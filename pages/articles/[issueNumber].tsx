@@ -8,7 +8,6 @@ import {
   type Issue,
   type IssueComment,
 } from "../../lib/issue";
-import Time from "../../components/Time";
 
 type Props = {
   issue: Issue;
@@ -23,7 +22,6 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
       </Head>
       <section>
         <header>
-          <Time dateTime={issue.created_at} />
           <h1>{issue.title}</h1>
         </header>
         <aside>
@@ -39,9 +37,6 @@ const ShowArticle: NextPage<Props> = ({ issue, issueComments }) => {
       {issueComments.map((issueComment) => (
         <article key={issueComment.id}>
           <section>
-            <header>
-              <Time dateTime={issueComment.created_at} />
-            </header>
             <div
               dangerouslySetInnerHTML={{ __html: issueComment.bodyHTML }}
             ></div>

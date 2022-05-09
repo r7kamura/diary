@@ -11,6 +11,9 @@ type Issue = any;
 const Home: NextPage<Props> = ({ issues }) => {
   return (
     <section>
+      <p>
+        <a href="https://twitter.com/r7kamura">r7kamura</a>'s daily working log.
+      </p>
       <ol>
         {issues.map((issue) => (
           <li key={issue.number}>

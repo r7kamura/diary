@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 
-const siteTitle = "r7kamura/nippo";
+const siteTitle = "r7kamura/diary";
 
 export default function Layout({ children }) {
   return (

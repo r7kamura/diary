@@ -13,15 +13,14 @@ export async function generateFeed(): Promise<string> {
   });
 
   let fullIssues = await listFullIssues({ limit: 20 });
-
+  const nowDateString = formatInTimeZone(
+    new Date(),
+    "Asia/Tokyo",
+    "yyyy-MM-dd"
+  );
   fullIssues.forEach(async (fullIssue: Issue) => {
     if (
-      fullIssue.title <
-      formatInTimeZone(
-        new Date(fullIssue.created_at),
-        "Asia/Tokyo",
-        "yyyy-MM-dd"
-      )
+      fullIssue.title >= nowDateString
     ) {
       return;
     }

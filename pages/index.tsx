@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { listIssues } from "../lib/issue";
+import fs from "fs";
+import { generateFeed } from "../lib/feed";
 
 type Props = {
   issues: Array<Issue>;
@@ -29,6 +31,10 @@ const Home: NextPage<Props> = ({ issues }) => {
 export default Home;
 
 export async function getStaticProps() {
+  if (process.env.ON_NEXT_BUILD) {
+    fs.writeFileSync("public/feed.xml", await generateFeed());
+  }
+
   return {
     props: {
       issues: await listIssues(),

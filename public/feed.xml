@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 16 May 2022 20:38:19 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-16]]></title><link>https://r7kamura.github.io/diary/articles/9</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/9</guid><pubDate>Sun, 15 May 2022 23:47:50 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をする。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=hmqyfS5opho">https://www.youtube.com/watch?v=hmqyfS5opho</a></li>
+</ul><hr><p>RuboCopをRuby 3.1で試したら意図しない挙動が顕れたので、取り急ぎIssueを出した。</p>
+<ul>
+<li><a href="https://github.com/rubocop/rubocop/issues/10639">rubocop/rubocop#10639</a></li>
+</ul>
+<p>そんなに詳しく調べてないけど、多分重複したIssueは無いはず…</p><hr><p>作業配信をやると運動不足気味になるはずなので、配信中に何か1つ運動をする、という習慣を取り入れてみることにした。腕立て伏せ1回 (本当に1回)、とかでOK。</p><hr><p>前述のRuboCopのIssueにPull Requestで対応してくれた人がいて良かった。</p><hr><p>auto-correctがsafeかunsafeかを判定する機能を付けて、safeなやつだけpickする機能を付けたい</p>
+<ul>
+<li><a href="https://github.com/r7kamura/rubocop_todo_corrector">https://github.com/r7kamura/rubocop_todo_corrector</a></li>
+</ul><hr><blockquote>
+<p>auto-correctがsafeかunsafeかを判定する機能を付けて、safeなやつだけpickする機能を付けたい</p>
+</blockquote>
+<p>最近の .rubocop_todo.yml だとコメントに記述してくれるので、それをパースすれば良さそう。古いやつはどうなんだろう、ソースコードを見に行けばわかるか？</p><hr><p>pickだけでなく、correctのときにも <code>--auto-correct</code> を使うか <code>--auto-correct-all</code> を使うか、という選択がある。</p><hr><p>ソースコードを奥深くまで辿っていかないと分からない。外部コマンドでRubyを動かして辿らせることもできるが、.rubocop_todo.ymlのコメントを参照する程度に留めておく方が手軽で良いだろうと思う。</p>
+<p><a href="https://github.com/rubocop/rubocop/blob/58c56bf75e48543d53fa856e21e58c39371dce2a/lib/rubocop/cop/autocorrect_logic.rb#L27-L29">https://github.com/rubocop/rubocop/blob/58c56bf75e48543d53fa856e21e58c39371dce2a/lib/rubocop/cop/autocorrect_logic.rb#L27-L29</a></p><hr><p>デフォルトではsafeなcopだけを対象にし、<code>only_safe: false</code> というオプションが指定できるようにした。
+<a href="https://github.com/r7kamura/rubocop-todo-corrector">https://github.com/r7kamura/rubocop-todo-corrector</a></p><hr><p>書いた。
+<a href="https://r7kamura.com/articles/2022-05-16-logicool-capture-obs-missing">Logicool Capture 認識しない OBS</a></p><hr><p>r7kamura/gialogにRSS配信機能を付けると良いのではとは前から思ってはいるが、r7kamura/diaryのような使い方を考えると、単純にIssueのdescription部分だけを、Issueがつくられたタイミングで配信しても意味が無い。</p>
+<p>そこで、前日分までの直近20件程度の記事について (前日分ということはつまり日記や日報としての利用を想定しているのでgialogには付けられない)、IssueとIssueCommentのdescriptionを (hr要素か何かで区切りつつ) 全て繋ぎ合わせたものを配信する、ということを考えた。これであれば、前日分のその人の日記や作業ログ的なものをまとめて読めて、新聞的な感じで楽しく読めるし、書いた人も昨日の振り返りが出来て嬉しいはず。</p>
+<p>ただ、この仕組みを入れると定期的にビルドするようにスケジューリングか必要になる。このように作業ログ用ツールとして特化させていくと、豪華になっていくので、r7kamura/nippoみたいなテンプレートリポジトリを更につくって、そこに機能を足していく方がいいかもしれない。</p><hr><p>これを何とかしないとNext.jsでRSS吐くのがいつまで経ってもだるいままだ。
+<a href="https://github.com/vercel/next.js/discussions/36640">Generate non-HTML files on <code>next export</code> · Discussion #36640 · vercel/next.js</a></p><hr><p>GitHubのコメント欄にフォーカスするためだけのGoogle Chorme拡張、をつくるか悩んでいて今日はつくらなかった。GitHubにキーボードショートカットを増やす拡張、であればつくってもいいと思う一方で他にGitHubで使いたいキーボードショートカットがそんなにないのでそこが逆に難しい。あと5個ぐらい思い付いたらつくってもいいと思う。</p>]]></content:encoded></item><item><title><![CDATA[2022-05-15]]></title><link>https://r7kamura.github.io/diary/articles/8</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/8</guid><pubDate>Sat, 14 May 2022 23:00:46 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をしている。</p>
+<p><a href="https://www.youtube.com/watch?v=Myo6UXFFfpQ">https://www.youtube.com/watch?v=Myo6UXFFfpQ</a></p><hr><p>全自動ゴミ箱の60L版ぐらいのやつがあれば購入したい</p>
+<p><a href="https://townew.jp/">https://townew.jp/</a></p><hr><p>朝からつくってて完成した。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/rubocop-todo-corrector">https://github.com/r7kamura/rubocop-todo-corrector</a></li>
+</ul>]]></content:encoded></item><item><title><![CDATA[2022-05-14]]></title><link>https://r7kamura.github.io/diary/articles/7</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/7</guid><pubDate>Sat, 14 May 2022 01:43:50 GMT</pubDate><content:encoded><![CDATA[<hr><p>rubocop-challengeをRailsアプリで動かそうとしてみたが、よく分からないエラーで動かず。</p>
+<p>デバッグのために手元でrubocop_challengerを直接実行してみると、更に違うエラーが出て動かず… そもそも <code>rubocop_challenge go</code> を実行すると、そのRailsアプリに含まれているGemfileの内容で <code>bundle install</code> を始めてしまい、なぜそんなことが実行されるのかよく分からない。rubocopの実行に必要なのは、.rubocop.yml のrequireの項目で定義されているものだけのはずなので、<code>bundle install</code> とかしてはいけない。</p><hr><p><code>bundle install</code> の問題は、とりあえずrubocop gem groupのものだけインストールするように、BUNDLE_WITHOUT環境変数を与えるというworkaroundで上手く解決した。そしてrubocop-challengeで発生するエラーを手元で再現できるようになった。</p><hr><p>.rubocop.ymlからローカルの ./lib/foo.rb を読み込むようになっていたせいでエラーが出て処理が止まり、そこで.rubocop_todo.ymlが空の状態に更新され、それを後続の処理がパースしようとしてよく分からないエラーが出て失敗する、という状況だったようだ。</p><hr><p>rubocop_challengerに色々とIssueを出した。</p>
+<p>しかし真面目にこういうものを運用したい気持ちがあるなら、適切な機能だけを持つものを自作した方が良いのかもと思いつつある。</p><hr><p>リンク切れを見かけたのでPull Requestを出した。</p>
+<ul>
+<li><a href="https://github.com/ryz310/rubocop_challenger/pull/619">ryz310/rubocop_challenger#619</a></li>
+</ul><hr><p>試しにrubocop_todo_correctorをつくってみたい。</p>
+<p>複雑になるので、Pull Requestを出したりする部分はライブラリの外側でやってもらいたいところだが、commitを複数用意してPRを出すとなるとやはりライブラリから叩かないとダメだろうか</p><hr><p>味玉をつくりたいので、味玉のレシピも <a href="https://github.com/r7kamura/cooking">https://github.com/r7kamura/cooking</a> に欲しい。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/168410917-7487582a-86f4-4488-b33b-89be9902da9a.png" alt="image"></p>
+<p>用意した。</p>
+<p><a href="https://github.com/r7kamura/cooking/blob/d8ae10177844c32c6abe7889fe865f11bbb84770/soy-marinated-egg.md">cooking/soy-marinated-egg.md at main · r7kamura/cooking</a></p><hr><p>とりあえずリポジトリをつくった。実装はまだ無い。</p>
+<p><a href="https://github.com/r7kamura/rubocop_todo_corrector">https://github.com/r7kamura/rubocop_todo_corrector</a></p><hr><blockquote>
+<p>とりあえずリポジトリをつくった。実装はまだ無い。</p>
+<p><a href="https://github.com/r7kamura/rubocop_todo_corrector">https://github.com/r7kamura/rubocop_todo_corrector</a></p>
+</blockquote>
+<p>そこそこ実装を進めた。bundle installしてrubocop --auto-gen-configを実行できるところまでは出来たが、もう少し機能性を改善したい。50%ぐらいできた感じ。</p><hr><p>運動不足解消の入り口として、腹筋ローラーを配信中にやると良いのではないか</p>]]></content:encoded></item><item><title><![CDATA[2022-05-13]]></title><link>https://r7kamura.github.io/diary/articles/6</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/6</guid><pubDate>Thu, 12 May 2022 19:31:29 GMT</pubDate><content:encoded><![CDATA[<hr><p><img src="https://user-images.githubusercontent.com/111689/168153951-525108da-356f-4fef-8b0d-fe008cb34c76.JPG" alt="IMG_6590"></p>
+<p>ロジクールから無料保証でマウントパーツを取り寄せたところ、カメラごと届いてしまった。ロジクールさんそういうところあるよね</p><hr><p>サンプルプロジェクトをつくってrubocop_challengerを試運転させてみる</p>
+<ul>
+<li><a href="https://github.com/ryz310/rubocop_challenger">https://github.com/ryz310/rubocop_challenger</a></li>
+</ul><hr><p>rubocop_challengerが上手く動いた。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/rspec-json_matcher/pull/10">r7kamura/rspec-json_matcher#10</a></li>
+</ul>
+<pre><code>echo /vendor/ >> .gitignore
+</code></pre>
+<p>事前にこれをやらないとcommitの作成に失敗するのでハマった。</p>
+<p>デフォルトブランチがmainの場合は --base-branch=main オプションを付けないといけない。</p>
+<p>何度か実行していると同じCopに対して重複してPull Requestがつくられてしまう。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/rspec-json_matcher/pull/11">r7kamura/rspec-json_matcher#11</a></li>
+</ul><hr><p>custom actionにしている。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/rubocop-challenge">https://github.com/r7kamura/rubocop-challenge</a></li>
+</ul><hr><p>Stripeが<a href="https://markdoc.io/">Markdoc</a>というMarkdownベースの記法を持つドキュメント生成ツールを公開したらしい。</p>
+<p>Markdownの記法に加えて、<code>{% foo %}</code> みたいな記法で色々なことができるとのこと。</p><hr><p>OBSでのシーン変更時に音を自動的にfade outできないのか？と思って調べた。</p>
+<p>"<a href="https://obsproject.com/forum/threads/fading-audio-between-scenes.122722/">Question / Help - Fading Audio between scenes ?? | OBS Forums</a>" <a href="https://obsproject.com/forum/threads/fading-audio-between-scenes.122722/">https://obsproject.com/forum/threads/fading-audio-between-scenes.122722/</a></p>
+<p>デフォルトでそうなっている的なことが言われているので、多分メディアソースでやれば上手くいく？</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-13-rubocop-challenge">.rubocop_todo.ymlを解消するPull RequestをGitHub Actionsで自動生成する</a></p><hr><p>mermaid記法の練習として、料理メモを置くリポジトリをつくった。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/cooking">https://github.com/r7kamura/cooking</a></li>
+</ul><hr><p>恐らく別の問題でrubocop_challengerがエラーになっていたので原因を調べたところ、別の不具合っぽいものを見つけたのでPull Requestを出した。</p>
+<ul>
+<li><a href="https://github.com/ryz310/rubocop_challenger/pull/612">ryz310/rubocop_challenger#612</a></li>
+</ul>
+<p>それから機能要望のIssueを出した。もしかしたら、上のエラーが出たのはこれが原因かもしれない。</p>
+<ul>
+<li><a href="https://github.com/ryz310/rubocop_challenger/issues/613">ryz310/rubocop_challenger#613</a></li>
+</ul><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-13-mermaid-recipe-memo">Mermaid記法で料理のレシピを書く</a></p>]]></content:encoded></item><item><title><![CDATA[2022-05-12]]></title><link>https://r7kamura.github.io/diary/articles/5</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/5</guid><pubDate>Wed, 11 May 2022 21:15:35 GMT</pubDate><content:encoded><![CDATA[<hr><p>調べたら、うちのマイクアームが3/8オスのネジ、ウェブカメラのマウントパーツが1/4メスのネジ穴を持っているようだった。そこで、1/4オスと3/8メスを持つ変換パーツをAmazonで注文した。</p>
+<ul>
+<li><a href="https://www.amazon.co.jp/dp/B08XPZWR24">https://www.amazon.co.jp/dp/B08XPZWR24</a></li>
+</ul><hr><p>Gemfile.lockの差分をJSONで表示するライブラリと、それを利用して差分が無いことを検知するGitHub Actionsが欲しい。</p><hr><p>こんな感じで、いま現在そのGemfile.lockで指定されているGemについて、バージョンと名前をまとめたやつをJSONとして出力してくれるやつをとりあえず用意すれば良いかな。</p>
+<pre><code class="language-ruby">require 'bundler'
+require 'json'
+
+content = File.read('Gemfile.lock')
+parser = Bundler::LockfileParser.new(content)
+array = parser.specs.map do |specification|
+  {
+    name: specification.name,
+    version: specification.version
+  }
+end
+puts JSON.pretty_generate(array)
+</code></pre>
+<p>こういう感じになる</p>
+<pre><code class="language-json">[
+  {
+    "name": "zache",
+    "version": "0.12.0"
+  },
+  {
+    "name": "zeitwerk",
+    "version": "2.5.3"
+  },
+  {
+    "name": "zip_tricks",
+    "version": "5.6.0"
+  }
+]
+</code></pre>
+<hr>
+<pre><code class="language-ruby">require 'bundler'
+require 'json'
+
+content = File.read('Gemfile.lock')
+parser = Bundler::LockfileParser.new(content)
+result = parser.specs.each_with_object({}) do |specification, hash|
+  hash[specification.name] = specification.version
+end
+puts JSON.pretty_generate(result)
+</code></pre>
+<pre><code class="language-json">{
+  "zache": "0.12.0",
+  "zeitwerk": "2.5.3",
+  "zip_tricks": "5.6.0"
+}
+</code></pre>
+<p>Object形式にまとめた方がいいか。</p><hr><p>GitHub Actionsのcustom actionのinputsに、allow_listのような <code>Array&#x3C;String></code> を渡したいが、これは <code>String</code> しか受け付けていない。</p>
+<ul>
+<li><a href="https://docs.github.com/en//actions/creating-actions/metadata-syntax-for-github-actions">https://docs.github.com/en//actions/creating-actions/metadata-syntax-for-github-actions</a></li>
+</ul>
+<p>YAMLのヒアドキュメント記法は指示子を指定しなければスペース区切りにできたはずなので、スペース区切りで指定するという制約でいこうかな。</p>
+<pre><code>irb(main):067:0" YAML.load &#x3C;&#x3C;-EOS
+irb(main):068:0" foo:
+irb(main):069:0"   bar
+irb(main):070:0"   baz
+irb(main):071:0> EOS
+=> {"foo"=>"bar baz"}
+</code></pre><hr><p>Rubyでカラー表示するの、diffy gemが楽そうだったのでこれ使おうかな。</p>
+<p><a href="https://github.com/samg/diffy">https://github.com/samg/diffy</a></p>
+<pre><code>$ irb -rdiffy
+irb(main):002:0" a = &#x3C;&#x3C;EOS
+irb(main):003:0" 1
+irb(main):004:0" 2
+irb(main):005:0" 3
+irb(main):006:0> EOS
+=> "1\n2\n3\n"
+irb(main):007:0" b = &#x3C;&#x3C;EOS
+irb(main):008:0" 2
+irb(main):009:0" 2
+irb(main):010:0" 4
+irb(main):011:0> EOS
+=> "2\n2\n4\n"
+irb(main):012:0> puts Diffy::Diff.new(a, b)
+-1
+ 2                                                           
+-3                                                           
++2                                                           
++4                                                           
+=> nil                                                       
+irb(main):014:0> puts Diffy::Diff.new(a, b).to_s(:color)
+-1
+ 2                                                                                                    
+-3                                                                                                    
++2                                                                                                    
++4                                                                                                    
+=> nil
+</code></pre>
+<p>diff-lcsという老舗のやつも調べたけど面倒になってきた。</p>
+<ul>
+<li><a href="https://github.com/halostatue/diff-lcs">https://github.com/halostatue/diff-lcs</a></li>
+</ul><hr><p>2つのGemfile.lockの差分を検査して、差分があればエラーにしてdiffをANSIカラー付きで表示するCustom actionを書いた。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/gemfile-diff">https://github.com/r7kamura/gemfile-diff</a></li>
+</ul>
+<p>実際プロダクションで動かしてみたら不具合が5件ぐらい見つかった (酷い) が、修正したら意図通り動くようになったのでOKだろう。</p>
+<p>質とスピードの話で、およそ4回手動でテストした辺りで自動テストを書いた方が効率が良くなってくるという話があった気がする。今回は書かなかったが、テストを簡単に書けるような実装にはしておいたので、書いてみても良かったかもしれない。</p><hr><p>.rubocop_todo.ymlを見て勝手にPull Requestを出してくれるやつがあると教えてもらった。</p>
+<ul>
+<li><a href="https://github.com/ryz310/rubocop_challenger">https://github.com/ryz310/rubocop_challenger</a></li>
+</ul><hr><p>配信のカメラの角度を変えて、PCの画面が完全に映らないようにした。お互い気が散るため。</p><hr><p>rubocop_challengerはコードを読んでみたものの、怪しい箇所が多く、自作した方が良いような気もしてきた。</p><hr><p>チャプター情報が上手く書き出されていた。</p>
+<ul>
+<li><a href="https://r7kamura.com/articles/2022-05-11-obs-auto-chapter">OBSでチャプター情報を自動で書き出す</a></li>
+<li><a href="https://www.youtube.com/watch?v=IFeJ3nFHPKI">作業 with r7kamura #12 - YouTube</a></li>
+</ul>]]></content:encoded></item><item><title><![CDATA[2022-05-11]]></title><link>https://r7kamura.github.io/diary/articles/4</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/4</guid><pubDate>Tue, 10 May 2022 19:35:05 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をする。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=eI0U_mbsF_o">作業 with r7kamura #11 - YouTube</a></li>
+</ul><hr><p>LuaのプロジェクトつくるためにLintツールとか整えたいんだけど、あんまりそういうのを使う文化圏じゃないのかな</p><hr><p>OBS Studio用のスクリプト置き場をつくった。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/obs-scripts">https://github.com/r7kamura/obs-scripts</a></li>
+</ul><hr><p>StyluaというLua用のFormatterを見つけた。</p>
+<ul>
+<li><a href="https://github.com/JohnnyMorganz/StyLua">https://github.com/JohnnyMorganz/StyLua</a></li>
+<li><a href="https://github.com/JohnnyMorganz/stylua-action">https://github.com/JohnnyMorganz/stylua-action</a></li>
+</ul>
+<p>obs-scriptsに導入した。インデントがハードタブなのが新鮮。</p>
+<p><img src="https://user-images.githubusercontent.com/111689/167722837-7040b8b7-8764-4b43-b606-0eb71430a5a4.png" alt="image"></p><hr><p>YouTubeのチャプターを試して、同名のチャプターがあっても良いということが分かった。</p>
+<pre><code>00:00 Scene A
+01:23 Scene B
+02:34 Scene C
+03:45 Scene A
+</code></pre><hr><p>現状こうなる。</p>
+<pre><code>00:00:00 Work
+00:11:23 Break
+00:21:23 Work
+01:11:23 Break
+</code></pre>
+<p>こうする方が良いか？ごちゃごちゃしてうるさい気もする。無い方が良いか。</p>
+<pre><code>00:00:00 Work 1
+00:11:23 Break 1
+00:21:23 Work 2
+01:11:23 Break 2
+</code></pre><hr><p>現状は毎回同一のファイルに出力されるが、できればディレクトリを選ぶとそこに違うファイル名で生成してほしい。配信開始時のタイムスタンプで、chapters-YYYYMMDDhhmmss.txt とかがいいかも。</p><hr><p>ディレクトリを選択する形式にした。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/obs-scripts/pull/3">r7kamura/obs-scripts#3</a></li>
+</ul><hr><p>ディレクトリ構造を整えたり (gh-pagesブランチはやめてdocsディレクトリで運用することにした)、説明を書いたりした。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/obs-browser-sources">https://github.com/r7kamura/obs-browser-sources</a></li>
+</ul><hr><p>色を付けたり、文字サイズを画面幅に合わせたりした。</p>
+<ul>
+<li><a href="https://r7kamura.github.io/obs-browser-sources/pomodoro.html">https://r7kamura.github.io/obs-browser-sources/pomodoro.html</a></li>
+</ul><hr><p>Logicool CaptureがOBSから映像入力デバイスとして認識されなくなってつらい。今朝方Windowsのアップデートがあったが、あれは影響しているだろうか。</p><hr><ul>
+<li>Tweetdeck Shortcut Plus</li>
+<li>GitHub Shortcut Plus</li>
+</ul>
+<p>みたいなやつが欲しい。要するに、ユーザーがショートカットキーを設定できる余地を増やしたい。</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-11-pomodoro-timer-for-obs">OBS用ポモドーロタイマー</a></p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-11-obs-auto-chapter">OBSでチャプター情報を自動で書き出す</a></p><hr><p>GitHubのAppearanceをLight High Contrastに変更したら、ゲームボーイみたいなUIになって良くなった。</p><hr><p>amazon_url_shortenerのmanifest v3化を始めた。permissionsには文字列でURLを指定できなくなったのか。</p>
+<p><img src="https://user-images.githubusercontent.com/111689/167769546-b80d8711-ee7c-4345-8267-93c36c6af3e1.png" alt="image"></p>
+<ul>
+<li><a href="https://github.com/r7kamura/amazon_url_shortener/pull/14">r7kamura/amazon_url_shortener#14</a></li>
+</ul><hr><p>manifest v3対応をしつつ、高速化も加えた。URLからASINを推測可能な場合はそれを利用する。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/amazon_url_shortener">https://github.com/r7kamura/amazon_url_shortener</a></li>
+</ul><hr><p>Lua少し調べて書いて上手く動いたものの、環境構築とかテストの書き方とかの情報がもはや検索してもなかなか辿り着くのが難しい状況で、今後これに注力していこうみたいな気持ちにはならなかった。Pythonで書いた方が良かったかも</p>]]></content:encoded></item><item><title><![CDATA[2022-05-10]]></title><link>https://r7kamura.github.io/diary/articles/3</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/3</guid><pubDate>Mon, 09 May 2022 20:09:57 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をする。</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jDjO9BkA6Ys">作業 with r7kamura #10 - YouTube</a></li>
+</ul><hr><p>昨日の続きを読もうと思っている。classの話あたりから。</p>
+<ul>
+<li><a href="https://learnxinyminutes.com/docs/lua/">Learn Lua in Y Minutes</a></li>
+</ul><hr><p>YouTubeのチャンネルのカスタムURLが、条件を満たしてから10日後に使えるようになったと言っている人を見た。5月19日にまた確認したいところ。</p><hr><p>OBSのスクリプトファイルを試しに書いてみた。</p>
+<p>まず、スクリプトは次のディレクトリに置かれている。この場所は、OBSのスクリプト設定画面を選び、適当なスクリプトのコンテキストメニューからファイルの場所を開くことでも確認できる。</p>
+<pre><code>C:\Program Files\obs-studio\data\obs-plugins\frontend-tools\scripts
+</code></pre>
+<p>これらのスクリプトファイルは、変更に管理者権限が必要である。適当にスクリプトファイルをコピーし、hello.luaをつくる。この際にWindowsによって管理者権限の確認が求められる。</p>
+<p>Windowでは、hello.luaを右クリックし、プロパティ > セキュリティ > 詳細設定から、ファイルの所有者をAdministratorから自分のユーザーに変更する。自分の場合、r7kamというユーザ名なので、これを入力する。入力時に選択肢とかは一切出ないので、ユーザ名を覚えておく必要があり分かりづらい。</p>
+<p>変更したら今度は、プロパティ > セキュリティ > 編集から、追加した所有者に対して変更権限を与える。今回の例ではフルコントロールを与えた。</p>
+<p><img src="https://user-images.githubusercontent.com/111689/167494228-3700a3d6-1c34-4f28-885f-1ce147b3b518.png" alt="image"></p>
+<p>これで、スクリプトファイル hello.lua を変更するたびにいちいち管理者権限の確認を求められなくて済む。</p>
+<p>次の記事を参考に設定した。</p>
+<ul>
+<li><a href="https://qiita.com/murashi/items/708acd6b37aaf46b4fec">Windowsでファイルのアクセス権変更 - Qiita</a></li>
+</ul>
+<p>OBSのスクリプトの追加、スクリプトログの確認はこの辺からやる。</p>
+<p><img src="https://user-images.githubusercontent.com/111689/167495511-def395e5-d12d-499c-b504-a391130a0466.png" alt="image"></p>
+<pre><code class="language-lua">print("Hello")
+</code></pre>
+<p>これだけ書いたスクリプトを動かすと、こうなる。</p>
+<p><img src="https://user-images.githubusercontent.com/111689/167495653-061e74fc-af57-48d7-aab6-a4f6bc09dcfc.png" alt="image"></p><hr><blockquote>
+<p>When writing code for OBS, a very time-consuming task is to browse the huge OBS API to determine which functions or combinations of functions are required to reach OBS data.
+<a href="https://github.com/obsproject/obs-studio/wiki/Scripting-Tutorial-Source-Shake">https://github.com/obsproject/obs-studio/wiki/Scripting-Tutorial-Source-Shake</a></p>
+</blockquote>
+<p>tashikani... 🦀</p><hr><p>今回OBSスクリプトを書いてやりたいことをまとめる。</p>
+<p>MUST:</p>
+<ul>
+<li>00分になったらworkシーンへ遷移</li>
+<li>50分になったらbreakシーンへ遷移</li>
+</ul>
+<p>SHOULD:</p>
+<ul>
+<li>チャプター分割を自動化したいので、日時を記憶してどこかにテキストを書き出し
+<ul>
+<li>配信開始時</li>
+<li>配信終了時</li>
+<li>シーン遷移時</li>
+</ul>
+</li>
+</ul>
+<p>Lua/Pythonを利用しなくても、browser sourceでもある程度のことは可能。逆にUIを利用するならこちらの方がやりやすい可能性もある。テキストオブジェクトではなくHTMLでUIを提供できるため。</p>
+<ul>
+<li><a href="https://github.com/obsproject/obs-browser">https://github.com/obsproject/obs-browser</a></li>
+</ul>
+<p>browser sourceでもチャプター用の文字列も取得こそできそうだけど、ファイルへの書き込みとかは多分できなさそうに推測しているので、文字列をやり取り手段が無いかも。</p>
+<p>miyaokaさんが、チャプター書き出しのLuaスクリプトを書いて紹介してくれた。これはoutput.txtに書き出すという仕組みらしい。こういうので良いんだよ感ありますね。何とかJavaScriptでどこかに書き出せないものか… requestbin とかでも良いんで…</p>
+<ul>
+<li><a href="https://github.com/miyaoka/obs-plugin/blob/cf02c1475fa5cbaad5b8bc1269cb895c866e0702/youtube_chapter.lua">https://github.com/miyaoka/obs-plugin/blob/cf02c1475fa5cbaad5b8bc1269cb895c866e0702/youtube_chapter.lua</a></li>
+</ul>
+<p>browser sourceで実現できる旨味は、インストールの手間が無い (URL教えるだけ) なところ。</p><hr><p>download属性付きのフォームを用意してJavaScriptでクリックさせることで、テキストファイルをダウンロードさせる、という作戦でいけるかも？</p>
+<ul>
+<li><a href="https://cyzennt.co.jp/blog/2021/02/04/javascript%EF%BC%9A%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%8B%E3%82%89%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE/">https://cyzennt.co.jp/blog/2021/02/04/javascript%EF%BC%9A%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6%E3%81%8B%E3%82%89%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%81%AE%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE/</a></li>
+</ul><hr><p>ブラウザソースを試しに配置する用のリポジトリをつくった。gh-pagesブランチにHTMLを適当に置いて使う。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/obs-browser-sources">https://github.com/r7kamura/obs-browser-sources</a></li>
+</ul><hr><p>ブラウザソースからファイルをダウンロードさせる実験をしたがダメだった。</p><hr><p>ファイルパスを選択するUIが用意されていたので、これでチャプターの書き込み先ファイルパスを選択できるかも。</p>
+<ul>
+<li><a href="https://obsproject.com/docs/reference-properties.html">https://obsproject.com/docs/reference-properties.html</a></li>
+</ul><hr><p>GitHub Actionsでジョブ終了時にMarkdownを表示できる新機能が追加されたらしい。便利そう</p>
+<ul>
+<li><a href="https://github.blog/2022-05-09-supercharging-github-actions-with-job-summaries/">Supercharging GitHub Actions with Job Summaries | The GitHub Blog</a></li>
+</ul><hr><p>一応タイマーが表示されてシーンが自動で遷移されるところまではLuaで書けた。</p>
+<ul>
+<li><a href="https://gist.github.com/r7kamura/d6538c2291805476c2a3f3d2c58926a8">https://gist.github.com/r7kamura/d6538c2291805476c2a3f3d2c58926a8</a></li>
+</ul>
+<p>冷静になってみると、チャプター書き出し機能は独立したスクリプト (or プラグイン) として用意しても違和感ないので、シーン遷移 + タイマー表示だけならJavaScriptでブラウザソース使う方が良いかも… URL指定してもらってアクセス権限有効化してもらうだけで済むし…</p><hr><p>OBSの起動オプションをいじると、ブラウザソースでconsole.logでのデバッグができるらしい。</p>
+<ul>
+<li>"<a href="https://obsproject.com/forum/threads/how-to-get-console-log-in-browsersource.110221/">Question / Help - How to get Console.Log in BrowserSource? | OBS Forums</a>" <a href="https://obsproject.com/forum/threads/how-to-get-console-log-in-browsersource.110221/">https://obsproject.com/forum/threads/how-to-get-console-log-in-browsersource.110221/</a></li>
+</ul><hr><blockquote>
+<p>SetCurrentScene is only available with 27.2.
+<a href="https://github.com/obsproject/obs-browser/issues/347">obsproject/obs-browser#347</a></p>
+</blockquote>
+<p>OBS 27.2.4で試しているので問題は無いはずだが……</p>
+<p>と思ったら、関数名を間違えていた。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/167539561-f03dcd9f-6701-4aa2-934e-9d23a73242df.png" alt="image"></p>
+<p>次のようにOBSを起動すると、<a href="http://localhost:9292/">http://localhost:9292/</a> でDevToolsを開いてブラウザソースのデバッグができる。</p>
+<pre><code>/path/to/obs64.exe --remote-debugging-port=9222
+</code></pre><hr><p>動くようになった。</p>
+<p><a href="https://r7kamura.github.io/obs-browser-sources/pomodoro.html">https://r7kamura.github.io/obs-browser-sources/pomodoro.html</a></p>
+<p>次の名前の合計2つのシーンが存在する前提で動作する。</p>
+<ul>
+<li>Work</li>
+<li>Break</li>
+</ul>
+<p>次のように動く。</p>
+<ul>
+<li>そのシーンの残り時間を表示する</li>
+<li>毎時00分にWorkという名前のシーンに遷移する</li>
+<li>毎時50分にBreakという名前のシーンに遷移する</li>
+</ul><hr><p>Atomic Habitsの次の部分が良かった。</p>
+<blockquote>
+<p>世界を消費するだけでなく、自分が世界の設計者となろう</p>
+</blockquote><hr><p>2021年に買ったものを振り返る記事をあらためて読み返していた。</p>
+<p>「欲しいけど大きいから怖くて買えなかったもの」を買うようにした結果、いい買い物が多かったと思う。</p>
+<ul>
+<li><a href="https://r7kamura.com/articles/2021-12-29-good-buy-2021">良かったもの2021</a></li>
+</ul><hr><p>Ctrl+Alt+L で、IssueやPull Requestのtextareaにフォーカスするようにしたら、コメントがすごく捗るようになった。キー自体は余ってたからとりあえずそこにしただけで、何でもいい。</p>
+<p>どちらかと言うとコメントは足りない気味なので、もっとチャットみたいにガンガン書き込むべきだと思う。で、思うだけではダメなので、コメントが書かれる仕組みづくりをしっかりしていかないといけない。そのための改善。</p>]]></content:encoded></item><item><title><![CDATA[2022-05-09]]></title><link>https://r7kamura.github.io/diary/articles/1</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/1</guid><pubDate>Mon, 09 May 2022 05:53:59 GMT</pubDate><content:encoded><![CDATA[<hr><p>r7kamura/nippoのリポジトリを作り直した。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/nippo">https://github.com/r7kamura/nippo</a></li>
+</ul>
+<p>r7kamura/gialogの設計を　大幅に見直したためである。一応既存ユーザー用にmigrationスクリプトも書いてみたが、コードの方も新しいものに変えたりしないといけなくて、正直データ移行は諦めて作り直した方がはやい、と思い作り直した。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/gialog">https://github.com/r7kamura/gialog</a></li>
+<li><a href="https://github.com/r7kamura/gialog/blob/8d6b881f3894b9268311f757da3d76e2483d8a77/scripts/migrate_data_from_gialog_v0_to_v1.rb">https://github.com/r7kamura/gialog/blob/8d6b881f3894b9268311f757da3d76e2483d8a77/scripts/migrate_data_from_gialog_v0_to_v1.rb</a></li>
+</ul>
+<p>旧バージョンのデータ構造でもまあ別に問題無く使い続けられるので、既存ユーザーはそのまま使い続けてもらっても全然OK。古いままでいると特に不利益を被るとかは無い。新しい版では、ファイルの保存形式が新しい版ではMarkdownになったので、dataブランチの再利用性が高くなって将来的に何か別のMarkdownを使うブログに移行したくなったときにファイルのコピーだけで済んで手軽たり、diffが少し見やすくなったりという利点がある。</p><hr><p>リナカフェ跡地っていま1分10円のコワーキングスペースになってるんだ。</p>
+<ul>
+<li><a href="https://lifork.jp/akihabara2/share.html">https://lifork.jp/akihabara2/share.html</a></li>
+</ul><hr><p>今日も作業配信をやっている。GW以降も続けられていて偉い</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=Xb9C8JlIhuk">https://www.youtube.com/watch?v=Xb9C8JlIhuk</a></li>
+</ul><hr><p>ghコマンドを利用して、日本時間でその日のnippo用のIssueをブラウザで開く、なければついでにつくる、というのをやりたい。</p><hr><p>Issueのタイトルを元に検索するにはこうする。</p>
+<pre><code class="language-console">$ gh issue list --search "2022-05-09 in:title"
+
+Showing 1 of 1 issue in r7kamura/nippo that matches your search
+
+#1  2022-05-09    about 1 minute ago
+/home/r7kamura/ghq/github.com/r7kamura/nippo main
+$ gh issue list --search "2022-05-09 in:title" --json number
+[
+  {
+    "number": 1
+  }
+]
+/home/r7kamura/ghq/github.com/r7kamura/nippo main
+$ gh issue list --search "2022-05-09 in:title" --json number --jq "first"
+{"number":1}
+/home/r7kamura/ghq/github.com/r7kamura/nippo main
+$ gh issue list --search "2022-05-09 in:title" --json number --jq "first.number"
+1
+</code></pre><hr><p>日付を得るにはこう。</p>
+<pre><code class="language-console">$ date +%Y-%m-%d
+2022-05-09
+</code></pre><hr><p>任意のタイトル空のbodyでIssueを作成するにはこう。</p>
+<pre><code class="language-console">$ gh issue create --title "2022-05-10" --body ""
+
+Creating issue in r7kamura/nippo
+
+https://github.com/r7kamura/nippo/issues/2
+</code></pre><hr><p>なんやかんやして全てやるにはこう。</p>
+<pre><code>title=$(date +%Y-%m-%d)
+
+number=$(gh issue list --search "${title} in:title" --json number --jq "first.number")
+
+if [ -z "${number}" ]
+then
+  number=$(gh issue create --title "${title}" --body "" | sed --null-data --regexp-extended --expression "s;.*issues/([0-9]+);\1;")
+fi
+
+gh issue view "${number}" --web
+</code></pre><hr><p>このツールだと1日の終わりに振り返りをするという側面が薄いので、日報より日記の方が適切だと考えて、nippoからdiaryにリポジトリ名を変えた。</p>
+<ul>
+<li><a href="https://r7kamura.github.io/diary/">https://r7kamura.github.io/diary/</a></li>
+<li><a href="https://github.com/r7kamura/diary">https://github.com/r7kamura/diary</a></li>
+</ul><hr><p>Issueで日記を書くのを補助するためのGitHub CLI向けの拡張を用意した:</p>
+<ul>
+<li><a href="https://github.com/r7kamura/gh-diary">https://github.com/r7kamura/gh-diary</a></li>
+</ul><hr><p>YouTubeの登録者数が100人を超えた 🎉</p>
+<p>確か100人からチャンネルのカスタムURLを発行できるようになるらしいので、有効化されるのが楽しみ。</p><hr><p>GitHubでコメントフォームにフォーカスするショートカットキーが欲しかったので、自作のKeyworksというChrome拡張で実現することにした。</p>
+<p><img src="https://user-images.githubusercontent.com/111689/167367530-2766fc03-329f-4d51-a6eb-0ecce75f678c.png" alt="image"></p>
+<ul>
+<li><a href="https://chrome.google.com/webstore/detail/keyworks/chmkmpahmlgaaincbbdfnplohkkkapdl">https://chrome.google.com/webstore/detail/keyworks/chmkmpahmlgaaincbbdfnplohkkkapdl</a></li>
+</ul>
+<p>次のように設定している。</p>
+<pre><code>javascript:document.querySelector("#new_comment_field").focus();
+</code></pre><hr><p>OBSのプラグイン書きたいのでLuaを学ぶ。</p>
+<p>"<a href="https://learnxinyminutes.com/docs/lua/">Learn Lua in Y Minutes</a>" <a href="https://learnxinyminutes.com/docs/lua/">https://learnxinyminutes.com/docs/lua/</a></p><hr><p>Luaの歴史は1993年から始まる。</p>
+<ul>
+<li>"<a href="https://ja.wikipedia.org/wiki/Lua">Lua - Wikipedia</a>" <a href="https://ja.wikipedia.org/wiki/Lua">https://ja.wikipedia.org/wiki/Lua</a></li>
+</ul><hr><p>世間がSSGという概念を獲得してきたので、Next.jsの <code>next export</code> みたいに、Rubyでも <code>rack export</code> とやると静的サイトが生成されると良いのではと考えたのだけど、それって前につくったrack-captureだなと思い直した。既にあったな…</p>
+<ul>
+<li><a href="https://github.com/r7kamura/rack-capture">https://github.com/r7kamura/rack-capture</a></li>
+</ul>
+<p>Next.jsはエンドポイントごとに getStaticPaths, getStaticProps を定義する場所が用意されているのが良い。静的ファイルを配置する場所も決まっているから、特に困ることは無い。</p>
+<p>Rackでやろうとすると、自由過ぎてそうはいかない。</p>
+<p>Railsでやろうとすると、静的ファイルについては規約があるので上手くいきそう。getStaticPaths, getStaticPropsを書く良い場所はない。Railsが1 action 1 classという設計だったら良かったのにね。N actions 1 classになっているのは、Railsの本当に設計が悪いところだと思う。</p>
+<p>config/initializers/rails_exporet.rbのような設定用のRubyコードが書ける場所を用意して、rails exportというサブコマンドを追加するようなrails-export gemを用意して、rails export --initで設定用コードの雛形が生成されるようにして、というのをやると良いかも。でもRailsアプリを静的サイトに使って誰が嬉しいのかという話もある。</p><hr><p>記事を書いた。</p>
+<ul>
+<li><a href="https://r7kamura.com/articles/2022-05-09-github-issues-for-working-log">https://r7kamura.com/articles/2022-05-09-github-issues-for-working-log</a></li>
+</ul><hr><p>Luaの使い方を見ていると、Perlや初期のJavaScriptのことを思い出す。</p>
+<ul>
+<li>この辺の言語の軽い書き味を備えている</li>
+<li>それなりに高速</li>
+<li>それなりに移植性が高い</li>
+</ul>
+<p>というのは良いことだ。実際、OBSがLuaの実行エンジンを持っていて (詳細は不明なので雰囲気で言っている) Luaで書いたスクリプトをサクッと動かせるのだから、利点が上手く活きていると思う。</p><hr><p>この例には幾らか驚かされた。</p>
+<pre><code class="language-lua">u = {[{}] = 1729}
+b = u[{}]     -- We might expect 1729, but it's nil:
+-- b = nil since the lookup fails. It fails
+-- because the key we used is not the same object
+-- as the one used to store the original value. So
+-- strings &#x26; numbers are more portable keys.
+</code></pre>
+<p>ハッシュの計算方法に、素朴にテーブルというオブジェクトのIDを利用しているという感じなのかな。</p><hr><p>Luaのメタテーブルとかいうの見てひっくり返りそうになった。まあリクライニングチェアで作業してるので既にひっくり返ってるんですが……</p><hr><p>1時間掛けて60%ぐらい読み進めた。次回はそれを読みつつ、OBSに付属しているTimer.luaを読んでいきたいところ。</p>
+<ul>
+<li><a href="https://learnxinyminutes.com/docs/lua/">https://learnxinyminutes.com/docs/lua/</a></li>
+</ul>]]></content:encoded></item></channel></rss>

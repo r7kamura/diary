@@ -19,9 +19,7 @@ export async function generateFeed(): Promise<string> {
     "yyyy-MM-dd"
   );
   fullIssues.forEach(async (fullIssue: Issue) => {
-    if (
-      fullIssue.title >= nowDateString
-    ) {
+    if (fullIssue.title >= nowDateString) {
       return;
     }
 

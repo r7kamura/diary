@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import { basePath } from "../settings";
 
 const siteTitle = "r7kamura/diary";
 
@@ -8,6 +9,11 @@ export default function Layout({ children }) {
     <>
       <Head>
         <title>{siteTitle}</title>
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          href={`${basePath}/feed.xml`}
+        />
       </Head>
       <header>
         <nav>

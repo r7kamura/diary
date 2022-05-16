@@ -31,6 +31,11 @@ export async function generateFeed(): Promise<string> {
         })
       )
       .join("<hr>");
+    const dateString = formatInTimeZone(
+      new Date(),
+      "Asia/Tokyo",
+      "yyyy-MM-dd"
+    );
     rss.item({
       custom_elements: [
         {
@@ -40,7 +45,7 @@ export async function generateFeed(): Promise<string> {
         },
       ],
       date: new Date(fullIssue.created_at),
-      description: fullIssue.description || "",
+      description: `r7kamura's working log on ${dateString}`,
       title: fullIssue.title,
       url,
     });

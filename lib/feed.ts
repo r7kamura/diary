@@ -32,7 +32,7 @@ export async function generateFeed(): Promise<string> {
       )
       .join("<hr>");
     const dateString = formatInTimeZone(
-      new Date(),
+      new Date(fullIssue.created_at),
       "Asia/Tokyo",
       "yyyy-MM-dd"
     );

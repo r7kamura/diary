@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Thu, 19 May 2022 07:24:41 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-18]]></title><description><![CDATA[r7kamura's working log on 2022-05-18]]></description><link>https://r7kamura.github.io/diary/articles/12</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/12</guid><pubDate>Tue, 17 May 2022 20:04:14 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をする。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Thu, 19 May 2022 19:36:00 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-19]]></title><description><![CDATA[r7kamura's working log on 2022-05-19]]></description><link>https://r7kamura.github.io/diary/articles/13</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/13</guid><pubDate>Wed, 18 May 2022 19:28:17 GMT</pubDate><content:encoded><![CDATA[<hr><p>書いた。報告的で、情報量はあまり無い
+"<a href="https://r7kamura.com/articles/2022-05-18-amazon-url-shortener-update">Amazon URL Shortenerの改善</a>" <a href="https://r7kamura.com/articles/2022-05-18-amazon-url-shortener-update">https://r7kamura.com/articles/2022-05-18-amazon-url-shortener-update</a></p><hr><p>作業配信する。
+<a href="https://www.youtube.com/watch?v=Svr4JEjy5MQ&#x26;ab_channel=r7kamura">作業 with r7kamura #19 - YouTube</a></p><hr><p>これのウェブストアへの申請をやる。
+<a href="https://github.com/r7kamura/copy-markdown-link">r7kamura/copy-markdown-link: Browser extension to copy link in Markdown format.</a></p><hr><p>ウェブストアへ申請した。</p><hr><p>"AppBrew Rails Guides" という文書を書いている。</p><hr><p>見た。
+<a href="https://www.youtube.com/watch?v=T5diZPGOLhk&#x26;ab_channel=%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E5%85%AC%E5%BC%8FYouTube%E3%83%81%E3%83%A3%E3%83%B3%E3%83%8D%E3%83%AB">【公式】オリジナルアニメ「雪ほどきし二藍」第一話 青き踏む |『Pokémon LEGENDS アルセウス』 - YouTube</a></p><hr><p>毎月「久しぶりに釘宮理恵の声聴いた」と言っている気がする</p><hr><p>TweetDeckに追加したいショートカットキー</p>
+<ul>
+<li>選択中の投稿に含まれている画像を大きなサイズで表示する
+<ul>
+<li>前後の画像に移動する</li>
+<li>連続投稿の漫画である場合を考慮して、次の投稿があればその画像にそのまま遷移できると便利そう</li>
+</ul>
+</li>
+<li>その投稿をリツイートしたユーザーのカラムを新しく開く</li>
+<li>そのカラムを閉じる</li>
+<li>その投稿が引用している投稿を開く</li>
+<li>その投稿に含まれている最初のURLを開く</li>
+<li>その投稿をtwitter.comで開く</li>
+<li>その投稿のlikesを開く</li>
+<li>その投稿のretweetsを開く</li>
+</ul><hr><p>選択中の投稿には <code>is-selected-tweet</code> というクラス名が付くようだから、これを見てどうにかするJavaScriptを実行する拡張をつくれば良さそうではある。</p><hr><p>Chrome拡張の雛形を提供する手段として、例えば次の方法が考えられる</p>
+<ul>
+<li><code>npm init foo</code> できるような <code>create-foo</code> NPM packageをつくる</li>
+<li><code>foo-starter-kit</code> のようなテンプレートリポジトリをつくる</li>
+</ul>
+<p>テンプレートリポジトリの優位性は、NPMを動かす実行環境が無くても雛形を用意できること。Dockerfileとかを提供すれば、Node.jsを直接インストールさせることなく利用してもらえる。動的なコンテンツも、自己書き換えを行うGitHub Actionという飛び道具を使えば実現できないこともないが、何かを入力してもらうということはできない。</p>
+<p>NPM packageの優位性は、動的にコンテンツを入力する能力があることで、例えばcreate-viteだとTypeScriptを使うかどうか、Reactを使うかどうかなどが選択できるし、packageのdescriptionやnameを入力してもらったりできる。downsideとして、やはりNode.jsを入れてもらわないといけないということがある。</p><hr><p>今日の俗世:</p>
+<ul>
+<li>三角関数 金融</li>
+<li>ゆっくり茶番劇 商標登録取消</li>
+<li>4630万円誤送金</li>
+</ul><hr><p>Google Docsで代替テキスト (Ctrl + Shift + Y) から「題名」を付けることで、画像のtitle属性が付けられることが分かり、これでブログに表示する画像にキャプションを付けたりできるのだけど、一方でGoogle Docs側で編集しているときにその画像に代替テキストが割り当てられているかどうかという情報が一切分からない。代替テキストの利用には編集上の問題がある。</p><hr><p>Atomic Habits、後半のほうに (20章ぐらい?)、理論上すべての物事に対して楽しんで取り組める可能性があるが、人より楽しめるものを選択した方が、人から褒められたり感謝されたりしてより楽しみやすく、継続もしやすい、という基本的なことが書かれていて良かった。</p>
+<p>それから、探索と試行 (試行という語彙だったかは曖昧) をどういう割合でやると良いかという基本的な事柄にも触れられていて良かった。上手くいっている状況では試行を重視し、上手くいっていない状況では探索を重視する、というのが基本原則。また上手くいっている状態でも10-20%程度は探索に回せ的な話もあった。ちなみに、Googleの20%ルールという卑近で分かりやすい例が紹介されていた。</p><hr><p>AppBrew Rails Guidesは、AppBrew Rails Best Practicesにリネームして、かつ汎用性を持たせて一般公開できる形に留めることにした。これだとAppBrew固有の話ができなくなるが、そもそもAppBrew固有の話をすべきではないというか、一般的にそれはNG (だから例えばAppBrewのXが良くてYが悪いことは明らかだよね) という風に暗に伝える方が効果的であると考えたため。</p>
+<p>形式としては、X Best Practicesは1 sectionあたり1 title, 1~2 sentences + NG example + OK exampleの形式を取ることが多そうだったので、その形式を取ることにした。</p>]]></content:encoded></item><item><title><![CDATA[2022-05-18]]></title><description><![CDATA[r7kamura's working log on 2022-05-18]]></description><link>https://r7kamura.github.io/diary/articles/12</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/12</guid><pubDate>Tue, 17 May 2022 20:04:14 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をする。</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=lWDTGvYLbz4&#x26;ab_channel=r7kamura">作業 with r7kamura #18 - YouTube</a></li>
 </ul><hr><p>Copy Markdown LinkというChrome拡張が欲しくなってきた。Copy Rich Linkと同じように、コピー時にポップアップが出るやつ。似たようなものは無数にあるが、ポップアップが鬱陶しかったりする。ストアに出すかどうかはともかく、少なくとも自前で読み込んで使いたい</p><hr><p>google-docs-to-markdownで、exportするたびにGoogleから発行される画像のURLが変わるので、毎回差分が出てしまうという問題がある。最終変更日時を比較して変更が無ければExportしない、というのを実装すれば解決できる。ただ、差分が出たからといっても「大変そう」ぐらいしかデメリットが感じられないので、今のところモチベーションが湧かない。</p>

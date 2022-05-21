@@ -33,6 +33,16 @@ export default function Layout({ children }) {
                 <a>Home</a>
               </Link>
             </li>
+            <li>
+              <Link href="/feed.xml">
+                <a>RSS</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/r7kamura/diary">
+                <a>Code</a>
+              </Link>
+            </li>
           </ul>
         </nav>
       </footer>

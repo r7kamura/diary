@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 22 May 2022 09:08:03 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-21]]></title><description><![CDATA[r7kamura's working log on 2022-05-21]]></description><link>https://r7kamura.github.io/diary/articles/15</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/15</guid><pubDate>Fri, 20 May 2022 22:23:57 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をする。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 22 May 2022 19:06:10 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-22]]></title><description><![CDATA[r7kamura's working log on 2022-05-22]]></description><link>https://r7kamura.github.io/diary/articles/16</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/16</guid><pubDate>Sat, 21 May 2022 20:50:59 GMT</pubDate><content:encoded><![CDATA[<hr><p>actions/setup-nodeの <code>cache: npm</code> ってnode_modulesのキャッシュを作るわけじゃないのか。自分も勘違いしていた。
+<a href="https://github.com/actions/setup-node/pull/468">Adjust caching documentation by dmitry-shibanov · Pull Request #468 · actions/setup-node</a></p><hr><p>作業配信する。
+<a href="https://www.youtube.com/watch?v=27CmW1_rzAk&#x26;ab_channel=r7kamura">作業 with r7kamura #22 - YouTube</a></p><hr><p>tweetdeck shortcut plusを作り終えたら、転用してtwitter shortcut plusもつくりたい</p><hr><p>昨日から若干風邪気味。喉が若干痛いのと、鼻水が若干出る</p><hr><p><a href="https://r7kamura.github.io/diary/">r7kamura/diary</a>のフッター部分に、RSSとGitHubリポジトリへのリンクを足した。
+Feedlyで見てみたらこのRSSに7人の購読者が居た。</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-21-atomic-habits">Atomic Habitsを読んだ</a></p><hr><p><img src="https://user-images.githubusercontent.com/111689/169671335-28e27122-2427-42be-964f-1aacd3ffe025.png" alt="image"></p>
+<p>TweetDeck Shortcut Plusの管理画面をつくっている。</p><hr><p><a href="https://tailwindcss.com/">Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.</a>を学び始めた。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/169674779-686caa4b-6eac-4652-9f3d-2d5234d9525a.png" alt="image"></p><hr><p>本日の俗世:</p>
+<ul>
+<li>ダミアニャ</li>
+<li>大谷翔平</li>
+<li>MusicUnity2022</li>
+</ul><hr><p>OBSで、VLCソースのときのデフォルトが非表示時に停止だったが、非表示時に一時停止にしないと、上手くいかないことが分かった。</p><hr><p>第20回のスパム判定はその翌日には解除されていて、自分で公開化できるようになったので操作しておいた。何だったのか。</p><hr><p>昨日の配信でtunetankのBGM利用を試した。1日経っても著作権の申し立てが来なかったので、成功だと言える。いいサービスだと思う。ただ、使うサービスは少ない方が良いし万人が真似しやすい手法の方が良いと考えているので、将来的にはYouTube Audio Libraryの適当な音楽を見繕って移行したいところ。見繕うコストがかなり高いので、それが今のYouTube Audio Libraryの問題。</p><hr><p>YouTubeで保存されるアーカイブの最大時間は12時間だと聞いたことがある。では、12時間以上配信した場合に、アーカイブは12時間分残るのか、それとも何も残らないのか。実験してみるにはリスクが高すぎる。</p>
+<p><a href="https://youtu.be/TKepOSUGP1E?t=31454">地獄の1500個、梱包する - YouTube</a> (再生時間付きのリンク) という動画にて 、次の発言を聞いた。</p>
+<p>「"今日のアーカイブ残る？" ……あのね、12時間以内に一旦終了するっていう作業がしっかり達成できれば残る。万が一、超えちゃったら残んない。視聴者次第。視聴者が僕に伝えられるかどうかってとこ」</p>
+<p>ということで、配信時間が12時間を超えたらアーカイブ動画は1秒も残らない、という可能性が高まった。</p>
+<p>この機会に色々調べてみると、今は確かにそうらしい。</p>
+<ul>
+<li><a href="https://support.google.com/youtube/answer/6247592?hl=ja">ライブ配信のアーカイブ - YouTube ヘルプ</a></li>
+</ul>
+<p>昔は12時間分残っていた時代もあったらしい。今は残らない。これが情報が錯綜していてる原因でもある。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/169685128-ed3b6f48-8315-4664-9f5a-4864cab8fcd4.png" alt="image"></p>
+<p>₍₍ (ง ˙ω˙)ว ⁾⁾</p>
+<p><img src="https://user-images.githubusercontent.com/111689/169684247-5a2e7efd-41ca-4061-b733-ef986adde2ce.JPG" alt="IMG_6615"></p>
+<p>₍₍ (ง ˙؎˙ )ว ⁾⁾</p>
+<p><img src="https://user-images.githubusercontent.com/111689/169684245-fc29ae6b-3e76-41d6-9162-49c14b18531c.JPG" alt="IMG_6616"></p>
+<p>⁽◝(ˊ꒳ˋ )◜⁾⁾</p>
+<p><img src="https://user-images.githubusercontent.com/111689/169684631-1dcfb889-1c37-45e7-96a0-7b3002c4eb5e.JPG" alt="IMG_6619"></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=js6Sqpk-4dg&#x26;ab_channel=%E6%96%99%E7%90%86%E7%A0%94%E7%A9%B6%E5%AE%B6%E3%83%AA%E3%83%A5%E3%82%A6%E3%82%B8%E3%81%AE%E3%83%90%E3%82%BA%E3%83%AC%E3%82%B7%E3%83%94">1皿48円で出来るガチでウマい最強のズボラ飯【虚無ペペロンチーノ】 - YouTube</a></li>
+<li><a href="https://github.com/r7kamura/cooking/blob/5dd26d6f93bb9cf1efc94624f67fcfa68d940c17/peperoncino.md">cooking/peperoncino.md at main · r7kamura/cooking</a></li>
+</ul><hr><p>manifest v3で、Chrome拡張のアイコンがクリックされたときにオプションページを開くコード。</p>
+<pre><code class="language-javascript">// background.js
+chrome.action.onClicked.addListener(() => {
+  chrome.runtime.openOptionsPage();
+});
+</code></pre>
+<p>Chrome拡張のアイコンがクリックされたときにオプションページを開くコード。</p>
+<pre><code class="language-diff">- chrome.browserAction.onClicked.addListener(() => {
++ chrome.action.onClicked.addListener(() => {
+</code></pre>
+<p>manifest v2時代は <code>browserAction</code> だった。</p>]]></content:encoded></item><item><title><![CDATA[2022-05-21]]></title><description><![CDATA[r7kamura's working log on 2022-05-21]]></description><link>https://r7kamura.github.io/diary/articles/15</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/15</guid><pubDate>Fri, 20 May 2022 22:23:57 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をする。
 <a href="https://www.youtube.com/watch?v=_dUaejy3P7Y&#x26;ab_channel=r7kamura">作業 with r7kamura #21 - YouTube</a></p><hr><p>今日は利用するBGMを tunetank.com に変えるという改善を加えた。勿論有料で契約しているので、YouTubeにアーカイブ動画がSpam判定されないことを願う。</p><hr><p>知らなかったキーボードショートカットも含めてほとんどのものが記載されているっぽいので、一度読み直した。
 <a href="https://support.google.com/chrome/answer/157179?hl=ja&#x26;co=GENIE.Platform%3DDesktop">Chrome のキーボード ショートカット - パソコン - Google Chrome ヘルプ</a></p><hr><p>コア機能は大体できた。ショートカット管理画面をつくる必要があって大変そう。
 <a href="https://github.com/r7kamura/tweetdeck-shortcut-plus">r7kamura/tweetdeck-shortcut-plus: Browser extension to add more keyboard shortcuts on TweetDeck.</a></p><hr><p>デスクトップPCのOS利用割合 Win 75%, Mac 15%

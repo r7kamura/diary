@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 23 May 2022 11:40:58 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-22]]></title><description><![CDATA[r7kamura's working log on 2022-05-22]]></description><link>https://r7kamura.github.io/diary/articles/16</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/16</guid><pubDate>Sat, 21 May 2022 20:50:59 GMT</pubDate><content:encoded><![CDATA[<hr><p>actions/setup-nodeの <code>cache: npm</code> ってnode_modulesのキャッシュを作るわけじゃないのか。自分も勘違いしていた。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 23 May 2022 19:06:19 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-23]]></title><description><![CDATA[r7kamura's working log on 2022-05-23]]></description><link>https://r7kamura.github.io/diary/articles/17</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/17</guid><pubDate>Sun, 22 May 2022 22:36:54 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=KtfRmyQIrAE&#x26;ab_channel=r7kamura">作業 with r7kamura #23 - YouTube</a></p><hr><p>OBSのVLCメディアソースで、プレイリストファイルではなくディレクトリから選べることを知った。これで、プレイリストをつくらなくてもディレクトリに楽曲を放り込んでおけばOKな状態になった。早速既存のプレイリストは削除して、ディレクトリで指定するように変更した。どの辺がVLCに関係しているのかいまいち謎だが。内部的にVLCを通して音声ファイルを扱っているのかな。</p><hr><p>昨日の作業ではTailwindを初めて利用できて良かった。</p>
+<p>CSSは、次のいずれかの手段が現状の最適解だと思っているので、後者のパターンで採用する際の存在としてTailwindは優秀な選択肢。</p>
+<ul>
+<li>全部自分で書く</li>
+<li>何も書かない</li>
+</ul>
+<p>デザインセンス無しで活用できるものでは決してないとは思うけれど、変なことはできないようになっているはずなので、普通にCSSを書く場合と比べると、良いものが出来やすいようにはなっていると思う。</p><hr><p>この前ReactのuseEffectを利用したが、以前と比べて、つまりclass componentでcomponentDidMount等を利用して同等の機能を実現していた場合と比べて、関数の名前がやっていることを特に表していないので本当に分かりづらいという部分が気になった。クラスを使わずに実現するという方針は良いが、名前の付け方が悪くて、別の点で使いづらく、勿体ない。</p><hr><p>鳴らしている雨の音が2秒間ぐらいの無音から開始するせいで、ループ時に途切れるような感覚になることがあった。Window 10標準の方法でmp3のトリミングを行う方法は無さそうだったので (mp4ならフォトアプリがあったのだが)、Audacityを入れて編集した。これで配信時の雨の音が改善された。</p><hr><blockquote>
+<p>OBSのVLCメディアソースで、プレイリストファイルではなくディレクトリから選べることを知った。これで、プレイリストをつくらなくてもディレクトリに楽曲を放り込んでおけばOKな状態になった。早速既存のプレイリストは削除して、ディレクトリで指定するように変更した。どの辺がVLCに関係しているのかいまいち謎だが。内部的にVLCを通して音声ファイルを扱っているのかな。</p>
+</blockquote>
+<p>ディレクトリだとループ再生とシャッフル再生の機能が利用できないらしい。敗北。</p><hr><p>これをChromeウェブストアに申請した。
+<a href="https://github.com/r7kamura/tweetdeck-shortcut-plus">r7kamura/tweetdeck-shortcut-plus: Browser extension to add more keyboard shortcuts to TweetDeck.</a></p><hr><p>申請後にいろいろ不具合が見つかって修正した。一度に複数のバージョンを申請できないので、反応後に次のバージョンを申請しないといけない。</p><hr><p><a href="https://sustainable-rails.com/">Sustainable Web Development with Ruby on Rails</a> を読み始めた。</p>
+<p>『Railsで持続可能なウェブ開発を』というような題名。ここで言う持続可能というのは、</p>
+<ul>
+<li>仕様への要求が増えても</li>
+<li>リソースへの要求が増えても</li>
+<li>開発者が増えても</li>
+</ul>
+<p>耐えられるような、という意味だろう。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/169749521-2bbbe4a0-ebdf-43a1-b90d-431cb6e1b57d.png" alt="image"></p>
+<p>コードを入れるとほぼ半額 (6500円から3000円ぐらい?) になる。</p><hr><h3>logrageはtest環境で使うのは反対</h3>
+<p>development環境以外でlogrageを有効化している。test環境ではlograge有効化してほしくないな。production環境みたいな絶対に機械的しか見ないような場所では良いと思う。</p>
+<h3>app以下にapp/models以外にドメインモデルの亜種を増やすのは反対</h3>
+<p>ビジネスロジックを書くときはそれ専用の app/services みたいなディレクトリを使うらしい。自分はディレクトリを増やすことには反対で、すべてのビジネスロジック用クラスはドメインモデルの亜種だと思うので、app/models以下に定義した方が良いと考えている派。autoloaderの厄介事も増えて複雑になるし、ディレクトリが増えれば増えるほど命名規則がブレるようになるし。ActiveRecordにロジックを盛り込むかどうかという議論はまた別の話。</p>
+<h3>ビジネスロジックを記述するクラスを細かく分けるのには賛成</h3>
+<p>ビジネスロジックを書くときにクラスを細かく分けろという話がある。これには賛成。なぜなら、人はプログラムの大まかな構造を理解するときに、クラス間の関係性に着目して理解することが多いから。よく参照されているクラスに不具合があると、確認しなければいけない可能性のあるクラスが増える……という例が示されている。構造や関係性を表明するための手段としてクラスを細かく分ける。</p>
+<h3>常にresource-fulなroutingを使うべきというのには反対</h3>
+<p><code>resources :foos</code> と <code>get ...</code> とどっちを使うべきかという話について、後者を使うのは全くもって無益だとしている。そこまでか？でも、どちらにするかはともかく、どちらか片方に寄せるという姿勢は好ましいと思う。</p>
+<h3>Don’t Create Custom Actions, Create More Resourcesには賛成</h3>
+<p>"create more resources"という表現は良い。"コントローラーを分けた方がいい"、とするよりもこっちのほうが納得感が出るかも?</p>
+<h3>Resources should never be nested more than 1 level deep. には賛成</h3>
+<p>という記述がガイドにあるのか。確かにこのルールが丁度良いと思う。</p>
+<h3>Bet you didn’t think routing was such a deep topic!</h3>
+<p>わかる。ルーティングは超大事な部分だが、かなり軽視されていてつらくなりがち。</p>
+<h3>Ideally, Expose One Instance Variable Per Action</h3>
+<p>可能なのか？そんなルールを掲げることが。
+コントローラーからテンプレートにインスタンス変数で値を渡すという仕組みはひどい仕組みだとは思っているので、まああんまり多用しない方が良いよなという意味では賛成寄りではあるが、1個にしよう、とかあえて言うべきことなのだろうか。コントローラーでmemoizeしててヘルパーから透過的に触ってるやつ、とかもあるしなあ。</p>
+<h3>Helpers are Best at Exposing Global UI State and Generating Markup</h3>
+<p>ヘルパーは、Railsの提供するやつのようなグローバルなタイプのヘルパーとしては上手く働くという話。</p>
+<h3>その他</h3>
+<ul>
+<li>Just Use ERB</li>
+</ul><hr><p>作業配信は15:00に終了する、とするのが丁度良いように思った。次回も15:00の終了を狙いたい。</p>]]></content:encoded></item><item><title><![CDATA[2022-05-22]]></title><description><![CDATA[r7kamura's working log on 2022-05-22]]></description><link>https://r7kamura.github.io/diary/articles/16</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/16</guid><pubDate>Sat, 21 May 2022 20:50:59 GMT</pubDate><content:encoded><![CDATA[<hr><p>actions/setup-nodeの <code>cache: npm</code> ってnode_modulesのキャッシュを作るわけじゃないのか。自分も勘違いしていた。
 <a href="https://github.com/actions/setup-node/pull/468">Adjust caching documentation by dmitry-shibanov · Pull Request #468 · actions/setup-node</a></p><hr><p>作業配信する。
 <a href="https://www.youtube.com/watch?v=27CmW1_rzAk&#x26;ab_channel=r7kamura">作業 with r7kamura #22 - YouTube</a></p><hr><p>tweetdeck shortcut plusを作り終えたら、転用してtwitter shortcut plusもつくりたい</p><hr><p>昨日から若干風邪気味。喉が若干痛いのと、鼻水が若干出る</p><hr><p><a href="https://r7kamura.github.io/diary/">r7kamura/diary</a>のフッター部分に、RSSとGitHubリポジトリへのリンクを足した。
 Feedlyで見てみたらこのRSSに7人の購読者が居た。</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-21-atomic-habits">Atomic Habitsを読んだ</a></p><hr><p><img src="https://user-images.githubusercontent.com/111689/169671335-28e27122-2427-42be-964f-1aacd3ffe025.png" alt="image"></p>

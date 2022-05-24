@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 24 May 2022 00:02:19 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-23]]></title><description><![CDATA[r7kamura's working log on 2022-05-23]]></description><link>https://r7kamura.github.io/diary/articles/17</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/17</guid><pubDate>Sun, 22 May 2022 22:36:54 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=KtfRmyQIrAE&#x26;ab_channel=r7kamura">作業 with r7kamura #23 - YouTube</a></p><hr><p>OBSのVLCメディアソースで、プレイリストファイルではなくディレクトリから選べることを知った。これで、プレイリストをつくらなくてもディレクトリに楽曲を放り込んでおけばOKな状態になった。早速既存のプレイリストは削除して、ディレクトリで指定するように変更した。どの辺がVLCに関係しているのかいまいち謎だが。内部的にVLCを通して音声ファイルを扱っているのかな。</p><hr><p>昨日の作業ではTailwindを初めて利用できて良かった。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 24 May 2022 00:39:38 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-23]]></title><description><![CDATA[r7kamura's working log on 2022-05-23]]></description><link>https://r7kamura.github.io/diary/articles/17</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/17</guid><pubDate>Sun, 22 May 2022 22:36:54 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=KtfRmyQIrAE&#x26;ab_channel=r7kamura">作業 with r7kamura #23 - YouTube</a></p><hr><p>OBSのVLCメディアソースで、プレイリストファイルではなくディレクトリから選べることを知った。これで、プレイリストをつくらなくてもディレクトリに楽曲を放り込んでおけばOKな状態になった。早速既存のプレイリストは削除して、ディレクトリで指定するように変更した。どの辺がVLCに関係しているのかいまいち謎だが。内部的にVLCを通して音声ファイルを扱っているのかな。</p><hr><p>昨日の作業ではTailwindを初めて利用できて良かった。</p>
 <p>CSSは、次のいずれかの手段が現状の最適解だと思っているので、後者のパターンで採用する際の存在としてTailwindは優秀な選択肢。</p>
 <ul>
 <li>全部自分で書く</li>
@@ -16,17 +16,18 @@
 <li>開発者が増えても</li>
 </ul>
 <p>耐えられるような、という意味だろう。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/169749521-2bbbe4a0-ebdf-43a1-b90d-431cb6e1b57d.png" alt="image"></p>
-<p>コードを入れるとほぼ半額 (6500円から3000円ぐらい?) になる。</p><hr><h3>logrageはtest環境で使うのは反対</h3>
+<p>コードを入れるとほぼ半額 (6500円から3000円ぐらい?) になる。</p><hr><p>Sustainable Railsを読んでいく</p>
+<h3>logrageはtest環境で使う</h3>
 <p>development環境以外でlogrageを有効化している。test環境ではlograge有効化してほしくないな。production環境みたいな絶対に機械的しか見ないような場所では良いと思う。</p>
-<h3>app以下にapp/models以外にドメインモデルの亜種を増やすのは反対</h3>
+<h3>app以下にapp/models以外にドメインモデルの亜種を増やす</h3>
 <p>ビジネスロジックを書くときはそれ専用の app/services みたいなディレクトリを使うらしい。自分はディレクトリを増やすことには反対で、すべてのビジネスロジック用クラスはドメインモデルの亜種だと思うので、app/models以下に定義した方が良いと考えている派。autoloaderの厄介事も増えて複雑になるし、ディレクトリが増えれば増えるほど命名規則がブレるようになるし。ActiveRecordにロジックを盛り込むかどうかという議論はまた別の話。</p>
-<h3>ビジネスロジックを記述するクラスを細かく分けるのには賛成</h3>
+<h3>ビジネスロジックを記述するクラスを細かく分ける</h3>
 <p>ビジネスロジックを書くときにクラスを細かく分けろという話がある。これには賛成。なぜなら、人はプログラムの大まかな構造を理解するときに、クラス間の関係性に着目して理解することが多いから。よく参照されているクラスに不具合があると、確認しなければいけない可能性のあるクラスが増える……という例が示されている。構造や関係性を表明するための手段としてクラスを細かく分ける。</p>
-<h3>常にresource-fulなroutingを使うべきというのには反対</h3>
+<h3>常にresource-fulなroutingを使うべき</h3>
 <p><code>resources :foos</code> と <code>get ...</code> とどっちを使うべきかという話について、後者を使うのは全くもって無益だとしている。そこまでか？でも、どちらにするかはともかく、どちらか片方に寄せるという姿勢は好ましいと思う。</p>
-<h3>Don’t Create Custom Actions, Create More Resourcesには賛成</h3>
+<h3>Don’t Create Custom Actions, Create More Resources</h3>
 <p>"create more resources"という表現は良い。"コントローラーを分けた方がいい"、とするよりもこっちのほうが納得感が出るかも?</p>
-<h3>Resources should never be nested more than 1 level deep. には賛成</h3>
+<h3>Resources should never be nested more than 1 level deep</h3>
 <p>という記述がガイドにあるのか。確かにこのルールが丁度良いと思う。</p>
 <h3>Bet you didn’t think routing was such a deep topic!</h3>
 <p>わかる。ルーティングは超大事な部分だが、かなり軽視されていてつらくなりがち。</p>

@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 29 May 2022 05:24:04 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-28]]></title><description><![CDATA[r7kamura's working log on 2022-05-28]]></description><link>https://r7kamura.github.io/diary/articles/22</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/22</guid><pubDate>Fri, 27 May 2022 19:59:17 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=1eI3HMxjMto&#x26;ab_channel=r7kamura">作業 with r7kamura #28 - YouTube</a></p><hr><p>懸垂 順手4回 逆手3回</p><hr><p>腕立て伏せ15回</p><hr><p>腕が終わりすぎてタンブラーを持ち上げるだけで苦労して笑っちゃった</p><hr><p>PowerToysには、最近VSCodeで開いたWorkspaceを検索する、という機能がある。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 29 May 2022 19:06:05 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-29]]></title><description><![CDATA[r7kamura's working log on 2022-05-29]]></description><link>https://r7kamura.github.io/diary/articles/23</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/23</guid><pubDate>Sat, 28 May 2022 21:00:25 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=AC-8gSGSpO8&#x26;ab_channel=r7kamura">作業 with r7kamura #29 - YouTube</a></p><hr><p>書いた
+<a href="https://r7kamura.com/articles/2022-05-28-air-conditioner-cleaning">エアコンの掃除と試運転</a></p><hr><p>書いた
+<a href="https://r7kamura.com/articles/2022-05-28-chinning-machine-st115">懸垂マシン ST115</a></p><hr><p>作業配信 第27回からYouTube Audio Libraryの楽曲を使ってみている。</p>
+<p>著作権申し立ては来ていないので、問題無し。2日前の配信である第27回には、楽曲のクレジットが概要欄に自動的に追加されていた。1日前の配信にはまだ追加されていなかった。2日程度掛かる模様。</p><hr><p>懸垂 逆手4回
+昨日の筋肉痛を引きずったままやったら全然できなくてすごい</p><hr><p>Chromeウェブストアの審査に出した。
+<a href="https://github.com/r7kamura/twitter-shortcut-plus">r7kamura/twitter-shortcut-plus: Browser extension to add more keyboard shortcuts to twitter.com.</a></p><hr><p>twitter.comを使うようにしてみた感想:</p>
+<ul>
+<li>シンプルで単一用途的なところがそこそこ良い
+<ul>
+<li>1つのデバイスや1つのアプリでいろいろ出来てしまうと、用もないのにそれを使い続けてしまうという負の側面がある</li>
+</ul>
+</li>
+<li>おすすめ○○が非常に鬱陶しい
+<ul>
+<li>Twitter Recommend Block をつくりたい</li>
+</ul>
+</li>
+</ul><hr><p>つくりはじめた
+<a href="https://github.com/r7kamura/twitter-recommendation-block">r7kamura/twitter-recommendation-block: Chrome extension to block recommendation and promotion contents on twitter.com.</a></p><hr><p>twitterのpromoted tweetsを <code>Element.remove</code> で消す作戦を試したところ、定期的な? データ取得タイミングでタイムラインがいきなり something went wrong に変わるという問題が常に再現したので、removeだとダメそう。代わりに element.style.display = "none" だと上手くいった。</p><hr><p>腹筋ローラーを25回ほどやった。ゆっくりめに戻るようにしたらしんどい。</p><hr><p>パワーグリップが届いたので順手懸垂を試したが、今日は既に腕の力が終わってて3回で限界に。代わりにレッグレイズを試して、今日は昨日よりは脚を伸ばしながら上げ下げできるようになっていた。これ腰に負担が来そうで少し怖い。</p>]]></content:encoded></item><item><title><![CDATA[2022-05-28]]></title><description><![CDATA[r7kamura's working log on 2022-05-28]]></description><link>https://r7kamura.github.io/diary/articles/22</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/22</guid><pubDate>Fri, 27 May 2022 19:59:17 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=1eI3HMxjMto&#x26;ab_channel=r7kamura">作業 with r7kamura #28 - YouTube</a></p><hr><p>懸垂 順手4回 逆手3回</p><hr><p>腕立て伏せ15回</p><hr><p>腕が終わりすぎてタンブラーを持ち上げるだけで苦労して笑っちゃった</p><hr><p>PowerToysには、最近VSCodeで開いたWorkspaceを検索する、という機能がある。</p>
 <p><img src="https://user-images.githubusercontent.com/111689/170793391-06900aa6-7644-4e8f-8342-dc4b8c9813b6.png" alt="image"></p>
 <p>これは一体どこからデータを取得しているのだろう、しかしソースコードが公開されているとはいえ、C#は読めねえ……と思っていたところ、StackOverflowでどこに保存されているか教えてくれている人がいた。</p>
 <p><a href="https://stackoverflow.com/questions/54244342/list-vs-code-recent-workspaces-from-the-command-line">vscode settings - List VS Code recent workspaces from the command line - Stack Overflow</a></p>

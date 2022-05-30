@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 30 May 2022 19:06:16 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-30]]></title><description><![CDATA[r7kamura's working log on 2022-05-30]]></description><link>https://r7kamura.github.io/diary/articles/24</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/24</guid><pubDate>Sun, 29 May 2022 20:08:36 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=nIIJ5DiPWes&#x26;ab_channel=r7kamura">作業 with r7kamura #30 - YouTube</a></p><hr><p>これの続き
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 30 May 2022 20:10:23 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-30]]></title><description><![CDATA[r7kamura's working log on 2022-05-30]]></description><link>https://r7kamura.github.io/diary/articles/24</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/24</guid><pubDate>Sun, 29 May 2022 20:08:36 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=nIIJ5DiPWes&#x26;ab_channel=r7kamura">作業 with r7kamura #30 - YouTube</a></p><hr><p>これの続き
 <a href="https://github.com/r7kamura/twitter-recommendation-block">https://github.com/r7kamura/twitter-recommendation-block</a></p><hr><p>完成させて、審査に出した。
 <a href="https://github.com/r7kamura/twitter-recommendation-block">https://github.com/r7kamura/twitter-recommendation-block</a></p><hr><p>ブログ記事を書いた。最近、書いてすぐに投稿せずに、毎日朝4時頃に定期実行されるバッチでの投稿に任せている。</p><hr><p><code>only_safe: false</code> にしても効かない、と思ったらinputsは全て文字列として扱われるらしかった。この不具合を修正した。
 <a href="https://github.com/r7kamura/rubocop-todo-corrector">https://github.com/r7kamura/rubocop-todo-corrector</a></p><hr><p>twitter-reecommendation-block、いいねされたツイートを見ると、おすすめユーザーを非表示にする機能が暴発していて、Followableなユーザーがツイートの下や、いいねを押したときのポップアップに表示されない、という問題があるようだ。</p><hr><p>いろいろ直した。いろいろ。</p><hr><ul>
@@ -576,52 +576,4 @@ irb(main):014:0> puts Diffy::Diff.new(a, b).to_s(:color)
 <ul>
 <li><a href="https://r7kamura.com/articles/2022-05-11-obs-auto-chapter">OBSでチャプター情報を自動で書き出す</a></li>
 <li><a href="https://www.youtube.com/watch?v=IFeJ3nFHPKI">作業 with r7kamura #12 - YouTube</a></li>
-</ul>]]></content:encoded></item><item><title><![CDATA[2022-05-11]]></title><description><![CDATA[r7kamura's working log on 2022-05-11]]></description><link>https://r7kamura.github.io/diary/articles/4</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/4</guid><pubDate>Tue, 10 May 2022 19:35:05 GMT</pubDate><content:encoded><![CDATA[<hr><p>作業配信をする。</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=eI0U_mbsF_o">作業 with r7kamura #11 - YouTube</a></li>
-</ul><hr><p>LuaのプロジェクトつくるためにLintツールとか整えたいんだけど、あんまりそういうのを使う文化圏じゃないのかな</p><hr><p>OBS Studio用のスクリプト置き場をつくった。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/obs-scripts">https://github.com/r7kamura/obs-scripts</a></li>
-</ul><hr><p>StyluaというLua用のFormatterを見つけた。</p>
-<ul>
-<li><a href="https://github.com/JohnnyMorganz/StyLua">https://github.com/JohnnyMorganz/StyLua</a></li>
-<li><a href="https://github.com/JohnnyMorganz/stylua-action">https://github.com/JohnnyMorganz/stylua-action</a></li>
-</ul>
-<p>obs-scriptsに導入した。インデントがハードタブなのが新鮮。</p>
-<p><img src="https://user-images.githubusercontent.com/111689/167722837-7040b8b7-8764-4b43-b606-0eb71430a5a4.png" alt="image"></p><hr><p>YouTubeのチャプターを試して、同名のチャプターがあっても良いということが分かった。</p>
-<pre><code>00:00 Scene A
-01:23 Scene B
-02:34 Scene C
-03:45 Scene A
-</code></pre><hr><p>現状こうなる。</p>
-<pre><code>00:00:00 Work
-00:11:23 Break
-00:21:23 Work
-01:11:23 Break
-</code></pre>
-<p>こうする方が良いか？ごちゃごちゃしてうるさい気もする。無い方が良いか。</p>
-<pre><code>00:00:00 Work 1
-00:11:23 Break 1
-00:21:23 Work 2
-01:11:23 Break 2
-</code></pre><hr><p>現状は毎回同一のファイルに出力されるが、できればディレクトリを選ぶとそこに違うファイル名で生成してほしい。配信開始時のタイムスタンプで、chapters-YYYYMMDDhhmmss.txt とかがいいかも。</p><hr><p>ディレクトリを選択する形式にした。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/obs-scripts/pull/3">r7kamura/obs-scripts#3</a></li>
-</ul><hr><p>ディレクトリ構造を整えたり (gh-pagesブランチはやめてdocsディレクトリで運用することにした)、説明を書いたりした。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/obs-browser-sources">https://github.com/r7kamura/obs-browser-sources</a></li>
-</ul><hr><p>色を付けたり、文字サイズを画面幅に合わせたりした。</p>
-<ul>
-<li><a href="https://r7kamura.github.io/obs-browser-sources/pomodoro.html">https://r7kamura.github.io/obs-browser-sources/pomodoro.html</a></li>
-</ul><hr><p>Logicool CaptureがOBSから映像入力デバイスとして認識されなくなってつらい。今朝方Windowsのアップデートがあったが、あれは影響しているだろうか。</p><hr><ul>
-<li>Tweetdeck Shortcut Plus</li>
-<li>GitHub Shortcut Plus</li>
-</ul>
-<p>みたいなやつが欲しい。要するに、ユーザーがショートカットキーを設定できる余地を増やしたい。</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-11-pomodoro-timer-for-obs">OBS用ポモドーロタイマー</a></p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-11-obs-auto-chapter">OBSでチャプター情報を自動で書き出す</a></p><hr><p>GitHubのAppearanceをLight High Contrastに変更したら、ゲームボーイみたいなUIになって良くなった。</p><hr><p>amazon_url_shortenerのmanifest v3化を始めた。permissionsには文字列でURLを指定できなくなったのか。</p>
-<p><img src="https://user-images.githubusercontent.com/111689/167769546-b80d8711-ee7c-4345-8267-93c36c6af3e1.png" alt="image"></p>
-<ul>
-<li><a href="https://github.com/r7kamura/amazon_url_shortener/pull/14">r7kamura/amazon_url_shortener#14</a></li>
-</ul><hr><p>manifest v3対応をしつつ、高速化も加えた。URLからASINを推測可能な場合はそれを利用する。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/amazon_url_shortener">https://github.com/r7kamura/amazon_url_shortener</a></li>
-</ul><hr><p>Lua少し調べて書いて上手く動いたものの、環境構築とかテストの書き方とかの情報がもはや検索してもなかなか辿り着くのが難しい状況で、今後これに注力していこうみたいな気持ちにはならなかった。Pythonで書いた方が良かったかも</p>]]></content:encoded></item></channel></rss>
+</ul>]]></content:encoded></item></channel></rss>

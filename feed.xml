@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 31 May 2022 10:47:18 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-30]]></title><description><![CDATA[r7kamura's working log on 2022-05-30]]></description><link>https://r7kamura.github.io/diary/articles/24</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/24</guid><pubDate>Sun, 29 May 2022 20:08:36 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=nIIJ5DiPWes&#x26;ab_channel=r7kamura">作業 with r7kamura #30 - YouTube</a></p><hr><p>これの続き
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 31 May 2022 19:06:15 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-05-31]]></title><description><![CDATA[r7kamura's working log on 2022-05-31]]></description><link>https://r7kamura.github.io/diary/articles/25</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/25</guid><pubDate>Mon, 30 May 2022 20:09:12 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=MB2Mfv_WHZI&#x26;ab_channel=r7kamura">作業 with r7kamura #31 - YouTube</a></p><hr><p>初審査に通っていた。不具合修正を加えて次期バージョンの審査を申請した。名前もRecommendからRecommendationに変更する。
+<a href="https://chrome.google.com/webstore/detail/twitter-recommend-block/ekhgcgpangmhninpoeefefbcepiohaod?hl=ja&#x26;authuser=0">Twitter Recommend Block - Chrome ウェブストア</a></p><hr><p>懸垂をやった。</p>
+<ul>
+<li>Y字 4回</li>
+<li>順手 3回</li>
+<li>逆手 3回</li>
+</ul><hr><p>投稿されていた: <a href="https://r7kamura.com/articles/2022-05-30-supplement">サプリ</a></p><hr><p>音が全体的に小さいと指摘されて、確かにアーカイブを聴く限り小さい気がしていたので、変更を加えた。
+Yetiはハードウェア側でGainの調整ができるので、これを50%程度だったのを、85%程度の位置に変更した。
+これだけだとノイズが大きくなるはずなので、合わせてOBSでRNN方式のノイズ除去フィルターを掛ける。</p><hr><p>作業配信31日の振り返り記事を書いた。</p><hr><p>使っている文具:</p>
+<ul>
+<li><a href="https://www.amazon.co.jp/dp/B002CKDDYQ">Amazon | 三菱鉛筆 水性ボールペン ユニボール プロテック uni-ball UB-155 0.5mm 青 / 10本 | 水性ボールペン | 文房具・オフィス用品</a>
+<ul>
+<li>10年以上前から使っている</li>
+<li>文具屋によく置いてる</li>
+<li>どうでも良いことだがペン回しにおいてもバランスが良い</li>
+</ul>
+</li>
+<li><a href="https://www.amazon.co.jp/dp/B016PIGCG6?th=1">Amazon | コクヨ ノート リングノート 大人 キャンパス 方眼罫 A5 50枚 ス-T133S5-D 黒 | 文房具・オフィス用品 | 文房具・オフィス用品</a>
+<ul>
+<li>端まで全面印刷されてる薄めの5mm方眼、ダブルリング、というところが気に入っている</li>
+</ul>
+</li>
+</ul><hr><p>腹筋ローラー 10回2セット</p><hr><p>腹筋ローラー、立ちコロは最初は戻れなくてもぺたんとお腹が地面につくまでやるだけでも良いらしい。戻るときより行くときの方が負荷が高い傾向にあり、それだけでも筋トレになるとのこと。</p><hr><p>ケーブルマネジメントをしっかりやっていきたいという気持ちがあり、ディスプレイ用に長めのHDMIケーブルと、それからケーブルを束ねるためのやつを購入するかという気持ちになった</p>]]></content:encoded></item><item><title><![CDATA[2022-05-30]]></title><description><![CDATA[r7kamura's working log on 2022-05-30]]></description><link>https://r7kamura.github.io/diary/articles/24</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/24</guid><pubDate>Sun, 29 May 2022 20:08:36 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=nIIJ5DiPWes&#x26;ab_channel=r7kamura">作業 with r7kamura #30 - YouTube</a></p><hr><p>これの続き
 <a href="https://github.com/r7kamura/twitter-recommendation-block">https://github.com/r7kamura/twitter-recommendation-block</a></p><hr><p>完成させて、審査に出した。
 <a href="https://github.com/r7kamura/twitter-recommendation-block">https://github.com/r7kamura/twitter-recommendation-block</a></p><hr><p>ブログ記事を書いた。最近、書いてすぐに投稿せずに、毎日朝4時頃に定期実行されるバッチでの投稿に任せている。</p><hr><p><code>only_safe: false</code> にしても効かない、と思ったらinputsは全て文字列として扱われるらしかった。この不具合を修正した。
 <a href="https://github.com/r7kamura/rubocop-todo-corrector">https://github.com/r7kamura/rubocop-todo-corrector</a></p><hr><p>twitter-reecommendation-block、いいねされたツイートを見ると、おすすめユーザーを非表示にする機能が暴発していて、Followableなユーザーがツイートの下や、いいねを押したときのポップアップに表示されない、という問題があるようだ。</p><hr><p>いろいろ直した。いろいろ。</p><hr><ul>

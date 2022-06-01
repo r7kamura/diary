@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 01 Jun 2022 19:06:18 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-01]]></title><description><![CDATA[r7kamura's working log on 2022-06-01]]></description><link>https://r7kamura.github.io/diary/articles/26</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/26</guid><pubDate>Tue, 31 May 2022 22:23:44 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=73ru7RTmXNY&#x26;ab_channel=r7kamura">作業 with r7kamura #32 - YouTube</a></p><hr><p>腕立てを丁寧めにやったら腕が上がらなくなった。タンブラーが重い</p><hr><p>レッグレイズやってみたところ、腰をパッドに少し載せるようにしたらしっかり脚が上がるようになった。これであってるのか……? 腰に負担が来てそうで怖い気もする。</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-31-work-with-me-31-days">作業配信31日</a></p><hr><p>腹筋ローラー 10回1セット
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 01 Jun 2022 20:50:23 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-01]]></title><description><![CDATA[r7kamura's working log on 2022-06-01]]></description><link>https://r7kamura.github.io/diary/articles/26</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/26</guid><pubDate>Tue, 31 May 2022 22:23:44 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=73ru7RTmXNY&#x26;ab_channel=r7kamura">作業 with r7kamura #32 - YouTube</a></p><hr><p>腕立てを丁寧めにやったら腕が上がらなくなった。タンブラーが重い</p><hr><p>レッグレイズやってみたところ、腰をパッドに少し載せるようにしたらしっかり脚が上がるようになった。これであってるのか……? 腰に負担が来てそうで怖い気もする。</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-31-work-with-me-31-days">作業配信31日</a></p><hr><p>腹筋ローラー 10回1セット
 プランク 90秒 + 60秒
 レッグレイズ 5回1セット
 腕立て 15回1セット</p>]]></content:encoded></item><item><title><![CDATA[2022-05-31]]></title><description><![CDATA[r7kamura's working log on 2022-05-31]]></description><link>https://r7kamura.github.io/diary/articles/25</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/25</guid><pubDate>Mon, 30 May 2022 20:09:12 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=MB2Mfv_WHZI&#x26;ab_channel=r7kamura">作業 with r7kamura #31 - YouTube</a></p><hr><p>初審査に通っていた。不具合修正を加えて次期バージョンの審査を申請した。名前もRecommendからRecommendationに変更する。
@@ -464,35 +464,4 @@ ln -fs ~/dotfiles/.bashrc ~/.bashrc
 <p>とりあえずリポジトリをつくった。実装はまだ無い。</p>
 <p><a href="https://github.com/r7kamura/rubocop_todo_corrector">https://github.com/r7kamura/rubocop_todo_corrector</a></p>
 </blockquote>
-<p>そこそこ実装を進めた。bundle installしてrubocop --auto-gen-configを実行できるところまでは出来たが、もう少し機能性を改善したい。50%ぐらいできた感じ。</p><hr><p>運動不足解消の入り口として、腹筋ローラーを配信中にやると良いのではないか</p>]]></content:encoded></item><item><title><![CDATA[2022-05-13]]></title><description><![CDATA[r7kamura's working log on 2022-05-13]]></description><link>https://r7kamura.github.io/diary/articles/6</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/6</guid><pubDate>Thu, 12 May 2022 19:31:29 GMT</pubDate><content:encoded><![CDATA[<hr><p><img src="https://user-images.githubusercontent.com/111689/168153951-525108da-356f-4fef-8b0d-fe008cb34c76.JPG" alt="IMG_6590"></p>
-<p>ロジクールから無料保証でマウントパーツを取り寄せたところ、カメラごと届いてしまった。ロジクールさんそういうところあるよね</p><hr><p>サンプルプロジェクトをつくってrubocop_challengerを試運転させてみる</p>
-<ul>
-<li><a href="https://github.com/ryz310/rubocop_challenger">https://github.com/ryz310/rubocop_challenger</a></li>
-</ul><hr><p>rubocop_challengerが上手く動いた。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/rspec-json_matcher/pull/10">r7kamura/rspec-json_matcher#10</a></li>
-</ul>
-<pre><code>echo /vendor/ >> .gitignore
-</code></pre>
-<p>事前にこれをやらないとcommitの作成に失敗するのでハマった。</p>
-<p>デフォルトブランチがmainの場合は --base-branch=main オプションを付けないといけない。</p>
-<p>何度か実行していると同じCopに対して重複してPull Requestがつくられてしまう。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/rspec-json_matcher/pull/11">r7kamura/rspec-json_matcher#11</a></li>
-</ul><hr><p>custom actionにしている。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/rubocop-challenge">https://github.com/r7kamura/rubocop-challenge</a></li>
-</ul><hr><p>Stripeが<a href="https://markdoc.io/">Markdoc</a>というMarkdownベースの記法を持つドキュメント生成ツールを公開したらしい。</p>
-<p>Markdownの記法に加えて、<code>{% foo %}</code> みたいな記法で色々なことができるとのこと。</p><hr><p>OBSでのシーン変更時に音を自動的にfade outできないのか？と思って調べた。</p>
-<p>"<a href="https://obsproject.com/forum/threads/fading-audio-between-scenes.122722/">Question / Help - Fading Audio between scenes ?? | OBS Forums</a>" <a href="https://obsproject.com/forum/threads/fading-audio-between-scenes.122722/">https://obsproject.com/forum/threads/fading-audio-between-scenes.122722/</a></p>
-<p>デフォルトでそうなっている的なことが言われているので、多分メディアソースでやれば上手くいく？</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-13-rubocop-challenge">.rubocop_todo.ymlを解消するPull RequestをGitHub Actionsで自動生成する</a></p><hr><p>mermaid記法の練習として、料理メモを置くリポジトリをつくった。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/cooking">https://github.com/r7kamura/cooking</a></li>
-</ul><hr><p>恐らく別の問題でrubocop_challengerがエラーになっていたので原因を調べたところ、別の不具合っぽいものを見つけたのでPull Requestを出した。</p>
-<ul>
-<li><a href="https://github.com/ryz310/rubocop_challenger/pull/612">ryz310/rubocop_challenger#612</a></li>
-</ul>
-<p>それから機能要望のIssueを出した。もしかしたら、上のエラーが出たのはこれが原因かもしれない。</p>
-<ul>
-<li><a href="https://github.com/ryz310/rubocop_challenger/issues/613">ryz310/rubocop_challenger#613</a></li>
-</ul><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-13-mermaid-recipe-memo">Mermaid記法で料理のレシピを書く</a></p>]]></content:encoded></item></channel></rss>
+<p>そこそこ実装を進めた。bundle installしてrubocop --auto-gen-configを実行できるところまでは出来たが、もう少し機能性を改善したい。50%ぐらいできた感じ。</p><hr><p>運動不足解消の入り口として、腹筋ローラーを配信中にやると良いのではないか</p>]]></content:encoded></item></channel></rss>

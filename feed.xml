@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 06 Jun 2022 05:20:02 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-05]]></title><description><![CDATA[r7kamura's working log on 2022-06-05]]></description><link>https://r7kamura.github.io/diary/articles/30</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/30</guid><pubDate>Sat, 04 Jun 2022 22:07:47 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=Nmf0NRTqbyw">作業 with r7kamura #36 - YouTube</a></p><hr><p>カメラが気になってたので、GH5M2とsigma fpでつくったcinematic movieを漁ってみたり、iPhoneでcinematic movieを撮るための方法を色々教えてくれている動画を1～2本見たりした。まるで知らない分野なので、ちょっと見るだけで経験値効率がすごい</p><hr><p>Epoccum + iPhone 12 Pro Max + Windowsで配信するのを試してみた。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 06 Jun 2022 19:06:31 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-06]]></title><description><![CDATA[r7kamura's working log on 2022-06-06]]></description><link>https://r7kamura.github.io/diary/articles/31</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/31</guid><pubDate>Sun, 05 Jun 2022 21:15:32 GMT</pubDate><content:encoded><![CDATA[<hr><p>GitHubの検索機能がおかしく、変なものがヒットしてしまい、<code>gh-diary</code> が意図通り動かなかった。</p>
+<pre><code>$ gh issue list --search "'2022-06-06' in:title"
+
+Showing 5 of 5 issues in r7kamura/diary that match your search
+
+#30  2022-06-05    about 9 hours ago
+#29  2022-06-04    about 1 day ago
+#28  2022-06-03    about 2 days ago
+#27  2022-06-02    about 3 days ago
+#26  2022-06-01    about 4 days ago
+</code></pre>
+<p>今回このIssueは初めて手動でつくった。</p><hr><p>RedditとStackOverflowの投稿を見つけた。StackOverflowの方に、無理です……と回答しておいた。「いや出来ますよ？」という回答が来ると恥ずかしいかもしれないが、それはそれで答えが知れて嬉しいし、無理だと信じている者が1人居る、という情報を残しておくことできっと誰かの役に立つだろう。</p>
+<ul>
+<li><a href="https://www.reddit.com/r/github/comments/q1a98l/how_to_search_github_issue_by_exact_match/">How to search GitHub issue by EXACT match? : github</a></li>
+<li><a href="https://stackoverflow.com/questions/64173152/how-search-github-issue-by-exact-match-like-double-quotes-for-google/72511254#72511254">How search github issue by EXACT match (like Double Quotes for Google) - Stack Overflow</a></li>
+</ul><hr><p>二重引用符だといけると何人かから教えてもらった。動く方法が分かって良かった。gh-diaryも二重引用符を使うように修正しておいた</p>
+<ul>
+<li><a href="https://github.com/r7kamura/gh-diary/pull/5">r7kamura/gh-diary#5</a></li>
+</ul><hr><p>iPhoneで配信するとたまに画面が暗くなる問題があり、画面が写り込んでいることと、iVCamが自動で何かやることが悪い影響を及ぼしているのではないか、と考えている。たしかに自動調整が有効化されている項目が何個かあったので、PC側でも、iPhone側でも無効化してみた。</p><hr><p>WSL2のdevcaontainerで <code>git pull</code> したら完全に停止して困っていた問題、ホスト側の .bashrc に</p>
+<pre><code>eval "$(ssh-agent)"
+</code></pre>
+<p>を追加したら解決した。これはログイン時にのみ実行すればいいと思うので、多分 .bash_profile で良い。</p>
+<hr>
+<p>デバッグの過程として、まず</p>
+<pre><code>ssh -T git@github.com
+</code></pre>
+<p>でも再現することを確認し、次に</p>
+<pre><code>ssh-add -l
+</code></pre>
+<p>でも再現することを確認した。この状態で、ホスト側で起動したシェルで適当に</p>
+<pre><code>eval "$(ssh-agent)"
+</code></pre>
+<p>を実行。これ自体では解決はしないのだけど、<code>ssh-agent</code> がホスト側で問題無く実行できるということはこれで確かめられる。</p>
+<p>その後、冒頭のように .bashrc にこれを記述してから試してみると、問題が解消された。</p>
+<p>最初、次のページを見たときは「<code>git pull</code> で問題が出る点は似ているが、permission deniedと表示される訳ではないから違うのかも」と思っていたが、解決してから振り返ると、問題としては同じものだったようだ。</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/67178239/ssh-forwarding-using-wsl2-and-vs-code-containers-on-windows">docker - SSH forwarding using WSL2 and VS code containers on Windows - Stack Overflow</a></li>
+</ul>
+<blockquote>
+<p>To get VS Code to use your SSH keys from your WSL2 instance inside a Docker container running on the WSL2 backend, you need to tell WSL2 to create an ssh-agent at startup, and add your ssh key to the agent. When VS Code attaches to a container running on the WSL2 backend, it will automatically pick up the running ssh-agent, and allow you to authenticate with your WSL2 SSH keys inside your container.</p>
+</blockquote>
+<p>という情報が明示されていて良かった。</p>
+<p>それから、シェルを起動するたびにいちいち <code>ssh-agent</code> を起動していは無数に <code>ssh-agent</code> が起動してしまうことになるし、何よりそのたびに <code>ssh-add</code> を実行しなければいけず、SSH鍵にパスフレーズを付けている場合にこれは非常に手間である。そこで、keychainを導入してシェルスクリプトを生成し、このシェルスクリプトをシェル起動時に読み込ませることにした。</p>
+<ul>
+<li><a href="https://zenn.dev/kaityo256/articles/ssh_agent_on_wsl">WSL2のUbuntuでkeychain経由でssh-agentを使う</a></li>
+</ul><hr><p><img src="https://user-images.githubusercontent.com/111689/172076978-b6803aa1-37d3-45d6-b9e8-d18a1cfc928b.png" alt="image"></p>
+<p>Google IMEの他にデフォルトのMicrosoft IMEが存在していて、たまにこれに切り替わったり、Windows + Spaceを間違って押したときに切り替わってしまったりと、たいへん不便だった。言語の設定 > 日本語 > オプション > キーボード からMicrosoft IMEを取り除くことで、この問題が解消された。削除と言うと怖い響きだが、これは簡単に元に戻せるらしい。また、WindowsアップデートなどでMicrosoft IMEが勝手に追加される場合もあるので、このときは同様の処理を行わなければならない。</p><hr><p>devcontainerで使うためのinstall.shでは、sudoを付けていると動かない、ということが分かった。</p>
+<p>なんかことあるごとに "dotfiles.repository": "r7kamura/dotfiles" の設定がリセットされるのだけど、常にこの設定を使うようにVSCodeのユーザー設定に伝える方法はないのだろうか。設定画面にGUIで項目はないものの、普通にJSONにこれを書き込めば意図通り動くのか? とりあえず足してみた。</p><hr><p>ホストの ~/.config/gh/hosts.yml にghの認証情報が含まれているのだけど、コンテナでghコマンドを使うために、これをコンテナでも再利用したい。Dockerのマウント時にこれを指定すれば良いような気がするが、dotfilesでghを使うという話だから、これはリポジトリ固有の話ではないし、しかしinstall.shはコンテナの中で実行されると思うので上手く動かなさそうだし、どうしたものか</p>
+<ul>
+<li><a href="https://code.visualstudio.com/remote/advancedcontainers/add-local-file-mount">Add local file mount to a container</a></li>
+</ul><hr><p>git credentials helperがローカルのOSにインストールされている場合はなんか上手いことやってくれる的なことが書いてある。これghにも使えるんだろうか</p>
+<ul>
+<li><a href="https://docs.github.com/en/get-started/getting-started-with-git/caching-your-github-credentials-in-git">Caching your GitHub credentials in Git - GitHub Docs</a></li>
+</ul><hr><p>docker-composeを使うようにして、gitignoreしたdocker-compose.override.ymlで設定する、というworkaroundが良い気がするなあ</p><hr><p>Railsのメソッド定義を省略してテンプレートだけが存在するバージョンのアクションでは、before_actionが実行されないらしいということをjpmobileの開発者に教えてもらった。マジか……。</p>
+<pre><code>Started GET "/" for ::1 at 2022-06-06 10:49:51 +0900
+   (0.4ms)  SELECT sqlite_version(*)
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 341)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 619)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 3042)
+</code></pre>
+<p>こういう感じでログが出るので、明らかに <code>HomeController#index</code> というactionがありそうだし、当然 <code>before_action</code> も実行されるだろ、と思いそう。</p><hr><blockquote>
+<p>Railsのメソッド定義を省略してテンプレートだけが存在するバージョンのアクションでは、before_actionが実行されないらしいということを教えてもらった</p>
+</blockquote>
+<p>実際に確認したところ、これは誤りだった。</p><hr><p>影響力の低いネガティブな情報、をニュースサイトなどからフィルタリングしたいかも、という話をした。</p><hr><p>jpmobileにPull Requestを出した。</p><hr><p>雑Custom cop置き場を有効活用している。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/sevencop/pull/1">r7kamura/sevencop#1</a></li>
+</ul>]]></content:encoded></item><item><title><![CDATA[2022-06-05]]></title><description><![CDATA[r7kamura's working log on 2022-06-05]]></description><link>https://r7kamura.github.io/diary/articles/30</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/30</guid><pubDate>Sat, 04 Jun 2022 22:07:47 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=Nmf0NRTqbyw">作業 with r7kamura #36 - YouTube</a></p><hr><p>カメラが気になってたので、GH5M2とsigma fpでつくったcinematic movieを漁ってみたり、iPhoneでcinematic movieを撮るための方法を色々教えてくれている動画を1～2本見たりした。まるで知らない分野なので、ちょっと見るだけで経験値効率がすごい</p><hr><p>Epoccum + iPhone 12 Pro Max + Windowsで配信するのを試してみた。</p>
 <p>良いところ:</p>
 <ul>
 <li>ロジクールのウェブカメラC980GRに比べて格段に画質が良くなった</li>

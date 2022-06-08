@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 08 Jun 2022 19:06:14 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-08]]></title><description><![CDATA[r7kamura's working log on 2022-06-08]]></description><link>https://r7kamura.github.io/diary/articles/33</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/33</guid><pubDate>Tue, 07 Jun 2022 21:10:51 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=mhf055j9DaQ">作業 with r7kamura #39 - YouTube</a></p><hr><p>sigma fp Lの開封や試運転などを少しやった。毎日ちまちま触って学んでいきたい。</p><hr><p>運動するようになったのでまた以前と同じプロテインを注文した。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 08 Jun 2022 23:20:53 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-08]]></title><description><![CDATA[r7kamura's working log on 2022-06-08]]></description><link>https://r7kamura.github.io/diary/articles/33</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/33</guid><pubDate>Tue, 07 Jun 2022 21:10:51 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=mhf055j9DaQ">作業 with r7kamura #39 - YouTube</a></p><hr><p>sigma fp Lの開封や試運転などを少しやった。毎日ちまちま触って学んでいきたい。</p><hr><p>運動するようになったのでまた以前と同じプロテインを注文した。
 <a href="https://r7kamura.com/articles/2020-02-17-my-protein">マイプロテインのプロテインを買った</a></p><hr><ul>
 <li>懸垂 腕広げて5回 + 逆手4回</li>
 <li>懸垂 順手2回</li>
@@ -460,46 +460,4 @@ chrome.action.onClicked.addListener(() => {
 <a href="https://gs.statcounter.com/os-market-share/desktop/worldwide">Desktop Operating System Market Share Worldwide | Statcounter Global Stats</a></p><hr><p>GitHubがMarkdownの引用に新しい記法を追加しようとしているという話:
 <a href="https://github.com/github/feedback/discussions/16925">[Markdown] An option to highlight a "Note" and "Warning" using blockquote (Beta) · Discussion #16925 · github/feedback</a></p><hr><p>Atomic Habitsを読み終えた。平凡な時間管理の話が紹介されるのかと思いきや、あらゆる観点について真面目に考えているという本で、印象が良かった。また、普段は人が説明してくれないような生活のあらゆることについて説明してくれて、そうそう、そういう話が知りたかったんだよね、と思いところが何度もあった。その話はいい話だからあと100mぐらい深掘りしてほしいのにな～と思うことが多かった。</p>
 <p>Kindle版も購入してAudible版と併用しようとしたものの、結局はKindle版で1時間、Audibleで9時間ぐらいの割合で読んだので、Kindle版は必要なかった。等速で聞いていたものの、1.25倍ぐらいで聞いても良かったかも。</p>
-<p>冒頭の「はじめに」の事故のエピソード以外はほぼ全部読んで良かった内容だった。冒頭の事故のエピソードは本当に最悪で、怖い事故が紹介されてただ怖いだけなので無い方がいい。そこから奇跡的に回復して上手くいった話として構成されているが、この最初の部分だけは本当に読まなくて良い。かなりいい本なのに、普通の人は冒頭から読むはずなので、ここで読者を失うのは勿体ない。いい本だが、この冒頭のせいで他人にも勧めづらい。言うほどか？という話ではあるのだけど、それ以外の良さのせいでこの部分の悪さが浮き彫りになっている。</p><hr><p>TweetDeckでやりたいこと全部キーボードでできるのすごい。腕がもう1本生えたような感覚。</p>]]></content:encoded></item><item><title><![CDATA[2022-05-20]]></title><description><![CDATA[r7kamura's working log on 2022-05-20]]></description><link>https://r7kamura.github.io/diary/articles/14</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/14</guid><pubDate>Thu, 19 May 2022 19:33:45 GMT</pubDate><content:encoded><![CDATA[<p>.</p><hr><p><a href="https://chrome.google.com/webstore/detail/copy-markdown-link/gkceaaphhbeanfciglgpffnncfpipjpa">Copy Markdown Link.</a>がChromeウェブストアで公開された。</p><hr><p>Copy Markdown Linkを紹介する旨の記事を一応書いた。よくあるものなので大したことは無いものの、一応。</p><hr><p><a href="https://github.com/antfu/vitesse-webext">https://github.com/antfu/vitesse-webext</a> というブラウザ拡張向けテンプレートリポジトリを試してみて、確かに動いたが、色々入りまくっててよく分からん (ちゃんと読んでないだけ) という気持ちになったので、やはり自前で小さいテンプレートリポジトリを持つか……という気持ちを新たにした。しかしまあ優れてそうなところは沢山あって、</p>
-<ul>
-<li>ESLint対応</li>
-<li>他ブラウザ対応</li>
-<li>content-script対応</li>
-<li>その他よく知らないけど色々やってくれるはず</li>
-</ul>
-<p>という違いはありそう。</p><hr><p>ブログ記事を書いてからすぐ配信するのではなく定時バッチ (日本時間午前4時) でのビルドにのみ頼るようにした結果、なんというか気持ちに余裕が出てきたような気がしなくもない。がすぐ公開された方がアドだろみたいな気持ちもあり、これは判断が難しいところ。すぐ公開されて反応を気にしすぎてしまうというデメリット、手軽に文章を書いて雑に投稿できるというメリットをどう評価するかという話。</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-20-copy-markdown-link">Copy Markdown Link</a></p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-20-image-caption">画像のキャプション復活</a></p><hr><p>結局、</p>
-<pre><code>gh workflow run import --repo r7kamura/r7kamura.com
-</code></pre>
-<p>とか叩いて更新を試みてしまっていて、全く意味がない。</p><hr><p><a href="https://www.youtube.com/watch?v=IXwOcXgY3WM&#x26;ab_channel=r7kamura">作業 with r7kamura #20 - YouTube</a></p><hr><p><a href="https://github.com/r7kamura/diary/issues/14">#14</a> だけIssue作成時にIssueイベントが発行されておらず、Issueのデータが同期されていなかった。発行されないこともあるのだな</p><hr><p>馬がメールを自動返信してくれるサービス、良すぎる
-<a href="https://www.youtube.com/watch?v=kbfD_lX1Tog&#x26;ab_channel=InspiredbyIceland">OutHorse Your Email to Iceland’s Horses - YouTube</a></p>
-<p><img src="https://user-images.githubusercontent.com/111689/169418733-4e277647-641b-478c-aa67-69f4c4117ea1.png" alt="image"></p><hr><p>Rails 6.1 (7.0かも?) から、使い方次第ではpeform_enqueued_jobsを使っているコードを書き換えないといけなくなった。</p>
-<pre><code class="language-ruby"># NG (Rails 6.1未満ではOK)
-expect {
-  perform_enqueued_jobs { subject }
-}.to raise_error(X)
-
-# OK
-perform_enqueued_jobs {
-  expect { subject }.to raise_error(X)
-}
-</code></pre>
-<ul>
-<li><a href="https://github.com/rails/rails/issues/41290">perform_enqueued_jobs does not return the type of error raised in the job · Issue #41290 · rails/rails</a></li>
-</ul><hr><p>VSCodeのdevcontainerの機能を使ってみることにした。</p>
-<p>Node.jsのイメージを使うようにDockerfileを置く。コマンドパレットでReopen container的なやつを実行すると、.devcontainer/devcontainer.json が自動生成された。この状態でVSCodeでターミナルを開くと、そのDockerfileで開かれるようになった。node:18には偶然Gitもインストールされていたので助かった。</p>
-<p>しかし普段使っている環境とはdotfilesも異なるしなんだか居心地が悪い。そう思って調べていたら、VSCodeの設定でお前のdotfilesのリポジトリのURLを入力すれば勝手にインストールしてやるよという機能が存在することが分かった。ただ、これを使うにはリポジトリのルートに install.sh みたいなファイルが無いといけないということで、雑にそれをこしらえた。</p>
-<p><a href="https://github.com/r7kamura/dotfiles">https://github.com/r7kamura/dotfiles</a></p>
-<p>install.shの内容はこれだけ</p>
-<pre><code class="language-bash">#!/bin/bash
-set -euo pipefail
-
-ln -fs ~/dotfiles/.bashrc ~/.bashrc
-</code></pre>
-<p>URLを設定後、そのままでは特に何も反映されなかったが、VSCodeのworkspaceを一度開き直すことで無事設定が反映され、いつものような環境で開発できるようになった。</p>
-<p><img src="https://user-images.githubusercontent.com/111689/169434352-587f4ea9-680b-4e78-bd4c-799348f95710.png" alt="image"></p><hr><p>devcontainerからgit pushしようとするとプロセスから音沙汰がなくなりworkspaceを閉じるしかなくなる、という問題に遭遇したので一時撤退することにした。</p><hr><p>つくりはじめた: <a href="https://github.com/r7kamura/tweetdeck-shortcut-plus">r7kamura/tweetdeck-shortcut-plus: Browser extension to add more keyboard shortcuts on TweetDeck.</a></p><hr><p>今日の俗世:</p>
-<ul>
-<li>デス鮭ハンター</li>
-<li>4630万円誤送金 男 逮捕</li>
-<li>首相 痛恨ミス 正解は5階</li>
-</ul><hr><p>腹筋ローラーが届いたので、膝ついて10回だけやった。</p><hr><p>朝から鼻水が出るし喉も痛かったので、少し風邪気味かもしれない。最近銭湯によく行っていたせいか？</p><hr><p>YouTubeからあなたの投稿した動画はスパムであると警告がきて直近の動画が非公開化された。調べてみると、この件に関しては再審査する余地もなく、またサポートも受けられないらしい。何が原因かが分からないが、90日以内にあと2回警告を受けるとチャンネルが停止されるという記載があったので (スパムの場合は1回で停止だという説明も見かけたが、今回停止されていないことから、どうやら常にそうではないらしい)、何が原因か確かめるために実験できる機会は残り2度だけらしい。この実験に2度失敗するとチャンネルが停止される。</p>
-<p>問題の原因について、著作権フリーの楽曲を再生していることだと推測している。これに賭けて、次回は配信中に楽曲を再生しないことを試して、その後その動画が非公開化されないかどうかをもって、成否を確かめることにしようか考えている。</p><hr><p><a href="https://zenn.dev/takahashim/articles/ab48aaedab1e68">『Sustainable Web Development with Ruby on Rails』はRails使ってるなら絶対面白いと思う</a> が面白そうだった。</p><hr><p>以前からYouTubeの配信で使うための音楽を有料で使わせてくれるサービスが無いか探していて、 <a href="https://tunetank.com/">https://tunetank.com/</a> が良さそうだったので使ってみることにした。</p>]]></content:encoded></item></channel></rss>
+<p>冒頭の「はじめに」の事故のエピソード以外はほぼ全部読んで良かった内容だった。冒頭の事故のエピソードは本当に最悪で、怖い事故が紹介されてただ怖いだけなので無い方がいい。そこから奇跡的に回復して上手くいった話として構成されているが、この最初の部分だけは本当に読まなくて良い。かなりいい本なのに、普通の人は冒頭から読むはずなので、ここで読者を失うのは勿体ない。いい本だが、この冒頭のせいで他人にも勧めづらい。言うほどか？という話ではあるのだけど、それ以外の良さのせいでこの部分の悪さが浮き彫りになっている。</p><hr><p>TweetDeckでやりたいこと全部キーボードでできるのすごい。腕がもう1本生えたような感覚。</p>]]></content:encoded></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sat, 11 Jun 2022 21:14:52 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-10]]></title><description><![CDATA[r7kamura's working log on 2022-06-10]]></description><link>https://r7kamura.github.io/diary/articles/35</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/35</guid><pubDate>Thu, 09 Jun 2022 21:45:01 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=nCx63dQbaEQ">作業 with r7kamura #41 - YouTube</a></p><hr><p>最近、以前と比べて、作業ログやノートに情報を書き残すことが減った。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sat, 11 Jun 2022 21:15:15 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-11]]></title><description><![CDATA[r7kamura's working log on 2022-06-12]]></description><link>https://r7kamura.github.io/diary/articles/37</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/37</guid><pubDate>Sat, 11 Jun 2022 21:13:58 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=yetyBYkZceI">作業 with r7kamura #42 - YouTube</a></p>]]></content:encoded></item><item><title><![CDATA[2022-06-10]]></title><description><![CDATA[r7kamura's working log on 2022-06-10]]></description><link>https://r7kamura.github.io/diary/articles/35</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/35</guid><pubDate>Thu, 09 Jun 2022 21:45:01 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=nCx63dQbaEQ">作業 with r7kamura #41 - YouTube</a></p><hr><p>最近、以前と比べて、作業ログやノートに情報を書き残すことが減った。
 GW期間と比べて仕事時間の割合が増えて、クリエイティブなことが要求されることが少なくなったから？</p><hr><p>腹筋ローラー22日目。
 膝コロ8往復を1日2セットはやるようにしていて、続いている。立ちコロはまだできそうにない。</p><hr><p>例のスクワットやった (3日ぶり3回目)。今回も5種目やってギブアップ</p><hr><p>レッグレイズが綺麗にできるようになって嬉しい</p><hr><p>最近OSS活動率が減ってきて、業務専用活動率が増えてきている気がする。
 もう少しOSS活動率をあげたほうがバランスが良い気がするので、次回何か業務から取り出せそうなものを取り出す活動に従事したい。</p><hr><p>良かった:
@@ -409,22 +409,4 @@ end
 <ul>
 <li><a href="https://brutalist-web.design/">Brutalist Web Design</a></li>
 <li><a href="https://gigazine.net/news/20180710-brutalist-web-design/">ウェブデザインの本質に主眼を置いたデザインガイドライン「ブルータリスト・ウェブ・デザイン」 - GIGAZINE</a></li>
-</ul><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-24-sustainable-rails">『Sustainable Web Development with Ruby on Rails』を読んだ</a></p><hr><p>腹筋ローラー 10回3セット</p>]]></content:encoded></item><item><title><![CDATA[2022-05-23]]></title><description><![CDATA[r7kamura's working log on 2022-05-23]]></description><link>https://r7kamura.github.io/diary/articles/17</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/17</guid><pubDate>Sun, 22 May 2022 22:36:54 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=KtfRmyQIrAE&#x26;ab_channel=r7kamura">作業 with r7kamura #23 - YouTube</a></p><hr><p>OBSのVLCメディアソースで、プレイリストファイルではなくディレクトリから選べることを知った。これで、プレイリストをつくらなくてもディレクトリに楽曲を放り込んでおけばOKな状態になった。早速既存のプレイリストは削除して、ディレクトリで指定するように変更した。どの辺がVLCに関係しているのかいまいち謎だが。内部的にVLCを通して音声ファイルを扱っているのかな。</p><hr><p>昨日の作業ではTailwindを初めて利用できて良かった。</p>
-<p>CSSは、次のいずれかの手段が現状の最適解だと思っているので、後者のパターンで採用する際の存在としてTailwindは優秀な選択肢。</p>
-<ul>
-<li>全部自分で書く</li>
-<li>何も書かない</li>
-</ul>
-<p>デザインセンス無しで活用できるものでは決してないとは思うけれど、変なことはできないようになっているはずなので、普通にCSSを書く場合と比べると、良いものが出来やすいようにはなっていると思う。</p><hr><p>この前ReactのuseEffectを利用したが、以前と比べて、つまりclass componentでcomponentDidMount等を利用して同等の機能を実現していた場合と比べて、関数の名前がやっていることを特に表していないので本当に分かりづらいという部分が気になった。クラスを使わずに実現するという方針は良いが、名前の付け方が悪くて、別の点で使いづらく、勿体ない。</p><hr><p>鳴らしている雨の音が2秒間ぐらいの無音から開始するせいで、ループ時に途切れるような感覚になることがあった。Window 10標準の方法でmp3のトリミングを行う方法は無さそうだったので (mp4ならフォトアプリがあったのだが)、Audacityを入れて編集した。これで配信時の雨の音が改善された。</p><hr><blockquote>
-<p>OBSのVLCメディアソースで、プレイリストファイルではなくディレクトリから選べることを知った。これで、プレイリストをつくらなくてもディレクトリに楽曲を放り込んでおけばOKな状態になった。早速既存のプレイリストは削除して、ディレクトリで指定するように変更した。どの辺がVLCに関係しているのかいまいち謎だが。内部的にVLCを通して音声ファイルを扱っているのかな。</p>
-</blockquote>
-<p>ディレクトリだとループ再生とシャッフル再生の機能が利用できないらしい。敗北。</p><hr><p>これをChromeウェブストアに申請した。
-<a href="https://github.com/r7kamura/tweetdeck-shortcut-plus">r7kamura/tweetdeck-shortcut-plus: Browser extension to add more keyboard shortcuts to TweetDeck.</a></p><hr><p>申請後にいろいろ不具合が見つかって修正した。一度に複数のバージョンを申請できないので、反応後に次のバージョンを申請しないといけない。</p><hr><p><a href="https://sustainable-rails.com/">Sustainable Web Development with Ruby on Rails</a> を読み始めた。</p>
-<p>『Railsで持続可能なウェブ開発を』というような題名。ここで言う持続可能というのは、</p>
-<ul>
-<li>仕様への要求が増えても</li>
-<li>リソースへの要求が増えても</li>
-<li>開発者が増えても</li>
-</ul>
-<p>耐えられるような、という意味だろう。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/169749521-2bbbe4a0-ebdf-43a1-b90d-431cb6e1b57d.png" alt="image"></p>
-<p>コードを入れるとほぼ半額 (6500円から3000円ぐらい?) になる。</p><hr><p>作業配信は15:00に終了する、とするのが丁度良いように思った。次回も15:00の終了を狙いたい。</p><hr><p>腹筋ローラー 10回2セット</p>]]></content:encoded></item></channel></rss>
+</ul><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-24-sustainable-rails">『Sustainable Web Development with Ruby on Rails』を読んだ</a></p><hr><p>腹筋ローラー 10回3セット</p>]]></content:encoded></item></channel></rss>

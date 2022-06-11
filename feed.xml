@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sat, 11 Jun 2022 19:06:05 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-10]]></title><description><![CDATA[r7kamura's working log on 2022-06-10]]></description><link>https://r7kamura.github.io/diary/articles/35</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/35</guid><pubDate>Thu, 09 Jun 2022 21:45:01 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=nCx63dQbaEQ">作業 with r7kamura #41 - YouTube</a></p><hr><p>最近、以前と比べて、作業ログやノートに情報を書き残すことが減った。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sat, 11 Jun 2022 21:14:52 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-10]]></title><description><![CDATA[r7kamura's working log on 2022-06-10]]></description><link>https://r7kamura.github.io/diary/articles/35</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/35</guid><pubDate>Thu, 09 Jun 2022 21:45:01 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=nCx63dQbaEQ">作業 with r7kamura #41 - YouTube</a></p><hr><p>最近、以前と比べて、作業ログやノートに情報を書き残すことが減った。
 GW期間と比べて仕事時間の割合が増えて、クリエイティブなことが要求されることが少なくなったから？</p><hr><p>腹筋ローラー22日目。
 膝コロ8往復を1日2セットはやるようにしていて、続いている。立ちコロはまだできそうにない。</p><hr><p>例のスクワットやった (3日ぶり3回目)。今回も5種目やってギブアップ</p><hr><p>レッグレイズが綺麗にできるようになって嬉しい</p><hr><p>最近OSS活動率が減ってきて、業務専用活動率が増えてきている気がする。
 もう少しOSS活動率をあげたほうがバランスが良い気がするので、次回何か業務から取り出せそうなものを取り出す活動に従事したい。</p><hr><p>良かった:
@@ -427,41 +427,4 @@ end
 <li>開発者が増えても</li>
 </ul>
 <p>耐えられるような、という意味だろう。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/169749521-2bbbe4a0-ebdf-43a1-b90d-431cb6e1b57d.png" alt="image"></p>
-<p>コードを入れるとほぼ半額 (6500円から3000円ぐらい?) になる。</p><hr><p>作業配信は15:00に終了する、とするのが丁度良いように思った。次回も15:00の終了を狙いたい。</p><hr><p>腹筋ローラー 10回2セット</p>]]></content:encoded></item><item><title><![CDATA[2022-05-22]]></title><description><![CDATA[r7kamura's working log on 2022-05-22]]></description><link>https://r7kamura.github.io/diary/articles/16</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/16</guid><pubDate>Sat, 21 May 2022 20:50:59 GMT</pubDate><content:encoded><![CDATA[<hr><p>actions/setup-nodeの <code>cache: npm</code> ってnode_modulesのキャッシュを作るわけじゃないのか。自分も勘違いしていた。
-<a href="https://github.com/actions/setup-node/pull/468">Adjust caching documentation by dmitry-shibanov · Pull Request #468 · actions/setup-node</a></p><hr><p>作業配信する。
-<a href="https://www.youtube.com/watch?v=27CmW1_rzAk&#x26;ab_channel=r7kamura">作業 with r7kamura #22 - YouTube</a></p><hr><p>tweetdeck shortcut plusを作り終えたら、転用してtwitter shortcut plusもつくりたい</p><hr><p>昨日から若干風邪気味。喉が若干痛いのと、鼻水が若干出る</p><hr><p><a href="https://r7kamura.github.io/diary/">r7kamura/diary</a>のフッター部分に、RSSとGitHubリポジトリへのリンクを足した。
-Feedlyで見てみたらこのRSSに7人の購読者が居た。</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-05-21-atomic-habits">Atomic Habitsを読んだ</a></p><hr><p><img src="https://user-images.githubusercontent.com/111689/169671335-28e27122-2427-42be-964f-1aacd3ffe025.png" alt="image"></p>
-<p>TweetDeck Shortcut Plusの管理画面をつくっている。</p><hr><p><a href="https://tailwindcss.com/">Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.</a>を学び始めた。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/169674779-686caa4b-6eac-4652-9f3d-2d5234d9525a.png" alt="image"></p><hr><p>本日の俗世:</p>
-<ul>
-<li>ダミアニャ</li>
-<li>大谷翔平</li>
-<li>MusicUnity2022</li>
-</ul><hr><p>OBSで、VLCソースのときのデフォルトが非表示時に停止だったが、非表示時に一時停止にしないと、上手くいかないことが分かった。</p><hr><p>第20回のスパム判定はその翌日には解除されていて、自分で公開化できるようになったので操作しておいた。何だったのか。</p><hr><p>昨日の配信でtunetankのBGM利用を試した。1日経っても著作権の申し立てが来なかったので、成功だと言える。いいサービスだと思う。ただ、使うサービスは少ない方が良いし万人が真似しやすい手法の方が良いと考えているので、将来的にはYouTube Audio Libraryの適当な音楽を見繕って移行したいところ。見繕うコストがかなり高いので、それが今のYouTube Audio Libraryの問題。</p><hr><p>YouTubeで保存されるアーカイブの最大時間は12時間だと聞いたことがある。では、12時間以上配信した場合に、アーカイブは12時間分残るのか、それとも何も残らないのか。実験してみるにはリスクが高すぎる。</p>
-<p><a href="https://youtu.be/TKepOSUGP1E?t=31454">地獄の1500個、梱包する - YouTube</a> (再生時間付きのリンク) という動画にて 、次の発言を聞いた。</p>
-<p>「"今日のアーカイブ残る？" ……あのね、12時間以内に一旦終了するっていう作業がしっかり達成できれば残る。万が一、超えちゃったら残んない。視聴者次第。視聴者が僕に伝えられるかどうかってとこ」</p>
-<p>ということで、配信時間が12時間を超えたらアーカイブ動画は1秒も残らない、という可能性が高まった。</p>
-<p>この機会に色々調べてみると、今は確かにそうらしい。</p>
-<ul>
-<li><a href="https://support.google.com/youtube/answer/6247592?hl=ja">ライブ配信のアーカイブ - YouTube ヘルプ</a></li>
-</ul>
-<p>昔は12時間分残っていた時代もあったらしい。今は残らない。これが情報が錯綜していてる原因でもある。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/169685128-ed3b6f48-8315-4664-9f5a-4864cab8fcd4.png" alt="image"></p>
-<p>₍₍ (ง ˙ω˙)ว ⁾⁾</p>
-<p><img src="https://user-images.githubusercontent.com/111689/169684247-5a2e7efd-41ca-4061-b733-ef986adde2ce.JPG" alt="IMG_6615"></p>
-<p>₍₍ (ง ˙؎˙ )ว ⁾⁾</p>
-<p><img src="https://user-images.githubusercontent.com/111689/169684245-fc29ae6b-3e76-41d6-9162-49c14b18531c.JPG" alt="IMG_6616"></p>
-<p>⁽◝(ˊ꒳ˋ )◜⁾⁾</p>
-<p><img src="https://user-images.githubusercontent.com/111689/169684631-1dcfb889-1c37-45e7-96a0-7b3002c4eb5e.JPG" alt="IMG_6619"></p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=js6Sqpk-4dg&#x26;ab_channel=%E6%96%99%E7%90%86%E7%A0%94%E7%A9%B6%E5%AE%B6%E3%83%AA%E3%83%A5%E3%82%A6%E3%82%B8%E3%81%AE%E3%83%90%E3%82%BA%E3%83%AC%E3%82%B7%E3%83%94">1皿48円で出来るガチでウマい最強のズボラ飯【虚無ペペロンチーノ】 - YouTube</a></li>
-<li><a href="https://github.com/r7kamura/cooking/blob/5dd26d6f93bb9cf1efc94624f67fcfa68d940c17/peperoncino.md">cooking/peperoncino.md at main · r7kamura/cooking</a></li>
-</ul><hr><p>manifest v3で、Chrome拡張のアイコンがクリックされたときにオプションページを開くコード。</p>
-<pre><code class="language-javascript">// background.js
-chrome.action.onClicked.addListener(() => {
-  chrome.runtime.openOptionsPage();
-});
-</code></pre>
-<p>Chrome拡張のアイコンがクリックされたときにオプションページを開くコード。</p>
-<pre><code class="language-diff">- chrome.browserAction.onClicked.addListener(() => {
-+ chrome.action.onClicked.addListener(() => {
-</code></pre>
-<p>manifest v2時代は <code>browserAction</code> だった。</p><hr><p>腹筋ローラー 10回1セット</p>]]></content:encoded></item></channel></rss>
+<p>コードを入れるとほぼ半額 (6500円から3000円ぐらい?) になる。</p><hr><p>作業配信は15:00に終了する、とするのが丁度良いように思った。次回も15:00の終了を狙いたい。</p><hr><p>腹筋ローラー 10回2セット</p>]]></content:encoded></item></channel></rss>

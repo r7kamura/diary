@@ -39,7 +39,7 @@ export async function listIssues() {
         ...issueMatter.data,
       };
     })
-    .sort(byCreatedAt)
+    .sort(byTitle)
     .reverse();
 }
 
@@ -81,13 +81,13 @@ export async function listIssueComments({
       };
     })
   );
-  return issueComments.sort(byCreatedAt);
+  return issueComments.sort(byTitle);
 }
 
-function byCreatedAt(a: any, b: any) {
-  if (a.created_at < b.created_at) {
+function byTitle(a: any, b: any) {
+  if (a.title < b.title) {
     return -1;
-  } else if (a.created_at > b.created_at) {
+  } else if (a.title > b.title) {
     return 1;
   } else {
     return 0;

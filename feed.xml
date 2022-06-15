@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 15 Jun 2022 19:06:47 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-15]]></title><description><![CDATA[r7kamura's working log on 2022-06-15]]></description><link>https://r7kamura.github.io/diary/articles/40</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/40</guid><pubDate>Tue, 14 Jun 2022 23:42:27 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=xSNkAsG8rI4">作業 with r7kamura #46 - YouTube</a></p><hr><p>RSpec/FilePathは、定数名の対応の他に、_specというsuffixも検査してくれる。</p><hr><p>RSpecのcustom formatter初めて書いた。こんな感じなのか。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 15 Jun 2022 22:34:45 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-15]]></title><description><![CDATA[r7kamura's working log on 2022-06-15]]></description><link>https://r7kamura.github.io/diary/articles/40</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/40</guid><pubDate>Tue, 14 Jun 2022 23:42:27 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=xSNkAsG8rI4">作業 with r7kamura #46 - YouTube</a></p><hr><p>RSpec/FilePathは、定数名の対応の他に、_specというsuffixも検査してくれる。</p><hr><p>RSpecのcustom formatter初めて書いた。こんな感じなのか。
 いや記憶を失っているだけで、なんか書いたような気がしなくもないが……
 <a href="https://github.com/r7kamura/toolbox/blob/main/scripts/unhandled_exception_rspec_formatter.rb">https://github.com/r7kamura/toolbox/blob/main/scripts/unhandled_exception_rspec_formatter.rb</a></p><hr><p>大昔に知ったことなので今更感があるけど、</p>
 <p>forkしたリポジトリで作業してると</p>
@@ -325,56 +325,4 @@ Yetiはハードウェア側でGainの調整ができるので、これを50%程
 <li>資料修復技術でエロ本を蘇生</li>
 </ul><hr><p>懸垂マシンでレッグレイズをやる方法を調べて、5回×3セットぐらい軽くやってみた。脚を伸ばすのは全然無理。とにかく身体を反らしてしまわないように気を付けたい。
 <a href="https://www.youtube.com/watch?v=RuynaHvOv5Y&#x26;ab_channel=ShuichiToda%E6%88%B8%E7%94%B0%E7%A7%80%E4%B8%80">【筋トレ】腹筋だけを効果的に鍛えるレッグレイズのポイント - YouTube</a></p><hr><p>smile.amazon.comというドメインの存在を初めて知った。
-<a href="https://github.com/r7kamura/amazon_url_shortener/issues/17">Feature request: Add in support for smile.amazon.com links · Issue #17 · r7kamura/amazon_url_shortener</a></p>]]></content:encoded></item><item><title><![CDATA[2022-05-27]]></title><description><![CDATA[r7kamura's working log on 2022-05-27]]></description><link>https://r7kamura.github.io/diary/articles/21</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/21</guid><pubDate>Thu, 26 May 2022 20:17:37 GMT</pubDate><content:encoded><![CDATA[<hr><p>今日の俗世:</p>
-<ul>
-<li>ゲーミング箸</li>
-<li>壱百満天原サロメ</li>
-</ul><hr><p><a href="https://www.youtube.com/watch?v=za9xTbJUzPQ&#x26;ab_channel=r7kamura">作業 with r7kamura #27 - YouTube</a></p><hr><p>他の人が映している自分のYouTubeの映像の写真を見てみると、自分でプレビューで見るよりかなり高画質で、プレビューとの乖離があることが分かる。</p><hr><p>作業配信環境に幾らかアップデートがあるたびに、作業配信環境をまとめる記事を新たに書こうとするが、少し書くたびに「そんなに需要無いな」と思ってゴミ箱に捨てている。</p><hr><p>rubocop-todo-correctorでPull Requestをつくったときに、pull_request event契機の他のworkflowも実行されてほしいが、デフォルトのGITHUB_TOKENを使っていると実行されない。</p>
-<p>これは<a href="https://docs.github.com/en//actions/security-guides/automatic-token-authentication">Automatic token authentication - GitHub Docs</a>で説明されている。</p>
-<blockquote>
-<p>When you use the repository's GITHUB_TOKEN to perform tasks, events triggered by the GITHUB_TOKEN will not create a new workflow run. This prevents you from accidentally creating recursive workflow runs. For example, if a workflow run pushes code using the repository's GITHUB_TOKEN, a new workflow will not run even when the repository contains a workflow configured to run when push events occur.</p>
-</blockquote>
-<p>GitHub Appで組織ごとにaccess tokenを発行すると良さそうな雰囲気があるので、これが使えるか試してみたい。</p><hr><p>rubocop 1.30で、auto-correctがautocorrectに統一されたらしい。これにより、色々なものが壊れるようになった。驚いたのが、auto-correctの方を正規形とするのかと思いきや、autocorrectの方を正規形とするみたいだ。automobileみたいなものかね。</p>
-<ul>
-<li><a href="https://github.com/rubocop/rubocop/pull/10547">[Fix #10095] Change "auto-correct" to "autocorrect" by chris-hewitt · Pull Request #10547 · rubocop/rubocop</a></li>
-</ul>
-<p>rubocop-todo-correctorも壊れていたので対応した。</p><hr><p>懸垂マシンの配送状況が気になって調べたところ、昨日の昼時点で関西に居たらしい。</p><hr><ol>
-<li>r7kamura名義でGitHub App Aをつくる</li>
-<li>r7kamura/x にAをインストールする (実際の操作としては、Aをr7kamuraにインストールするときにxのみを選択)</li>
-<li>r7kamura/x で <a href="https://github.com/tibdex/github-app-token">https://github.com/tibdex/github-app-token</a> を利用してアクセストークンを発行する</li>
-</ol>
-<p>という実験が成功。</p><hr><p>rubocop-todo-corrector custom actionで利用するアクセストークンについて、actions/checkoutではデフォルトのもの (github.token) を使い、gh pr createのときだけもしwithで指定されていたらそのアクセストークン、無ければデフォルトのアクセストークンを使う、というように変更すれば良いように思った。</p>
-<p>つまり、アプリで発行するアクセストークンの権限について、</p>
-<ul>
-<li>pull requestのwrite</li>
-<li>workflowのwrite</li>
-</ul>
-<p>のscopeだけあれば良くて、</p>
-<ul>
-<li>contentのwrite</li>
-</ul>
-<p>は不要そう?</p><hr><pre><code class="language-yaml">- run: echo "${{ inputs.access_token || github.token }}" | gh auth login --with-token
-</code></pre>
-<p>こんな感じ?</p><hr><p>作業配信で、YouTube Audio Libraryの曲を使ってみることにした。
-探すのに一苦労だが……誰かが良さげな曲をまとめてくれたやつを参考に探している。</p><hr><p>Re: <a href="https://motemen.hatenablog.com/entry/2022/05/concentration-hacks">集中するためにやっていること2022 - 詩と創作・思索のひろば</a></p>
-<blockquote>
-<p>本来の話とは関係ないことを書き出しておき、横道にそれることを防ぐやり方</p>
-</blockquote>
-<blockquote>
-<p>書き出す先が手元のアプリとかだと、そのままネットサーフィンなどしだすのでいけない</p>
-</blockquote>
-<p>自分も、思い付きは紙のノートに書き出して忘れるようにしている。</p>
-<p>PCでやるとネットサーフィンなどしだすというのは確かに。複数の機能を持つデバイス (e.g. PC、スマホ) と比べて、単純な機能しか持たないデバイス (e.g. 紙の付箋、紙のノート) は、そういうところで利点がある。</p>
-<p>寝る前にいま考えていることをノート等に書き出しておくとよく寝られる、という話をどこかで読んだ気がする。<a href="https://www.amazon.co.jp/dp/B07KWLFXX1">スゴい早起き</a> だったか。このこともあって、最近よく紙のノートに雑多なメモを書きがち。たまにノートをパラパラと読み返すのは面白い。</p><hr><p>workflow権限を持つGitHub Appベースで作成したアクセストークンを使ってrubocop-todo-correctorを動かし、自動的にPull RequestでGitHub Action (この場合はRuboCopによりLint; 分かりづらい) が動作する、という実験が成功した。</p>
-<p><img src="https://user-images.githubusercontent.com/111689/170610432-7a17581e-6b67-46ed-8ed4-ba731d32d32d.png" alt="image"></p><hr><p>うちの炊飯器はジャスト50分間で炊きあがるので、作業時間開始直後に炊き始めないと、次の休憩時間に炊飯が間に合わない。</p><hr><p>Twitterのノイズを消す拡張、という切り口のものがあった。</p>
-<ul>
-<li><a href="https://chrome.google.com/webstore/detail/twitter-stress-reduction/ipnjgahnocpaefhffbnnjonihlihoeic?hl=ja">Twitter Stress Reduction - Chrome ウェブストア</a></li>
-</ul>
-<p>自作するなら、Twitterのおすすめを消す拡張、という切り口のものをつくるのが良いかもしれない。Twitterは要素に適当なクラス名が振られていないので、実装は結構大変そう。</p>
-<p>他にまずまずユーザーがあるものとしてはこの辺:</p>
-<ul>
-<li><a href="https://chrome.google.com/webstore/detail/twitter%E3%81%AE%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%88%E3%82%AB%E3%83%83%E3%83%88%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99/cebkmpjkademcaigilgldjonmphfbmfh?hl=ja">Twitterのキーボードショートカットを無効化するやつ - Chrome ウェブストア</a></li>
-<li><a href="https://chrome.google.com/webstore/detail/twitter-media-downloader/cblpjenafgeohmnjknfhpdbdljfkndig">Twitter メディアダウンローダ - Chrome ウェブストア</a></li>
-</ul>
-<p>メディアダウンローダに10万人いるのはすごい。</p><hr><p>懸垂マシンを完成させた。1人でゆっくりやって2時間弱掛かった。</p>
-<p>とりあえず逆手で5回、順手で3回やった (つーかこれが限界)。</p><hr><p><a href="https://www.youtube.com/clip/Ugkxy2NXpdlfZF0kT9s-MoCOrbB1wpWEryK9">✂️ 懸垂 - YouTube</a></p>]]></content:encoded></item></channel></rss>
+<a href="https://github.com/r7kamura/amazon_url_shortener/issues/17">Feature request: Add in support for smile.amazon.com links · Issue #17 · r7kamura/amazon_url_shortener</a></p>]]></content:encoded></item></channel></rss>

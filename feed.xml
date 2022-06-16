@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Thu, 16 Jun 2022 19:06:04 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-16]]></title><description><![CDATA[r7kamura's working log on 2022-06-16]]></description><link>https://r7kamura.github.io/diary/articles/41</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/41</guid><pubDate>Wed, 15 Jun 2022 22:33:41 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=Ii07vwFc6pA">作業 with r7kamura #47 - YouTube</a></p><hr><p>49型のながーーい画面を試してみたかったので、デルアンバサダープログラムのモニタープログラムに応募した。当選したらうるさいぐらい感想述べまくりたい</p><hr><p>写真流していく用の場所をTumblrでつくった。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Thu, 16 Jun 2022 21:26:53 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-16]]></title><description><![CDATA[r7kamura's working log on 2022-06-16]]></description><link>https://r7kamura.github.io/diary/articles/41</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/41</guid><pubDate>Wed, 15 Jun 2022 22:33:41 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=Ii07vwFc6pA">作業 with r7kamura #47 - YouTube</a></p><hr><p>49型のながーーい画面を試してみたかったので、デルアンバサダープログラムのモニタープログラムに応募した。当選したらうるさいぐらい感想述べまくりたい</p><hr><p>写真流していく用の場所をTumblrでつくった。
 <a href="https://r7camera.tumblr.com/">https://r7camera.tumblr.com/</a></p><hr><p>Tumblrのカスタムテーマつくるの結構苦労した……</p>]]></content:encoded></item><item><title><![CDATA[2022-06-15]]></title><description><![CDATA[r7kamura's working log on 2022-06-15]]></description><link>https://r7kamura.github.io/diary/articles/40</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/40</guid><pubDate>Tue, 14 Jun 2022 23:42:27 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=xSNkAsG8rI4">作業 with r7kamura #46 - YouTube</a></p><hr><p>RSpec/FilePathは、定数名の対応の他に、_specというsuffixも検査してくれる。</p><hr><p>RSpecのcustom formatter初めて書いた。こんな感じなのか。
 いや記憶を失っているだけで、なんか書いたような気がしなくもないが……
 <a href="https://github.com/r7kamura/toolbox/blob/main/scripts/unhandled_exception_rspec_formatter.rb">https://github.com/r7kamura/toolbox/blob/main/scripts/unhandled_exception_rspec_formatter.rb</a></p><hr><p>大昔に知ったことなので今更感があるけど、</p>
@@ -299,31 +299,4 @@ Yetiはハードウェア側でGainの調整ができるので、これを50%程
 </ul>
 </li>
 </ul><hr><p>つくりはじめた
-<a href="https://github.com/r7kamura/twitter-recommendation-block">r7kamura/twitter-recommendation-block: Chrome extension to block recommendation and promotion contents on twitter.com.</a></p><hr><p>twitterのpromoted tweetsを <code>Element.remove</code> で消す作戦を試したところ、定期的な? データ取得タイミングでタイムラインがいきなり something went wrong に変わるという問題が常に再現したので、removeだとダメそう。代わりに element.style.display = "none" だと上手くいった。</p><hr><p>腹筋ローラーを25回ほどやった。ゆっくりめに戻るようにしたらしんどい。</p><hr><p>パワーグリップが届いたので順手懸垂を試したが、今日は既に腕の力が終わってて3回で限界に。代わりにレッグレイズを試して、今日は昨日よりは脚を伸ばしながら上げ下げできるようになっていた。これ腰に負担が来そうで少し怖い。</p>]]></content:encoded></item><item><title><![CDATA[2022-05-28]]></title><description><![CDATA[r7kamura's working log on 2022-05-28]]></description><link>https://r7kamura.github.io/diary/articles/22</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/22</guid><pubDate>Fri, 27 May 2022 19:59:17 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=1eI3HMxjMto&#x26;ab_channel=r7kamura">作業 with r7kamura #28 - YouTube</a></p><hr><p>懸垂 順手4回 逆手3回</p><hr><p>腕立て伏せ15回</p><hr><p>腕が終わりすぎてタンブラーを持ち上げるだけで苦労して笑っちゃった</p><hr><p>PowerToysには、最近VSCodeで開いたWorkspaceを検索する、という機能がある。</p>
-<p><img src="https://user-images.githubusercontent.com/111689/170793391-06900aa6-7644-4e8f-8342-dc4b8c9813b6.png" alt="image"></p>
-<p>これは一体どこからデータを取得しているのだろう、しかしソースコードが公開されているとはいえ、C#は読めねえ……と思っていたところ、StackOverflowでどこに保存されているか教えてくれている人がいた。</p>
-<p><a href="https://stackoverflow.com/questions/54244342/list-vs-code-recent-workspaces-from-the-command-line">vscode settings - List VS Code recent workspaces from the command line - Stack Overflow</a></p>
-<pre><code>C:\Users\&#x3C;USER>\AppData\Roaming\Code\User\workspaceStorage\*\workspace.json
-</code></pre>
-<p>という感じのパスにJSONで保存されているので、これを適当に漁れば良いらしい。もし検索結果から消したかったら、ここから消すと良いのだろうか。</p><hr><p>腹筋ローラー 10回</p><hr><p>フィルターのお手入れ表示が出ていたので、エアコンのフィルターの掃除をした。ダイキンの業務用のやつで、天井埋め込み型でラウンドフロー型 (4方向に風が出る) だったが、まあやることは簡単でボタンを2個同時に押してフタをだらんと開いた状態にし、あとは掃除機で埃を吸い込めばOK。しかしまあほぼ汚れていなかった。</p><hr><p>古いほうのAirPods Proをもしかしたら修理交換してもらえるかもしれない。ということで修理予約を入れた。</p>
-<p>付けるときにキュイイッと甲高い異音がするし、2020年10月以前につくられた製品には異音問題があるらしく、この製品を購入したのは2020年12月で微妙なところ。</p><hr><p>twitter.comの各要素にアクセスする方法:</p>
-<ul>
-<li>j/kで移動している中で、選択中のアイテム
-<ul>
-<li>document.activeElement</li>
-</ul>
-</li>
-<li>ツイート内の画像
-<ul>
-<li><code>img[alt="画像"]</code></li>
-<li>locale設定に依存する</li>
-</ul>
-</li>
-</ul><hr><p>作り始めた
-<a href="https://github.com/r7kamura/twitter-shortcut-plus">r7kamura/twitter-shortcut-plus: Browser extension to add more keyboard shortcuts to twitter.com.</a></p><hr><p>今日の俗世:</p>
-<ul>
-<li>岸田トークン</li>
-<li>資料修復技術でエロ本を蘇生</li>
-</ul><hr><p>懸垂マシンでレッグレイズをやる方法を調べて、5回×3セットぐらい軽くやってみた。脚を伸ばすのは全然無理。とにかく身体を反らしてしまわないように気を付けたい。
-<a href="https://www.youtube.com/watch?v=RuynaHvOv5Y&#x26;ab_channel=ShuichiToda%E6%88%B8%E7%94%B0%E7%A7%80%E4%B8%80">【筋トレ】腹筋だけを効果的に鍛えるレッグレイズのポイント - YouTube</a></p><hr><p>smile.amazon.comというドメインの存在を初めて知った。
-<a href="https://github.com/r7kamura/amazon_url_shortener/issues/17">Feature request: Add in support for smile.amazon.com links · Issue #17 · r7kamura/amazon_url_shortener</a></p>]]></content:encoded></item></channel></rss>
+<a href="https://github.com/r7kamura/twitter-recommendation-block">r7kamura/twitter-recommendation-block: Chrome extension to block recommendation and promotion contents on twitter.com.</a></p><hr><p>twitterのpromoted tweetsを <code>Element.remove</code> で消す作戦を試したところ、定期的な? データ取得タイミングでタイムラインがいきなり something went wrong に変わるという問題が常に再現したので、removeだとダメそう。代わりに element.style.display = "none" だと上手くいった。</p><hr><p>腹筋ローラーを25回ほどやった。ゆっくりめに戻るようにしたらしんどい。</p><hr><p>パワーグリップが届いたので順手懸垂を試したが、今日は既に腕の力が終わってて3回で限界に。代わりにレッグレイズを試して、今日は昨日よりは脚を伸ばしながら上げ下げできるようになっていた。これ腰に負担が来そうで少し怖い。</p>]]></content:encoded></item></channel></rss>

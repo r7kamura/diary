@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 17 Jun 2022 19:06:27 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-17]]></title><description><![CDATA[r7kamura's working log on 2022-06-17]]></description><link>https://r7kamura.github.io/diary/articles/42</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/42</guid><pubDate>Thu, 16 Jun 2022 21:25:30 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=BdpcCcwstZU">作業 with r7kamura #48 - YouTube</a></p><hr><p>Googleドキュメントでたまにリスト記法が上手くMarkdownに変換されないことがある……
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 17 Jun 2022 21:05:18 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-17]]></title><description><![CDATA[r7kamura's working log on 2022-06-17]]></description><link>https://r7kamura.github.io/diary/articles/42</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/42</guid><pubDate>Thu, 16 Jun 2022 21:25:30 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=BdpcCcwstZU">作業 with r7kamura #48 - YouTube</a></p><hr><p>Googleドキュメントでたまにリスト記法が上手くMarkdownに変換されないことがある……
 HTML to Markdown の変換のところで上手くいってないのかも。</p><hr><p>最近の俗世:</p>
 <ul>
 <li>インターネットエクスプローラー 終了</li>
@@ -302,22 +302,4 @@ Yetiはハードウェア側でGainの調整ができるので、これを50%程
 <li>プランク60秒4セット</li>
 </ul><hr><p>YouTubeの公開予約が便利そうだったので用意してみた。</p>
 <p><img src="https://user-images.githubusercontent.com/111689/170935625-296c001c-b6ae-4c20-8859-d0a7f32f172a.png" alt="image"></p>
-<p><a href="https://www.youtube.com/watch?v=MB2Mfv_WHZI&#x26;ab_channel=r7kamura">作業 with r7kamura #31 - YouTube</a></p>]]></content:encoded></item><item><title><![CDATA[2022-05-29]]></title><description><![CDATA[r7kamura's working log on 2022-05-29]]></description><link>https://r7kamura.github.io/diary/articles/23</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/23</guid><pubDate>Sat, 28 May 2022 21:00:25 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=AC-8gSGSpO8&#x26;ab_channel=r7kamura">作業 with r7kamura #29 - YouTube</a></p><hr><p>書いた
-<a href="https://r7kamura.com/articles/2022-05-28-air-conditioner-cleaning">エアコンの掃除と試運転</a></p><hr><p>書いた
-<a href="https://r7kamura.com/articles/2022-05-28-chinning-machine-st115">懸垂マシン ST115</a></p><hr><p>作業配信 第27回からYouTube Audio Libraryの楽曲を使ってみている。</p>
-<p>著作権申し立ては来ていないので、問題無し。2日前の配信である第27回には、楽曲のクレジットが概要欄に自動的に追加されていた。1日前の配信にはまだ追加されていなかった。2日程度掛かる模様。</p><hr><p>懸垂 逆手4回
-昨日の筋肉痛を引きずったままやったら全然できなくてすごい</p><hr><p>Chromeウェブストアの審査に出した。
-<a href="https://github.com/r7kamura/twitter-shortcut-plus">r7kamura/twitter-shortcut-plus: Browser extension to add more keyboard shortcuts to twitter.com.</a></p><hr><p>twitter.comを使うようにしてみた感想:</p>
-<ul>
-<li>シンプルで単一用途的なところがそこそこ良い
-<ul>
-<li>1つのデバイスや1つのアプリでいろいろ出来てしまうと、用もないのにそれを使い続けてしまうという負の側面がある</li>
-</ul>
-</li>
-<li>おすすめ○○が非常に鬱陶しい
-<ul>
-<li>Twitter Recommend Block をつくりたい</li>
-</ul>
-</li>
-</ul><hr><p>つくりはじめた
-<a href="https://github.com/r7kamura/twitter-recommendation-block">r7kamura/twitter-recommendation-block: Chrome extension to block recommendation and promotion contents on twitter.com.</a></p><hr><p>twitterのpromoted tweetsを <code>Element.remove</code> で消す作戦を試したところ、定期的な? データ取得タイミングでタイムラインがいきなり something went wrong に変わるという問題が常に再現したので、removeだとダメそう。代わりに element.style.display = "none" だと上手くいった。</p><hr><p>腹筋ローラーを25回ほどやった。ゆっくりめに戻るようにしたらしんどい。</p><hr><p>パワーグリップが届いたので順手懸垂を試したが、今日は既に腕の力が終わってて3回で限界に。代わりにレッグレイズを試して、今日は昨日よりは脚を伸ばしながら上げ下げできるようになっていた。これ腰に負担が来そうで少し怖い。</p>]]></content:encoded></item></channel></rss>
+<p><a href="https://www.youtube.com/watch?v=MB2Mfv_WHZI&#x26;ab_channel=r7kamura">作業 with r7kamura #31 - YouTube</a></p>]]></content:encoded></item></channel></rss>

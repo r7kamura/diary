@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 20 Jun 2022 09:28:34 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-19]]></title><description><![CDATA[r7kamura's working log on 2022-06-19]]></description><link>https://r7kamura.github.io/diary/articles/44</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/44</guid><pubDate>Sat, 18 Jun 2022 21:16:04 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=K5F12rtKOHo">作業 with r7kamura #50 - YouTube</a></p><hr><p>semgrepの使い方を学んでいる</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 20 Jun 2022 19:06:12 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-20]]></title><description><![CDATA[r7kamura's working log on 2022-06-20]]></description><link>https://r7kamura.github.io/diary/articles/45</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/45</guid><pubDate>Sun, 19 Jun 2022 21:04:36 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=pmK_2Ga8jco">作業 with r7kamura #51 - YouTube</a></p><hr><p><a href="https://github.com/r7kamura/semgrepper">semgrepper</a>の試用と改善をして、差分を適切に求めてくれない問題を修正できた。</p>
+<p>環境変数を元に適切な差分を求めているようで、更にその環境変数にはパスが入っていて実際には内部でパスの参照するファイルを読んでいて……ということだったので、composite custom actionの中でdocker run --rm ... semgrep ci ... とやるのは大変そう。結果的に、docker custom actionとして提供することにした。</p><hr><p>semgrepにPRを出すために、pyenvを入れてpython 3.10.5を入れて……ということをしていた。</p>
+<p>この辺を読んでいくと、どうやらsemgrep-cliをいじればいいらしい。</p>
+<ul>
+<li><a href="https://semgrep.dev/docs/contributing/how-to-contribute/">https://semgrep.dev/docs/contributing/how-to-contribute/</a></li>
+<li><a href="https://semgrep.dev/docs/contributing/contributing-code/">https://semgrep.dev/docs/contributing/contributing-code/</a></li>
+</ul>
+<p>WSL2でPythonを入れてpipenv installしようとしたらハマってググった。</p>
+<pre><code># NG
+SEMGREP_SKIP_BIN=true python -m pipenv install --dev
+
+# OK
+SEMGREP_SKIP_BIN=true python -m pipenv install --dev --python=/home/r7kamura/.pyenv/shims/python
+</code></pre>
+<p><a href="https://github.com/pypa/pipenv/issues/3488">pypa/pipenv#3488</a> helped me a lot, thanks.</p>
+<p>手元でsemgrep-cliを動かすことに成功したが、ドキュメントに書いてある通り、semgrep-coreって実行ファイルがねえよと怒られているので、prebuiltなやつを持ってくるか自分で20分かけてビルドするかして持ってこないといけない。面倒だ……</p>
+<p>manual shortcutの項目にある通り、releasesの最新版のtar.gzからsemgrep-coreバイナリを持ってきてPATHの通るところに配置した上で、pipenv shellやら何やらを組み合わせた結果、ようやく手元でインストールしたsemgrepが動いた</p>
+<p><img src="https://user-images.githubusercontent.com/111689/174514290-04978a2c-999e-435b-8bf9-784540a89564.png" alt="image"></p>
+<p>一度ローカルでのsemgrepインストール手順を踏むと、コードを変更したときに反映される、つまりコピーしてるのではなく実体を参照するようになるらしい。</p>
+<pre><code>$ python -m semgrep scan --github-actions
+Scanning 2 files with 3 ruby rules.
+  100%|██████████████████████████████████████████████████████████████████████████████████████████████████|2/2 tasks
+::warning file=semgrep_another_example.rb,line=1,col=1,endLine=1,endCol=6::foo is deprecated. Use baz instead.
+::warning file=semgrep_example.rb,line=1,col=1,endLine=1,endCol=6::foo is deprecated. Use baz instead.
+::error file=semgrep_example.rb,line=2,col=1,endLine=2,endCol=6::bar is removed. Use baz instead.
+::notice file=semgrep_example.rb,line=3,col=1,endLine=3,endCol=6::baz is great.
+
+Some files were skipped or only partially analyzed.
+  Scan was limited to files tracked by git.
+
+Ran 3 rules on 2 files: 4 findings.
+</code></pre>
+<p>動くようになった。</p>
+<p>semgrepにPull Requestを出した。</p><hr><p>懸垂、ディップス、腕立て、腹筋ローラーをやった。
+ディップスは身体を壊しそうな気配があるので、トレーナーに見てもらわない限りは今後やらないことにした。
+腹筋ローラーの様子を動画に撮ることにして、今回試しにiPhoneで動画を撮った。とりあえず100回やった。</p>]]></content:encoded></item><item><title><![CDATA[2022-06-19]]></title><description><![CDATA[r7kamura's working log on 2022-06-19]]></description><link>https://r7kamura.github.io/diary/articles/44</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/44</guid><pubDate>Sat, 18 Jun 2022 21:16:04 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=K5F12rtKOHo">作業 with r7kamura #50 - YouTube</a></p><hr><p>semgrepの使い方を学んでいる</p>
 <ul>
 <li><a href="https://semgrep.dev/">https://semgrep.dev/</a></li>
 <li><a href="https://semgrep.dev/playground/new">https://semgrep.dev/playground/new</a></li>

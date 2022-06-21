@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 21 Jun 2022 19:05:57 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-21]]></title><description><![CDATA[r7kamura's working log on 2022-06-21]]></description><link>https://r7kamura.github.io/diary/articles/46</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/46</guid><pubDate>Mon, 20 Jun 2022 22:39:43 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=bE7QNqM9iew">作業 with r7kamura #52 - YouTube</a></p><hr><p>RuboCopに、<code>--format github</code> についてPull Requestを出した。</p><hr><p>最近の俗世:</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 21 Jun 2022 21:11:53 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-21]]></title><description><![CDATA[r7kamura's working log on 2022-06-21]]></description><link>https://r7kamura.github.io/diary/articles/46</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/46</guid><pubDate>Mon, 20 Jun 2022 22:39:43 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=bE7QNqM9iew">作業 with r7kamura #52 - YouTube</a></p><hr><p>RuboCopに、<code>--format github</code> についてPull Requestを出した。</p><hr><p>最近の俗世:</p>
 <ul>
 <li>お嬢様部</li>
 <li>悠仁さま 学内に冷房設置を提言</li>
@@ -335,38 +335,4 @@ Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 3042)
 </ul><hr><p>r7kamura.comのダークモード対応の前段として、Tailwind化、をやろうとしている。</p>
 <p>Tailwind最高～～と考えている訳ではないが、特定の要件でTailwind最高～～ where 特定の要件 is larger than expected ぐらいには考えているので、Tailwindのことをもう少し学んでおく必要があると感じている。しかしこういうのは自分事になって身を切らないとなかなか深くまで理解できないので……という訳で、自分のウェブサイトをのCSSをTailwindベースのものに作り変えてみようとしている。まあここのCSSは、創業当時からの秘伝のタレを試行錯誤しながら弄り続けるというよりは、何度もつくりかえるべきものという感じがしている。</p><hr><p><a href="https://r7kamura.com/">r7kamura.com</a>のダークモード対応をやった。</p><hr><p>急にマシュマロを始めた
 <a href="https://marshmallow-qa.com/r7kamura">r7kamuraにマシュマロを投げる | マシュマロ</a></p>]]></content:encoded></item><item><title><![CDATA[2022-06-03]]></title><description><![CDATA[r7kamura's working log on 2022-06-03]]></description><link>https://r7kamura.github.io/diary/articles/28</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/28</guid><pubDate>Thu, 02 Jun 2022 21:08:11 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=CfeTmawvUgY">作業 with r7kamura #34 - YouTube</a></p><hr><p>devcontainer、前回Node.jsのコンテナで試したときに <code>git push</code> した瞬間完全に停止するという問題があって簡単にあきらめていたが、再挑戦したい。</p><hr><p>node:18 のイメージが悪いのかと思いきや、他のイメージで試しても問題が起きたので、SSH通信周りで何か失敗してそうな印象がある。</p><hr><p>面白かった
-<a href="https://note.com/reisaikigyou_ma/n/ne8f3effb313c">零細企業買収して売却した話｜reisaikigyou_ma｜note</a></p><hr><p>輝度管理アプリとして、Monitorianから<a href="https://twinkletray.com/">Twinkle Tray</a>に移行した。無料で、キーボードショートカットがあるのが便利。</p>]]></content:encoded></item><item><title><![CDATA[2022-06-02]]></title><description><![CDATA[r7kamura's working log on 2022-06-02]]></description><link>https://r7kamura.github.io/diary/articles/27</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/27</guid><pubDate>Wed, 01 Jun 2022 20:48:27 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=H_860YHihis&#x26;ab_channel=r7kamura">作業 with r7kamura #33 - YouTube</a></p><hr><p>GitHubのDropdownを表示させるボタンを押してから実際に表示されるまで待つために、MutationObserverで要素の属性に対する変更を監視してみて、上手くいった。使いやすいAPI。</p><hr><p>ここ数日、寝起きに風邪気味のときに近い症状を感じることが多い。鼻水が出る、喉が痛いの2つ。</p><hr><p>睡眠中は免疫力が低下するため、睡眠時に風邪になる (そこで発症する) ような感じになることは多いらしい。
-それから、寝起きに風邪ライクな症状を感じる (睡眠時の炎症に対する防衛反応) ことも多いらしい。</p><hr><p>懸垂:</p>
-<ol>
-<li>順手5回</li>
-<li>1分休憩</li>
-<li>逆手3回</li>
-<li>1分休憩</li>
-<li>順手0回</li>
-<li>50分休憩</li>
-<li>順手3回</li>
-<li>50分休憩</li>
-<li>順手2回</li>
-</ol><hr><p>アロマディフューザーと、安いアロマオイルセットを手に入れたので、好きな香りを探していくことにした。</p>
-<ul>
-<li>サンダルウッド
-<ul>
-<li>新しい筋トレグッズとかにありがちなゴムっぽい? 匂いがする</li>
-<li>嫌い</li>
-</ul>
-</li>
-<li>レモングラス
-<ul>
-<li>レモンだなーという感じ</li>
-<li>レモンを押し付けてきていて安っぽい感じはする</li>
-<li>嫌いではない</li>
-<li>好きというほどでもない</li>
-</ul>
-</li>
-</ul><hr><p>jpmobileにRails 7.0での不具合っぽいものを見つけたので、IssueとPull Requestを出した。</p><hr><p>今日はあまりにも仕事が捗った。</p><hr><p>Issue / Pull Requestの画面で、コメントフォームにフォーカスするショートカットキーを追加した。</p>
-<ul>
-<li><a href="https://github.com/r7kamura/github-shortcut-plus">https://github.com/r7kamura/github-shortcut-plus</a></li>
-</ul>
-<p>j や k みたいなキーが登録されることを考慮して、input, textarea, contentEditableにフォーカスしているときはショートカットキーが発動しないようにしている。これは誤動作が防げる一方で、textareaで何か書いてるときに「あ、これしたい」と思ったときに操作できない不便さがある。Tabキーを押してフォーカスを外したりすれば良いわけだが…</p>
-<p>フォーカスを外す (Skip to Contentする) ショートカットをあえて追加すれば良いかも？</p><hr><p>腹筋ローラー13日目だが、立ちコロはまだまだ難しい。
-立ちコロやろうとして戻れずに地面に倒れ込む、というのだけでもトレーニングになるらしいので、これを何度かやっている。</p>]]></content:encoded></item></channel></rss>
+<a href="https://note.com/reisaikigyou_ma/n/ne8f3effb313c">零細企業買収して売却した話｜reisaikigyou_ma｜note</a></p><hr><p>輝度管理アプリとして、Monitorianから<a href="https://twinkletray.com/">Twinkle Tray</a>に移行した。無料で、キーボードショートカットがあるのが便利。</p>]]></content:encoded></item></channel></rss>

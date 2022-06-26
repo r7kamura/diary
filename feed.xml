@@ -1,22 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 26 Jun 2022 21:07:55 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-26]]></title><description><![CDATA[r7kamura's working log on 2022-06-26]]></description><link>https://r7kamura.github.io/diary/articles/51</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/51</guid><pubDate>Sat, 25 Jun 2022 21:09:03 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=hfhm34le6es">作業 with r7kamura #57 - YouTube</a></p><hr><p>一昨日やった依存Gemのgemspec調査で通りがかりに気になったものに対して、一通りPull Requestを出し終えた。幾つかのGemは反応が早くてすぐにmergeされたものの、最終更新が数年前などの望み薄なものも多い。</p><hr><p>この日の運動:</p>
-<ul>
-<li>散歩
-<ul>
-<li>芝離宮恩賜庭園</li>
-<li>日の出駅</li>
-</ul>
-</li>
-<li>懸垂
-<ul>
-<li>連続最大5回</li>
-</ul>
-</li>
-<li>腕立て
-<ul>
-<li>まめたまの動画のやつ</li>
-</ul>
-</li>
-</ul>]]></content:encoded></item><item><title><![CDATA[2022-06-25]]></title><description><![CDATA[r7kamura's working log on 2022-06-25]]></description><link>https://r7kamura.github.io/diary/articles/50</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/50</guid><pubDate>Fri, 24 Jun 2022 21:02:57 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=BtZzeKz69rE">作業 with r7kamura #56 - YouTube</a></p><hr><p>GitHubが世界の900名の開発者に$550ずつone time sponsorでお金を配ったらしい。素晴らしい</p><hr><p>例のスクワットをやった。若干ながら後半戦がまともに進められるようになったかもしれない。</p><hr><p>社の依存Gemの変更全部読む活動をしていて、作業効率改善のためにgemspecのmetadataを元にスプレッドシートに色々まとめたりしていたのだけど、たまにURLがhttpだったりリンク切れてたりというものが見つかっていたので、それらに対してnitpickながらURLを修正するPull Requestを送っていた。</p><hr><p>今日の筋トレ:</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 26 Jun 2022 21:08:13 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-26]]></title><description><![CDATA[r7kamura's working log on 2022-06-26]]></description><link>https://r7kamura.github.io/diary/articles/51</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/51</guid><pubDate>Sat, 25 Jun 2022 21:09:03 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=hfhm34le6es">作業 with r7kamura #57 - YouTube</a></p><hr><p>一昨日やった依存Gemのgemspec調査で通りがかりに気になったものに対して、一通りPull Requestを出し終えた。幾つかのGemは反応が早くてすぐにmergeされたものの、最終更新が数年前などの望み薄なものも多い。</p>]]></content:encoded></item><item><title><![CDATA[2022-06-25]]></title><description><![CDATA[r7kamura's working log on 2022-06-25]]></description><link>https://r7kamura.github.io/diary/articles/50</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/50</guid><pubDate>Fri, 24 Jun 2022 21:02:57 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=BtZzeKz69rE">作業 with r7kamura #56 - YouTube</a></p><hr><p>GitHubが世界の900名の開発者に$550ずつone time sponsorでお金を配ったらしい。素晴らしい</p><hr><p>例のスクワットをやった。若干ながら後半戦がまともに進められるようになったかもしれない。</p><hr><p>社の依存Gemの変更全部読む活動をしていて、作業効率改善のためにgemspecのmetadataを元にスプレッドシートに色々まとめたりしていたのだけど、たまにURLがhttpだったりリンク切れてたりというものが見つかっていたので、それらに対してnitpickながらURLを修正するPull Requestを送っていた。</p><hr><p>今日の筋トレ:</p>
 <ul>
 <li>スクワット
 <ul>
@@ -313,8 +295,4 @@ GW期間と比べて仕事時間の割合が増えて、クリエイティブな
 <a href="https://r7kamura.com/articles/2020-02-17-my-protein">マイプロテインのプロテインを買った</a></p><hr><ul>
 <li>懸垂 腕広げて5回 + 逆手4回</li>
 <li>懸垂 順手2回</li>
-</ul><hr><p>自宅内でいろんなものを100枚ほど撮りまくって操作方法・設定による写り方の違いを徐々に覚え始めた。先は長い。</p><hr><p>sigma fp Lの接続試験をした。うまく映ってる。10分ほど映してただけでカメラは結構アツアツだしちょっと怖い</p>]]></content:encoded></item><item><title><![CDATA[2022-06-07]]></title><description><![CDATA[r7kamura's working log on 2022-06-07]]></description><link>https://r7kamura.github.io/diary/articles/32</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/32</guid><pubDate>Mon, 06 Jun 2022 21:04:32 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=0ZzngwAn9iA">作業 with r7kamura #38 - YouTube</a></p><hr><p><a href="https://github.com/r7kamura/sevencop">r7kamura/sevencop: Custom cops for RuboCop.</a> をリリースした。</p>
-<p>いまのところ含まれているCopは <code>Sevencop/RedundantExistenceCheck</code> の1つのみ。ursmさんが手作業でやっているのを見てCopがあれば良いのにと思ってつくったもの。偽陽性があるのでUnsafe。--autocorrect-allに対応している。こういう偽陽性があるものはあまり公式に追加すべきではない (こういうものが入るとどんどん品質が落ちていく) し、battle testedでなく思い付き程度のものを入れるのも良くないだろうと思ったので、本体にはPull Requestを出さずに3rd PartyのCop置き場に置くことにした。</p><hr><p>2回目、5種類目まで。
-<a href="https://www.youtube.com/watch?v=LOuh44mpQRg">【7分】これ一回で十分！超高強度下半身トレーニング【筋トレ】 - YouTube</a></p><hr><p>死、死んでる……
-<a href="https://go-store.io/">https://go-store.io/</a></p><hr><p>書いた
-<a href="https://r7kamura.com/articles/2022-06-07-sevencop-redundant-existence-check">https://r7kamura.com/articles/2022-06-07-sevencop-redundant-existence-check</a></p><hr><p>朝にプランクもやった</p><hr><p>ヨドバシカメラでカメラを見てきた</p>]]></content:encoded></item></channel></rss>
+</ul><hr><p>自宅内でいろんなものを100枚ほど撮りまくって操作方法・設定による写り方の違いを徐々に覚え始めた。先は長い。</p><hr><p>sigma fp Lの接続試験をした。うまく映ってる。10分ほど映してただけでカメラは結構アツアツだしちょっと怖い</p>]]></content:encoded></item></channel></rss>

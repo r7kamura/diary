@@ -12,19 +12,23 @@ type Issue = any;
 
 const Home: NextPage<Props> = ({ issues }) => {
   return (
-    <section>
-      <p>
-        <a href="https://twitter.com/r7kamura">r7kamura</a>&apos;s daily working
-        log.
-      </p>
-      <ol>
-        {issues.map((issue) => (
-          <li key={issue.number}>
-            <Link href={`/articles/${issue.number}`}>{issue.title}</Link>
-          </li>
-        ))}
-      </ol>
-    </section>
+    <>
+      <section>
+        <p>
+          <a href="https://twitter.com/r7kamura">r7kamura</a>&apos;s daily
+          working log.
+        </p>
+      </section>
+      <section className="mt-12">
+        <ol className="flex flex-col gap-12">
+          {issues.map((issue) => (
+            <li key={issue.number}>
+              <Link href={`/articles/${issue.number}`}>{issue.title}</Link>
+            </li>
+          ))}
+        </ol>
+      </section>
+    </>
   );
 };
 

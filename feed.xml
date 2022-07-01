@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 01 Jul 2022 09:44:37 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-06-30]]></title><description><![CDATA[r7kamura's working log on 2022-06-30]]></description><link>https://r7kamura.github.io/diary/articles/55</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/55</guid><pubDate>Wed, 29 Jun 2022 21:07:38 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=kVeLT5ixdd0">作業 with r7kamura #61 - YouTube</a></p><hr><p><a href="https://www.youtube.com/watch?v=0NE2Lo0omSA">騙されたと思って14日間だけこの腹筋を試してみて下さい。 - YouTube</a></p><hr><p>1ドル137円</p><hr><p>この日の運動:</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 01 Jul 2022 19:06:17 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-01]]></title><description><![CDATA[r7kamura's working log on 2022-07-01]]></description><link>https://r7kamura.github.io/diary/articles/56</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/56</guid><pubDate>Thu, 30 Jun 2022 21:03:28 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=twh1Rh2JYTw">作業 with r7kamura #62 - YouTube</a></p><hr><p>配信開始時にやっていること:</p>
+<ul>
+<li>カメラの設置
+<ul>
+<li>三脚を常に置いていると邪魔なので都度動かしている</li>
+<li>角度の調整や焦点の調整で若干手間取る</li>
+</ul>
+</li>
+<li>OBSで配信を選択して選択
+<ul>
+<li>前回の配信終了後に翌日の配信を作成してあるので選択するだけ</li>
+</ul>
+</li>
+<li>OBSで配信開始</li>
+<li>Twitterに配信のリンクを投稿</li>
+<li>Twitterのプロフィールに固定</li>
+<li>作業ログに配信のリンクを記載</li>
+<li>水とコーヒーを入れる</li>
+</ul><hr><p><a href="https://github.com/r7kamura/gialog">gialog</a>のtailwind対応とダークモード対応をした。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/gialog/pull/15">r7kamura/gialog#15</a></li>
+</ul>
+<p>diaryにも反映させたい。テンプレート更新時の実体への適用は手作業なので大変だ。記事タイトルが日付なので元々の日付表示を消すなどの細かい違いもあるし。</p>
+<p>同じく<a href="https://r7kamura.github.io/diary/">r7kamura/diary</a>も対応した。</p><hr><p>この半年間シェルでよく使ったコマンド達:</p>
+<pre><code class="language-bash"># forkしたリポジトリで使う。gh pr create したときにpush先をわざわざ聞かれずに済む
+git push -u
+
+# DraftでPull Requestをつくる
+# titleとdescriptionはcommitsの内容を元に埋めてもらう
+gh pr create -f -d
+
+# gh pr view -w || gh pr create -w のalias
+# ウェブブラウザで、現在のブランチから出しているPull Requestを開くか、Pull Request作成画面を開く
+pr
+
+# gh repo view --web のalias
+# ウェブブラウザでリポジトリを開く
+po
+
+# grepするとき -w (--word-regexp) よく使う
+git grep -w foo
+
+# git grepとsedとxargsで雑に一括置換するやつ
+# もちろん正規表現も使える
+gr foo bar
+
+# テスト実行後にRailsのログ見がち
+# -RS は折り返し無し、カラー表示
+less -RS log/test.log
+
+# tig使いがち
+tig
+
+# pecoでブランチ切り替える関数ぺこ
+gc
+
+# pecoでgit addする関数ぺこ
+ga
+
+# レビューするときにそのブランチをcheckoutする
+# レビューするならエアプじゃなくてちゃんと動かした方が良い
+gh pr checkout 123
+</code></pre>
+<p>どこかで記事にまとめたい。</p><hr><p>待ち望んでいた最終話が公開され、ディスカバリーチャンネルの覆面ビリオネアを見終えた。全話最高だった……</p><hr><p><a href="https://github.com/sponsors/r7kamura">GitHubのr7kamuraのスポンサーページ</a>を更新した</p>]]></content:encoded></item><item><title><![CDATA[2022-06-30]]></title><description><![CDATA[r7kamura's working log on 2022-06-30]]></description><link>https://r7kamura.github.io/diary/articles/55</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/55</guid><pubDate>Wed, 29 Jun 2022 21:07:38 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=kVeLT5ixdd0">作業 with r7kamura #61 - YouTube</a></p><hr><p><a href="https://www.youtube.com/watch?v=0NE2Lo0omSA">騙されたと思って14日間だけこの腹筋を試してみて下さい。 - YouTube</a></p><hr><p>1ドル137円</p><hr><p>この日の運動:</p>
 <ul>
 <li>レッグレイズ</li>
 <li>腹筋

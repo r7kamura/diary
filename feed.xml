@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 01 Jul 2022 19:06:17 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-01]]></title><description><![CDATA[r7kamura's working log on 2022-07-01]]></description><link>https://r7kamura.github.io/diary/articles/56</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/56</guid><pubDate>Thu, 30 Jun 2022 21:03:28 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=twh1Rh2JYTw">作業 with r7kamura #62 - YouTube</a></p><hr><p>配信開始時にやっていること:</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 01 Jul 2022 21:09:52 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-01]]></title><description><![CDATA[r7kamura's working log on 2022-07-01]]></description><link>https://r7kamura.github.io/diary/articles/56</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/56</guid><pubDate>Thu, 30 Jun 2022 21:03:28 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=twh1Rh2JYTw">作業 with r7kamura #62 - YouTube</a></p><hr><p>配信開始時にやっていること:</p>
 <ul>
 <li>カメラの設置
 <ul>
@@ -388,12 +388,4 @@ Y K
 </li>
 </ul>
 </li>
-</ul>]]></content:encoded></item><item><title><![CDATA[2022-06-12]]></title><description><![CDATA[r7kamura's working log on 2022-06-12]]></description><link>https://r7kamura.github.io/diary/articles/36</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/36</guid><pubDate>Sat, 11 Jun 2022 21:13:48 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=zZMO2WHk7FE">作業 with r7kamura #43 - YouTube</a></p><hr><p>10日ぶりにYouTube Audio Libraryを掘った。
-ピアノ系の曲に良いのがあった。流石に掘り尽くしたかもしれない。
-SoundCloudには良い楽曲が沢山あるんだけど、あれらは権利関係が謎すぎてまだまだ近寄りがたい。惜しい。</p><hr><p>XY問題の話をした
-<a href="https://ja.wikipedia.org/wiki/XY%E5%95%8F%E9%A1%8C">XY問題 - Wikipedia</a></p><hr><p>Cortanaのキーボードショートカット (Win + Cで呼び出し) を無効化する方法を調べた。</p><hr><p>keydownを監視する拡張を入れていると、textareaでの入力がまずまず遅い (本気で入力すると少し遅れて反映されてしまう程度) ことに気付いた。shortcut plus系の拡張はあまり良くないのかも……</p><hr><p>書いた: <a href="https://r7kamura.com/articles/2022-06-12-salome-hyakumanten-chairs">サロメ椅子 百万点見本市</a></p><hr><p>絞り、AEL (Auto Exposure Lock)、親指AFなどの勉強をしている。</p>
-<p>sigma fpはデフォルトではシネマ撮影モード時のダイヤル操作が無効化されている (なんで?) ので、ダイヤルで変更したい場合はこれを設定で有効化しなければならないらしい。</p>
-<p>sigma fpの前ダイヤルには露出補正をカスタムで割り当てていますよ、という人が居た。なるほど。</p>
-<p>sigma fpのAELにAFを割り当てて親指AFのために使っていますよ、という人も居た。</p>
-<p>シネマ撮影モードでもUVC (USB Video Class) 接続するときはなんかISO感度の設定が表示されない気がするけど、これは……設定できないということなんだろうか? まだよくわかっていない。</p>
-<p>朝はいいんだけど、昼になってくると外が明るくて自分が暗く映りがちなので、なんか設定を見出さないといけない。</p>]]></content:encoded></item></channel></rss>
+</ul>]]></content:encoded></item></channel></rss>

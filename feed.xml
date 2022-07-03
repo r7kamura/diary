@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 03 Jul 2022 01:15:21 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-02]]></title><description><![CDATA[r7kamura's working log on 2022-07-02]]></description><link>https://r7kamura.github.io/diary/articles/58</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/58</guid><pubDate>Fri, 01 Jul 2022 21:08:48 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=a_qamEkRozY&#x26;ab_channel=r7kamura">作業 with r7kamura #63 - YouTube</a></p><hr><p>書いた:</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 03 Jul 2022 19:06:23 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-03]]></title><description><![CDATA[r7kamura's working log on 2022-07-03]]></description><link>https://r7kamura.github.io/diary/articles/59</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/59</guid><pubDate>Sat, 02 Jul 2022 21:05:09 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=vGWK7l8yysQ&#x26;ab_channel=r7kamura">作業 with r7kamura #64 - YouTube</a></p><hr><p>GitHubのchangelogを読んでいて、GitHub ProかGitHub Teams, GitHub Enterpriseだと (つまりGitHub Freeではない場合)、リポジトリでautolinkの設定をできるというのを知った。</p>
+<p>リポジトリのautolinkというのは、例えば <code>JIRA-</code>  をautolink対象のprefixとすること、またそのとき生成するURLパターンを設定できて、そうすると</p>
+<pre><code class="language-markdown">次のチケットに書いてあります:
+
+- JIRA-123
+</code></pre>
+<p>のようなdescriptionをMarkdownで書いたときに、自動的にこれをリンクにしてくれる機能らしい。便利そう。</p>
+<p>便利そうだと思ったけど、冷静に考えると番号だけ参照する機会って手入力でもしない限りないかも？もし「パターンに一致するURLを記述すると自動的に省略形式のリンクとして表示してくれる機能」なのであれば、それは便利かもしれない。</p><hr><p>RuboCopのEnabled, Safe, SafeAutoCorrect周りの話がよく分かっていなかったが、SafeとSafeAutoCorrectが導入された <a href="https://github.com/rubocop/rubocop/issues/5978">rubocop/rubocop#5978</a> では次のように説明されている:</p>
+<blockquote>
+<ul>
+<li>Safe (true/false) - indicates whether the cop can yield false positives (by design) or not.</li>
+<li>SafeAutoCorrect (true/false) - indicates whether the auto-correct the cop does is safe (equivalent) by design.</li>
+</ul>
+</blockquote>
+<p>なので、default.ymlで設定されているCopの設定について具体例で説明すると、こんな感じか:</p>
+<ul>
+<li>Enabled: false に設定されている場合
+<ul>
+<li>新しく追加された実験的なCop</li>
+<li>不具合がありそうなCop</li>
+</ul>
+</li>
+<li>Safe: false に設定されている場合
+<ul>
+<li>偽陽性がある (間違ってないのに間違っていると指摘されてしまう) ことが明らかなCop</li>
+</ul>
+</li>
+<li>SafeAutoCorrect: false に設定されている場合
+<ul>
+<li>破壊的な変更を持ち込んでしまう可能性があるのでおいそれとauto-correctしてほしくないCop</li>
+<li>おかしな変換結果になってしまう場合があることが明らかなCop</li>
+</ul>
+</li>
+</ul><hr><p>Hashリテラルのキーを辞書順にするCopがあると便利そうな気がしてきた。</p><hr><p>カスタムCop紹介記事を書いた:</p>
+<ul>
+<li><a href="https://r7kamura.com/articles/2022-07-03-sevencop-belongs-to-optional">Sevencop/BelongsToOptional</a></li>
+</ul><hr><p>筋トレ振り返り記事を書いた:</p>
+<ul>
+<li><a href="https://r7kamura.com/articles/2022-07-03-workout-initiation">筋トレ初動の立ち回り</a></li>
+</ul>]]></content:encoded></item><item><title><![CDATA[2022-07-02]]></title><description><![CDATA[r7kamura's working log on 2022-07-02]]></description><link>https://r7kamura.github.io/diary/articles/58</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/58</guid><pubDate>Fri, 01 Jul 2022 21:08:48 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=a_qamEkRozY&#x26;ab_channel=r7kamura">作業 with r7kamura #63 - YouTube</a></p><hr><p>書いた:</p>
 <ul>
 <li><a href="https://r7kamura.com/articles/2022-07-02-nanoleaf-lines">Nanoleafを付けると楽しい</a></li>
 </ul><hr><p>rubocop --auto-gen-config の実装を見てみたが、slimcopなどから簡単に使えそうな実装ではなかった……</p>

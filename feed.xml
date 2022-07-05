@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 05 Jul 2022 08:43:29 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-04]]></title><description><![CDATA[r7kamura's working log on 2022-07-04]]></description><link>https://r7kamura.github.io/diary/articles/60</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/60</guid><pubDate>Sun, 03 Jul 2022 21:03:16 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=0tpkoGHsdjM&#x26;ab_channel=r7kamura">作業 with r7kamura #65 - YouTube</a></p><hr><p>Created a custom cop I've always wanted:</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 05 Jul 2022 19:06:25 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-05]]></title><description><![CDATA[r7kamura's working log on 2022-07-05]]></description><link>https://r7kamura.github.io/diary/articles/61</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/61</guid><pubDate>Mon, 04 Jul 2022 23:21:00 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=t7gxiMeVtw8&#x26;ab_channel=r7kamura">作業 with r7kamura #66 - YouTube</a></p>
+<p>最近のアップデート:</p>
+<ul>
+<li>壁に照明を貼り付けた
+<ul>
+<li>Nanoleaf Lines</li>
+</ul>
+</li>
+<li>机から箱までのケーブルを皮膜で覆ってまとめた</li>
+<li>作業時間中にマイクで環境音も流してみることにした
+<ul>
+<li>主に打鍵音</li>
+<li>たまに呼吸音が入る
+<ul>
+<li>これは理想的には要らない</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>休憩時間中に雨を止めてみることにした
+<ul>
+<li>気持ちの切り替えがしやすいかもしれない</li>
+<li>OBSの再生デバイスの扱い方に問題があり、BGMだけ鳴らないことがあるので、その対策としては有効かも
+<ul>
+<li>雨が止まったことを契機に、休憩時間に入ったということを認識できるようになるため</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><hr><p>rubocop-specのRSpec/EmptyExampleGroupにautocorrect機能があると便利だったので、つくってPull Requestを出した。不要なテストケースを2000件ほど消すという作業の中で実際にこれを使ってみたが、かなり便利だった。</p><hr><p>RSpec/EmptyExampleもあることに気付いた。</p><hr><p>円タイマーをつくるためにCSSを学んでいる</p>
+<ul>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/CSS/gradient/radial-gradient">https://developer.mozilla.org/ja/docs/Web/CSS/gradient/radial-gradient</a></li>
+<li><a href="https://ics.media/entry/18966/">https://ics.media/entry/18966/</a></li>
+</ul><hr><p>最近見たエンタメ:</p>
+<ul>
+<li>ニセモノの錬金術師
+<ul>
+<li>おすすめされた</li>
+<li>Kindleでラフ版をまずまずのところまで読んだ</li>
+</ul>
+</li>
+<li>SPY×FAMILY
+<ul>
+<li>最後の2話分で止まってたので見た</li>
+</ul>
+</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[2022-07-04]]></title><description><![CDATA[r7kamura's working log on 2022-07-04]]></description><link>https://r7kamura.github.io/diary/articles/60</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/60</guid><pubDate>Sun, 03 Jul 2022 21:03:16 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=0tpkoGHsdjM&#x26;ab_channel=r7kamura">作業 with r7kamura #65 - YouTube</a></p><hr><p>Created a custom cop I've always wanted:</p>
 <ul>
 <li><a href="https://github.com/r7kamura/sevencop/pull/13">Add <code>Sevencop/HashLiteralOrder</code> cop by r7kamura · Pull Request #13 · r7kamura/sevencop</a></li>
 </ul><hr><p>RuboCopにPull Requestを出した</p><hr><p>これにまつわる作業しててauto-correctが欲しかったから、Pull Request出そうかな。</p>

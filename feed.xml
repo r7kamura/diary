@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 06 Jul 2022 20:49:55 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-06]]></title><description><![CDATA[r7kamura's working log on 2022-07-06]]></description><link>https://r7kamura.github.io/diary/articles/62</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/62</guid><pubDate>Tue, 05 Jul 2022 21:05:33 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=0c2ha5EAIHM&#x26;ab_channel=r7kamura">作業 with r7kamura #67 - YouTube</a></p><hr><p>昨日OSSに出したPull Request達に反応をもらっていたので、対応した。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 06 Jul 2022 20:50:15 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-06]]></title><description><![CDATA[r7kamura's working log on 2022-07-06]]></description><link>https://r7kamura.github.io/diary/articles/62</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/62</guid><pubDate>Tue, 05 Jul 2022 21:05:33 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=0c2ha5EAIHM&#x26;ab_channel=r7kamura">作業 with r7kamura #67 - YouTube</a></p><hr><p>昨日OSSに出したPull Request達に反応をもらっていたので、対応した。</p>
 <p>対象がIssueやPull Requestだと、Issueからリンクを貼るとトラックバック的なリンクが貼られてしまうので、リンクをハリづらい……</p><hr><p>Notifer for GitHub、機能は良いけど細かい見た目を好みに変更したいので、こういうものを自作しても良い気がしてきた。</p>
 <ul>
 <li><a href="https://github.com/sindresorhus/notifier-for-github">https://github.com/sindresorhus/notifier-for-github</a></li>
@@ -391,25 +391,4 @@ Ran 3 rules on 2 files: 4 findings.
 私は都市景観撮影において構造物を先鋭化させるため、高濃度のNDフィルターを使用することにより、少なくとも15秒以上、長くて10分の長時間露光を行い、動体物の動きを抽象化させる手法をとっておりますが、本機能を適用した場合NDフィルターは必要無く、レンズの性能をダイレクトに享受しながら、かつノイズが極小までキャンセルされている、という複数の優位点を得ることができます。
 <a href="https://xico.media/columns/phase-one-xf-iq4/">https://xico.media/columns/phase-one-xf-iq4/</a></p>
 </blockquote>
-<p>長時間露光の使用例として、雲や海などを長時間露光によって抽象化させることで、都市景観撮影において構造物を目立たせる、という意図でもって使われることがあるらしい。</p>]]></content:encoded></item><item><title><![CDATA[2022-06-17]]></title><description><![CDATA[r7kamura's working log on 2022-06-17]]></description><link>https://r7kamura.github.io/diary/articles/42</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/42</guid><pubDate>Thu, 16 Jun 2022 21:25:30 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=BdpcCcwstZU">作業 with r7kamura #48 - YouTube</a></p><hr><p>Googleドキュメントでたまにリスト記法が上手くMarkdownに変換されないことがある……
-HTML to Markdown の変換のところで上手くいってないのかも。</p><hr><p>最近の俗世:</p>
-<ul>
-<li>インターネットエクスプローラー 終了</li>
-<li>FF7 Rebirth 今冬発売</li>
-</ul><hr><p>つくった
-<a href="https://github.com/r7kamura/unhandled_exception_formatter">r7kamura/unhandled_exception_formatter: Custom RSpec formatter to output unhandled exception.</a></p><hr><p>RailsアップグレードでこういうCopが欲しくなることが多いので、試しにつくってみている:</p>
-<pre><code class="language-ruby"># Bad
-class Article &#x3C; ApplicationRecord
-  validates :name, uniqueness: true
-end
-
-# Good
-class Article &#x3C; ApplicationRecord
-  validates :name, uniqueness: { case_sensitive: true }
-end
-
-# Good
-class Article &#x3C; ApplicationRecord
-  validates :name, uniqueness: { case_sensitive: false }
-end
-</code></pre>]]></content:encoded></item></channel></rss>
+<p>長時間露光の使用例として、雲や海などを長時間露光によって抽象化させることで、都市景観撮影において構造物を目立たせる、という意図でもって使われることがあるらしい。</p>]]></content:encoded></item></channel></rss>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 20 Jul 2022 21:07:33 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-20]]></title><description><![CDATA[r7kamura's working log on 2022-07-20]]></description><link>https://r7kamura.github.io/diary/articles/76</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/76</guid><pubDate>Tue, 19 Jul 2022 21:07:02 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=CH0rAOmT938&#x26;ab_channel=r7kamura">作業 with r7kamura #81 - YouTube</a></p><hr><p>gh-pr-releaseをリリースノート生成APIで代替できないか色々実験したものの、上手くいかなかった。</p><hr><p>YouTubeのコメント読み上げおばけというchrome拡張、YouTubeを英語のUIにすると英語で読み上げるんだな……</p><hr><p>rubocop-railsにprを出したが、果たして</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 20 Jul 2022 21:14:34 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-20]]></title><description><![CDATA[r7kamura's working log on 2022-07-20]]></description><link>https://r7kamura.github.io/diary/articles/76</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/76</guid><pubDate>Tue, 19 Jul 2022 21:07:02 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=CH0rAOmT938&#x26;ab_channel=r7kamura">作業 with r7kamura #81 - YouTube</a></p><hr><p>gh-pr-releaseをリリースノート生成APIで代替できないか色々実験したものの、上手くいかなかった。</p><hr><p>YouTubeのコメント読み上げおばけというchrome拡張、YouTubeを英語のUIにすると英語で読み上げるんだな……</p><hr><p>rubocop-railsにprを出したが、果たして</p>
 <ul>
 <li><a href="https://togithub.com/rubocop/rubocop-rails/pull/747">https://togithub.com/rubocop/rubocop-rails/pull/747</a></li>
 </ul>]]></content:encoded></item><item><title><![CDATA[2022-07-19]]></title><description><![CDATA[r7kamura's working log on 2022-07-19]]></description><link>https://r7kamura.github.io/diary/articles/75</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/75</guid><pubDate>Mon, 18 Jul 2022 21:02:49 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=Y-DN_nGx3wk">作業 with r7kamura #80 - YouTube</a></p><hr><p><a href="https://www.youtube.com/watch?v=B5wdRcv-zQA">ASMR Coding: Chrome extension in 20 min (subtitle commentary available) - YouTube</a>
@@ -242,4 +242,18 @@ ga
 # レビューするならエアプじゃなくてちゃんと動かした方が良い
 gh pr checkout 123
 </code></pre>
-<p>どこかで記事にまとめたい。</p><hr><p>待ち望んでいた最終話が公開され、ディスカバリーチャンネルの覆面ビリオネアを見終えた。全話最高だった……</p><hr><p><a href="https://github.com/sponsors/r7kamura">GitHubのr7kamuraのスポンサーページ</a>を更新した</p>]]></content:encoded></item></channel></rss>
+<p>どこかで記事にまとめたい。</p><hr><p>待ち望んでいた最終話が公開され、ディスカバリーチャンネルの覆面ビリオネアを見終えた。全話最高だった……</p><hr><p><a href="https://github.com/sponsors/r7kamura">GitHubのr7kamuraのスポンサーページ</a>を更新した</p>]]></content:encoded></item><item><title><![CDATA[2022-06-30]]></title><description><![CDATA[r7kamura's working log on 2022-06-30]]></description><link>https://r7kamura.github.io/diary/articles/55</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/55</guid><pubDate>Wed, 29 Jun 2022 21:07:38 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=kVeLT5ixdd0">作業 with r7kamura #61 - YouTube</a></p><hr><p><a href="https://www.youtube.com/watch?v=0NE2Lo0omSA">騙されたと思って14日間だけこの腹筋を試してみて下さい。 - YouTube</a></p><hr><p>1ドル137円</p><hr><p>この日の運動:</p>
+<ul>
+<li>レッグレイズ</li>
+<li>腹筋
+<ul>
+<li>動画を見てやったがきつすぎて腹筋が真っ二つになった</li>
+</ul>
+</li>
+<li>散歩
+<ul>
+<li>1時間ちょい</li>
+<li>かなり長めに歩いた</li>
+</ul>
+</li>
+</ul>]]></content:encoded></item></channel></rss>

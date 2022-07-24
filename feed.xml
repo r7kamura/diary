@@ -1,4 +1,129 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 24 Jul 2022 13:03:59 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-22]]></title><description><![CDATA[r7kamura's working log on 2022-07-22]]></description><link>https://r7kamura.github.io/diary/articles/78</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/78</guid><pubDate>Thu, 21 Jul 2022 21:50:04 GMT</pubDate><content:encoded><![CDATA[<hr><p>editabroにmonaco-markdownを導入するprをもらったので、monaco-markdownのソースコードを一通り読んでいる</p><hr><p>editabroのCIを改善して、リリースノート自動生成機能を有効化し (ノート生成だけまだ実験的なので手動でやっていた)、あと提出用のzipの自動生成とリリースへの紐づけも行うようにした。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 24 Jul 2022 19:06:10 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-24]]></title><description><![CDATA[r7kamura's working log on 2022-07-24]]></description><link>https://r7kamura.github.io/diary/articles/80</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/80</guid><pubDate>Sat, 23 Jul 2022 21:18:27 GMT</pubDate><content:encoded><![CDATA[<p>今回はvscode-rubyの読書メモを書き連ねていきます。</p><hr><p>vscode-rubyは、複数のパッケージを扱うmonorepoとして管理されている。</p>
+<ul>
+<li>vscode-ruby</li>
+<li>vscode-ruby-client</li>
+<li>vscode-ruby-debugger</li>
+<li>language-server-ruby</li>
+</ul>
+<p>monorepoの管理にはLernaを使っているとのこと。</p><hr><p>language-server-rubyについて詳しく見ていく。</p>
+<p>package.jsonを見ると、次のパッケージがdependenciesに含まれていた。</p>
+<ul>
+<li>web-tree-sitter</li>
+<li>web-tree-sitter-ruby</li>
+</ul>
+<p>web- prefix付きなのが気になるが、確かにtree-sitterが使われている。</p>
+<p>package.jsonのmainフィールドにdist/index.jsとあり、npm run buildではesbuild.jsが利用されている。</p>
+<p>esbuild.jsの中では、web-tree-sitter-ruby/tree-sitter-ruby.wasmが参照されている。
+なるほど、WASM形式でビルドされてNode.js等で使えるように配布されているのがweb-tree-sitterなのかな。
+ちなみにtree-sitterはRustで実装されている。</p><hr><ul>
+<li><a href="https://github.com/rubyide/vscode-ruby">https://github.com/rubyide/vscode-ruby</a></li>
+<li><a href="https://github.com/tree-sitter/tree-sitter">https://github.com/tree-sitter/tree-sitter</a></li>
+<li><a href="https://github.com/tree-sitter/tree-sitter-ruby">https://github.com/tree-sitter/tree-sitter-ruby</a></li>
+</ul><hr><p>language-server-rubyのesbuild.jsを見ると、次の二つのことをやっているのが分かる。</p>
+<ul>
+<li>tree-sitter{,-ruby}.wasmをコピーして、distディレクトリに入れる</li>
+<li>src/inedx.tsをビルドして、distディレクトリに入れる</li>
+</ul>
+<p>language-server-rubyのエントリポイントがsrc/index.jsであることが分かったので、ここを読み進めていく。</p><hr><p>手元に環境にnodenvが入っているので、vscode-rubyのリポジトリのルートディレクトリで次のコマンドを実行するだけで環境構築を完了させられた。</p>
+<pre><code>nodenv install
+npm install
+</code></pre>
+<p>これをやらないと、VSCodeが怒ってくる。</p>
+<p><img src="https://user-images.githubusercontent.com/111689/180624816-964a6b5b-a25a-44e5-bc95-26d8ea1b648f.png" alt="image"></p><hr><p>esbuildを使うのは初めてだけど、こういう感じで使うんだなあ。</p>
+<p><code>esbuild</code> というexecutableを実行するわけではなく、</p>
+<pre><code>node esbuild.js
+</code></pre>
+<p>と実行するというのが面白い。普通だったらオプションとかを渡したくなってCLIオプションを付けるためにCLIを用意するものだけど、esbuildの場合はどうせ設定ファイルを用意することになるので、そういうものを用意する必要は無いわという判断なのだろうか。まあ無くて良いなら無いに越したことはない。</p><hr><pre><code class="language-javascript">// Don't die when attempting to pipe stdin to a bad spawn
+// https://github.com/electron/electron/issues/13254
+process.on('SIGPIPE', () => {
+	log.error('SIGPIPE received');
+});
+</code></pre>
+<p>とあり、そういえばVS CodeはElectronベースだから、Electronの不具合の影響を受けるんだったと思い出した。</p><hr><p>基本のlanguage serverの実装はこういう感じのようだ。</p>
+<pre><code class="language-javascript">import { createConnection, ProposedFeatures } from "vscode-languageserver";
+cosnt connection = createConnection(ProposedFeatures.all);
+// Customize connection as you like...
+connection.listen();
+</code></pre><hr><pre><code class="language-javascript">let server;
+connection.onInitialize(async (params) => {
+  server = new Server(connection, params);
+  server.initialize();
+  return server.capabilities;
+});
+</code></pre>
+<p>こんな感じのコードが書かれているから、実際には <code>Server</code> という内部実装の中でいろいろな処理をやっている。</p>
+<p>なので、読むべきは次の実装:</p>
+<ul>
+<li>Serverのconstructor</li>
+<li>Server#initialize</li>
+</ul>
+<p>capabilitiesというのは、「このlanguage serevrはDocumentHighlightに対応ています」のような情報を明示するためのオブジェクトらしい。</p>
+<ul>
+<li><a href="https://code.visualstudio.com/api/language-extensions/programmatic-language-features">https://code.visualstudio.com/api/language-extensions/programmatic-language-features</a></li>
+</ul><hr><p>language-server-rubyでは、VS Codeの拡張として提供する各機能の単位を "Provider" と呼称しているようだ。VS Codeの用語なのか独自用語なのかはわからない。</p>
+<p>language-server-rubyでは、次の6つのProviderを用意しているようだ。</p>
+<ul>
+<li>FoldingRangeProvider</li>
+<li>DocumentHighlightProvider</li>
+<li>DocumentSymbolProvider</li>
+<li>DocumentFormattingProvider</li>
+<li>ConfigurationProvider</li>
+<li>WorkspaceProvider</li>
+</ul>
+<p>前者4つは初期化フェーズ中に用意され、後者2つは初期化フェーズ完了後に用意される。connection.onInitializeとconnection.onInitialize<strong>d</strong>でそれぞれ用意されている。</p>
+<ul>
+<li>Server#initialize</li>
+<li>Server#setup</li>
+</ul>
+<p>でそれぞれ実装されているが、このネーミングは少し分かりづらい…</p>
+<ul>
+<li>Server#onConnectionInitialize</li>
+<li>Server#onConnectionInitialized</li>
+</ul>
+<p>とかで良かっただろうと思う。</p>
+<p>その話はさておき、Server.tsの主な仕事はこのようにProviderを用意してあげることらしく、主な実装はつまりそれぞれのProviderに書かれているに違いない。</p>
+<p>Providerは、初期化時にconnectionを受け取って、何か良い感じに動くもののようだということが分かっている。</p><hr><p>各種Providerは基底Providerクラスを継承しているらしい。
+各種Providerは .registerというstatic methodを持っていて、外部向けのインターフェースがこれ</p><hr><p>Connection#onDocumentHighlight という、コールバック登録用のメソッドが生えているらしいDocumentHighlightProviderはこれをそのconstructorで呼び出している。ググってもonDocumentHighlightに関する情報は乏しい……</p>
+<p>onDocumentHighlightに渡す引数はServerRequestHandler型で、実際のコード例を見ると、TextDocumentPositionParams型の引数を取るらしい。位置情報が与えられるので、それに応じて何か適切に動作しろということだろうか。<code>Promise&#x3C;DocumentHighlight[]></code> 型の値を返す関数として実装されている。</p>
+<p>paramsはpositionとuriを持つObjectらしい。多分ファイルパスとその中での位置情報が入っている。</p>
+<p>DocumentHighlightAnalyzer.analyze にこれらの値を渡してその返り値をそのまま返している。役割分担を整理するとこうだ:</p>
+<ul>
+<li>Provider
+<ul>
+<li>Connection#onDocumentHighlight のことを知っている</li>
+<li>適切なハンドラー関数を用意してあげる責務を持つ</li>
+</ul>
+</li>
+<li>Analyzer
+<ul>
+<li>Connectionについては詳しいことは知らない</li>
+<li>コードの位置情報とファイルパスをもらって解析を行うだけ</li>
+</ul>
+</li>
+</ul><hr><p>DocumentHighlightAnalyzerでは、tree-sitterを利用した構文の解析と、<code>DocumentHighlight[]</code> の生成をやっている。どういう機能を持っているかというと、多分こんな感じ:</p>
+<ul>
+<li>endにカーソルを載せているときは、対応するbeginやdoからendまでをハイライトする</li>
+<li>beginやdoにカーソルを載せているときは、そこから対応するendまでをハイライトする</li>
+</ul>
+<p>tree-sitter-rubyの生成する構文木の実例を見ながら進めていった方が分かりやすいかもしれない。</p>
+<p>vscodeの "document highlight" という機能・概念を正確にするため、ぐぐってみた方が良さげ。</p>
+<blockquote>
+<p>A document highlight is a range inside a text document which deserves special attention. Usually a document highlight is visualized by changing the background color of its range.</p>
+</blockquote>
+<ul>
+<li><a href="https://vshaxe.github.io/vscode-extern/vscode/DocumentHighlight.html">https://vshaxe.github.io/vscode-extern/vscode/DocumentHighlight.html</a></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/111689/180629880-49960fae-d5b1-4e47-8978-4e66791d37bd.png" alt="image"></p>
+<p>いろいろ調べていると、次のような言及があった。</p>
+<blockquote>
+<p>textDocument/documentHighlightは、同じシンボルの使用箇所をエディタ上でハイライトする場合にも使用できます。</p>
+</blockquote>
+<ul>
+<li><a href="https://qiita.com/atsushieno/items/ce31df9bd88e98eec5c4">https://qiita.com/atsushieno/items/ce31df9bd88e98eec5c4</a></li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/111689/180630105-73de7a93-c83b-4004-abda-4a95db868978.png" alt="image"></p><hr><p><img src="https://user-images.githubusercontent.com/111689/180648140-a095e438-519d-43c1-9028-7b29296b3fa0.png" alt="image"></p>
+<p>この機能だな。endにカーソルが載っている状態だと、そのendと対応するdoの背景色が変わっている。</p>
+<p>if elsif else end や case when end, begin rescue else ensure end のときは全部光ってほしいな。少し改良してみる。</p>]]></content:encoded></item><item><title><![CDATA[2022-07-22]]></title><description><![CDATA[r7kamura's working log on 2022-07-22]]></description><link>https://r7kamura.github.io/diary/articles/78</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/78</guid><pubDate>Thu, 21 Jul 2022 21:50:04 GMT</pubDate><content:encoded><![CDATA[<hr><p>editabroにmonaco-markdownを導入するprをもらったので、monaco-markdownのソースコードを一通り読んでいる</p><hr><p>editabroのCIを改善して、リリースノート自動生成機能を有効化し (ノート生成だけまだ実験的なので手動でやっていた)、あと提出用のzipの自動生成とリリースへの紐づけも行うようにした。</p>
 <p>どうやらChrome Web Storeへの提出も自動でやってくれるactionがあるらしいが、なんか怖いのと説明文を提出のついでに直したりする工程がいま存在しているので、ここの自動化は未着手。</p><hr><p>r7kamura/workflowsに、chrome拡張のリリース用workflowを足した。</p><hr><p>WindowsでもMagic Trackpadが動いたので最高。</p><hr><p>MV7をしばらく試した感想:</p>
 <ul>
 <li>ダイナミックマイクを使うと、ほとんどの音が耳元で鳴っているかのように聴こえる</li>

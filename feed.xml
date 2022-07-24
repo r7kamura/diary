@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 24 Jul 2022 19:06:10 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-24]]></title><description><![CDATA[r7kamura's working log on 2022-07-24]]></description><link>https://r7kamura.github.io/diary/articles/80</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/80</guid><pubDate>Sat, 23 Jul 2022 21:18:27 GMT</pubDate><content:encoded><![CDATA[<p>今回はvscode-rubyの読書メモを書き連ねていきます。</p><hr><p>vscode-rubyは、複数のパッケージを扱うmonorepoとして管理されている。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 24 Jul 2022 21:23:53 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-24]]></title><description><![CDATA[r7kamura's working log on 2022-07-24]]></description><link>https://r7kamura.github.io/diary/articles/80</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/80</guid><pubDate>Sat, 23 Jul 2022 21:18:27 GMT</pubDate><content:encoded><![CDATA[<p>今回はvscode-rubyの読書メモを書き連ねていきます。</p><hr><p>vscode-rubyは、複数のパッケージを扱うmonorepoとして管理されている。</p>
 <ul>
 <li>vscode-ruby</li>
 <li>vscode-ruby-client</li>
@@ -312,10 +312,4 @@ connection.onInitialize(async (params) => {
 </ul><hr><p>筋トレ振り返り記事を書いた:</p>
 <ul>
 <li><a href="https://r7kamura.com/articles/2022-07-03-workout-initiation">筋トレ初動の立ち回り</a></li>
-</ul>]]></content:encoded></item><item><title><![CDATA[2022-07-02]]></title><description><![CDATA[r7kamura's working log on 2022-07-02]]></description><link>https://r7kamura.github.io/diary/articles/58</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/58</guid><pubDate>Fri, 01 Jul 2022 21:08:48 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=a_qamEkRozY&#x26;ab_channel=r7kamura">作業 with r7kamura #63 - YouTube</a></p><hr><p>書いた:</p>
-<ul>
-<li><a href="https://r7kamura.com/articles/2022-07-02-nanoleaf-lines">Nanoleafを付けると楽しい</a></li>
-</ul><hr><p>rubocop --auto-gen-config の実装を見てみたが、slimcopなどから簡単に使えそうな実装ではなかった……</p>
-<ul>
-<li><a href="https://github.com/rubocop/rubocop/blob/5e824488da27d3ecb05de6abbc7297a1246c6a7f/lib/rubocop/cli/command/auto_genenerate_config.rb">https://github.com/rubocop/rubocop/blob/5e824488da27d3ecb05de6abbc7297a1246c6a7f/lib/rubocop/cli/command/auto_genenerate_config.rb</a></li>
 </ul>]]></content:encoded></item></channel></rss>

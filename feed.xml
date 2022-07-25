@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 25 Jul 2022 08:52:28 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-24]]></title><description><![CDATA[r7kamura's working log on 2022-07-24]]></description><link>https://r7kamura.github.io/diary/articles/80</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/80</guid><pubDate>Sat, 23 Jul 2022 21:18:27 GMT</pubDate><content:encoded><![CDATA[<p>今回はvscode-rubyの読書メモを書き連ねていきます。</p><hr><p>vscode-rubyは、複数のパッケージを扱うmonorepoとして管理されている。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 25 Jul 2022 19:06:26 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-07-25]]></title><description><![CDATA[r7kamura's working log on 2022-07-25]]></description><link>https://r7kamura.github.io/diary/articles/81</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/81</guid><pubDate>Sun, 24 Jul 2022 21:22:54 GMT</pubDate><content:encoded><![CDATA[<hr><p>昨日に引き続き、vscode-rubyのlanguage-server-rubyを読んでいく。</p>
+<p>昨日は6つのProviderから構成されているという話をし、DocumentHighlightProviderの実装を読んだ。</p>
+<ul>
+<li>FoldingRangeProvider</li>
+<li>DocumentHighlightProvider</li>
+<li>DocumentSymbolProvider</li>
+<li>DocumentFormattingProvider</li>
+<li>ConfigurationProvider</li>
+<li>WorkspaceProvider</li>
+</ul><hr><p>SelectionRangeProviderというのを追加すれば、括弧だけでなく二重引用符やdo-endなどにもExpand selectionコマンドを対応させられるはず。</p>
+<ul>
+<li><a href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_selectionRange">https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_selectionRange</a></li>
+</ul><hr><p>DocumentSymbolProviderを見てみたが、DocumentHighlightProviderと比べて幾らか難しい実装だった。
+tree-sitterのwrapper?であるForestのstreamっぽいAPIを使っていて複雑。</p><hr><p>DocumentHighlightAnalyzerはリクエストのたびにインスタンスをつくって解析する仕組みだったが、DocumentSymbolAnalyzerとFoldingRangeAnalyzerは1個だけつくって使い回す実装らしく、Analyzer.tsがシングルトンをつくってそのプロパティにもたせている。</p><hr><p>Analyzer.tsには深さ優先探索のtree-walkingを行う仕組みが実装されている。treeが送られ続けてくるforestStreamというやつをanalyzerのシングルトンが購読しており、これをwalkで歩き続けつつ、symbolとfoldingの解析を続けている。FoldingRangeリクエストを受け取った際には、このanalyzerのシングルトンの現在の状態を読んで返すだけ。</p><hr><p>DocumentFormattingProviderを見てみよう。</p>
+<p>次の二種類のリクエストに対応するProviderであるらしい。</p>
+<ul>
+<li>textDocument.Formatting</li>
+<li>textDocument.rangeFormatting</li>
+</ul>
+<p>前者は与えられたドキュメント全体を、後者は与えられたドキュメントのうち指定された範囲のフォーマットを整えるためのものらしい。</p>
+<blockquote>
+<p>The document range formatting request is sent from the client to the server to format a given range in a document</p>
+</blockquote>
+<p>language-server-rubyの実装では、ここでRuboCopやらRufoやらを利用することになる。</p>
+<p>rxjsのObservableが利用されている。外部のプロセスとのやりとりが発生するところをこれでやりとりしているのだろうか。</p>
+<p>「ドキュメント」という単位が何を表しているのかという話があった。これは多分「ファイル」と読み替えてもさほど影響はないように思う。language-server-rubyでは、DocumentManager.tsがdocumentsというシングルトンを提供している。ドキュメントはIDを持っているらしく、このIDでdocumentsに問い合わせると対象のドキュメントが取得できるという仕組みらしい。</p>
+<p>vscode-languageserverというパッケージがdocumentsを管理する仕組みを提供していて、documents.listen(connection) とやると良い感じにクライアントのドキュメントの情報を管理してくれるらしい。つまり、document formattingのリクエストでわざわざソースコードをやり取りしなくても、そこではドキュメントのIDだけ含めておけば良くなるということ。</p>
+<p>Formatting Providerは、リクエストに応じて <code>Promise&#x3C;TextEdit[]></code> を返せば良いらしい。TextEditはvscode-languageserverが提供している。TextEditというのは、テキストを変形させる命令のことだと思う (e.g. replaceとか)。</p>
+<blockquote>
+<p>result: <a href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textEdit">TextEdit[]</a> | null describing the modification to the document to be formatted.</p>
+</blockquote>
+<p>BaseFormatterとRuboCopFormatterを見てみると、spawnを使って子プロセスをつくり、そこで <code>bundle exec rubocop -s ... -a</code> を実行していることがわかる。-sは標準入力経由で使うやつらしい。</p>
+<pre><code>    -s, --stdin FILE                 Pipe source from STDIN, using FILE in offense
+                                     reports. This is useful for editor integration.
+</code></pre>
+<pre><code>$ echo "1 + 2" | rubocop -s foo.rb -A
+Inspecting 1 file
+C
+
+Offenses:
+
+foo.rb:1:1: C: [Corrected] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
+1 + 2
+^
+foo.rb:2:1: C: [Corrected] Layout/EmptyLineAfterMagicComment: Add an empty line after magic comments.
+1 + 2
+^
+
+1 file inspected, 2 offenses detected, 2 offenses corrected
+====================
+# frozen_string_literal: true
+
+1 + 2
+</code></pre>
+<p>これで ====== の後ろを見れば変更後のコードが取得できる。この標準出力をもとに、``TextEdit[]` を用意する。これには<a href="https://github.com/google/diff-match-patch">diff-match-patch</a>というNPMパッケージが利用されている。</p>
+<p>選択範囲だけformatしてくれというリクエストだった場合でも、ファイル全体に対してRuboCopを利用するが、diffを見て選択範囲からの書き換えだけ適用することになっている。</p><hr><p>LSPの説明でmethod, paramsと呼ばれていたのはこういうやつのことか。</p>
+<blockquote>
+<p>LSP クライアントからサーバーへのメッセージとして、以下のような文字列が送られます。(改行は \r\n)</p>
+</blockquote>
+<pre><code>Content-Length: 88
+
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "shutdown",
+    "params": null
+}
+</code></pre>
+<ul>
+<li><a href="https://qiita.com/vain0x/items/d050fe7c8b342ed2004e#_reference-a5e1c1658f719e7db952">https://qiita.com/vain0x/items/d050fe7c8b342ed2004e#_reference-a5e1c1658f719e7db952</a></li>
+</ul>
+<blockquote>
+<p>この文字列は、今回はサーバーのプロセスの標準入力に送られてきます。標準入力を受け取るには process.stdin の data イベントを監視して、送られてくるデータをバッファーにためていけばいいです。</p>
+</blockquote>
+<p>実際にはどう送られてくるのかと思ったら、この場合は標準入力を利用しているんだな。素朴で嬉しい。</p><hr><p>vscode-textlintが要件としては分かりやすくて参考になりそうだった。実装はまだ読んでいない。</p>
+<ul>
+<li><a href="https://github.com/taichi/vscode-textlint">https://github.com/taichi/vscode-textlint</a></li>
+</ul><hr><p>クライアント側の実装も学び始めた。これを読んでみている。</p>
+<ul>
+<li><a href="https://qiita.com/minebreaker/items/c53e4dddb0709492d362">https://qiita.com/minebreaker/items/c53e4dddb0709492d362</a></li>
+</ul>
+<p>クライアント (vscodeの拡張) 起動時に、サーバ起動用のコマンド名も記述するもんなんだな。まあそれはそうか。
+例えばsolargraph gemはlanguage serverを提供していたはずで、あれは別途自前で起動させておくものだった気がするから、多分そういう場合にはサーバーを起動しないオプションもあるのだと思う。</p><hr><p>手元でvscode-rubyのビルドを試してみたが大変だった。これを見ながら進めた。</p>
+<ul>
+<li><a href="https://github.com/rubyide/vscode-ruby/blob/main/docs/developing.md">https://github.com/rubyide/vscode-ruby/blob/main/docs/developing.md</a></li>
+</ul>
+<pre><code>yarn install
+</code></pre>
+<p>これを実行する時点でエラー。./packages/vscode-ruby-client/package.jsonからdependenciesに書いているlanguage-server-rubyが存在しないとのこと。lernaの使い方が間違ってるとか? とりあえずこのdependenciesの行を手動で消すと進めるように。</p>
+<p>yarn install中にtree-sitter-rubyの何かでエラー。npm install tre-sitter-rubyを試すも問題無し。再度yarn installを実行するとなぜか成功。なぜ？</p>
+<p>yarn watchも失敗。</p>
+<blockquote>
+<p>Error: error:0308010C:digital envelope routines::unsupported
+at new Hash (node:internal/crypto/hash:67:19)</p>
+</blockquote>
+<p>webpackのhash関数がどうのこうのということで、ググってこの環境変数を追加して再試行すると上手くいった。</p>
+<pre><code>export NODE_OPTIONS=--openssl-legacy-provider
+</code></pre>]]></content:encoded></item><item><title><![CDATA[2022-07-24]]></title><description><![CDATA[r7kamura's working log on 2022-07-24]]></description><link>https://r7kamura.github.io/diary/articles/80</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/80</guid><pubDate>Sat, 23 Jul 2022 21:18:27 GMT</pubDate><content:encoded><![CDATA[<p>今回はvscode-rubyの読書メモを書き連ねていきます。</p><hr><p>vscode-rubyは、複数のパッケージを扱うmonorepoとして管理されている。</p>
 <ul>
 <li>vscode-ruby</li>
 <li>vscode-ruby-client</li>

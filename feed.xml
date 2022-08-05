@@ -1,4 +1,101 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 05 Aug 2022 10:49:20 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-04]]></title><description><![CDATA[r7kamura's working log on 2022-08-04]]></description><link>https://r7kamura.github.io/diary/articles/91</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/91</guid><pubDate>Wed, 03 Aug 2022 21:03:38 GMT</pubDate><content:encoded><![CDATA[<hr><p>ゼノブレイド3、かなりよく出来ている。1と2やる必要は全くない。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 05 Aug 2022 19:06:26 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-05]]></title><description><![CDATA[r7kamura's working log on 2022-08-05]]></description><link>https://r7kamura.github.io/diary/articles/92</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/92</guid><pubDate>Thu, 04 Aug 2022 21:03:13 GMT</pubDate><content:encoded><![CDATA[<hr><p>空いた時間にVSCodeのRuby用拡張を進捗させたい。</p><hr><p><code>Promise&#x3C;T></code> の代わりに <code>Thenable&#x3C;T></code> と記載している例をVSCodeのコード例でよく見るが、これはjQuery.Deferredなど他の各種Promise系のやつでも受け入れるための型クラスらしい。</p><hr><p>DocumentSelector</p>
+<p>その拡張がどういうドキュメント (VSCodeがタブとかで開くテキストの単位) で有効になるかを絞り込むための条件を指定する単位。次の2つの情報を持てるらしい</p>
+<ul>
+<li>どのファイルタイプか
+<ul>
+<li>e.g. <code>ruby</code></li>
+</ul>
+</li>
+<li>どのschemeか
+<ul>
+<li>e.g. <code>file</code>, <code>untitled</code></li>
+<li>現実的にはファイルが永続化されているかどうか (適当に新規タブで開いたやつはuntitled) を判別するのに使われることがほとんどっぽい?</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://code.visualstudio.com/api/references/document-selector">https://code.visualstudio.com/api/references/document-selector</a></p>
+<p>Example from lsp-example:</p>
+<pre><code class="language-js">[
+  { scheme: "file", language: "plaintext" }
+]
+</code></pre>
+<p>Example from vscode-ruby-client:</p>
+<pre><code class="language-js">[
+  { scheme: "file", language: "ruby" },
+  { scheme: "untitled", language: "ruby" },
+]
+</code></pre><hr><p>vscode packageのこれをClientOptionsに指定したものの、詳しく調べていない。</p>
+<pre><code>workspace.createFileSystemWatcher
+</code></pre><hr><p>vscode-ruby-clientだと、clientOptionsのmiddleware.workspaceを指定している。これはmulti workspaceのための何かだろうか。</p><hr><p>default import/export おさらいのコーナー。</p>
+<pre><code class="language-typescript">import * as path from "path";
+</code></pre>
+<p>例えば、上のコードを下のコードのように書き換えてみる。</p>
+<pre><code class="language-typescript">import path from "path";
+</code></pre>
+<p>すると、次のようなエラーが確認できる。</p>
+<pre><code>Module '"path"' can only be default-imported using the 'esModuleInterop' flagts(1259)
+path.d.ts(167, 5): This module is declared with using 'export =', and can only be used with a default import when using the 'esModuleInterop' flag.
+</code></pre>
+<p>これは、JavaScriptにおける幾つかのモジュールシステムのdefault import/exportに関する挙動が異なることが原因で……</p>
+<p>TypeScriptは何も設定していない場合、ES6風のモジュールシステムを前提に動くので、</p>
+<pre><code class="language-typescript">import a from "b"
+</code></pre>
+<p>に対しては、</p>
+<pre><code class="language-typescript">const a = require("b").default
+</code></pre>
+<p>のようなコードを生成し、</p>
+<pre><code class="language-typescript">import * as a from "b"
+</code></pre>
+<p>に対しては、</p>
+<pre><code class="language-typescript">const a = require("b")
+</code></pre>
+<p>のようなコードを生成する。</p>
+<p>path moduleは export default してはおらず普通に export しているので、後者の方法を使う必要があるという話。</p>
+<p>このTypeScriptの挙動は</p>
+<pre><code class="language-json">{ "esModuleInterop": true }
+</code></pre>
+<p>のように設定すると変えることもできる。</p><hr><p>lsp-exampleは、トップレベルのパッケージがVSCode extensionとして配布される形になっている。</p>
+<p>というのも、次のようにサーバープロセスを起動するためのパスが記載されているので、拡張のルートディレクトリから見て ./server/out/server.js というのがあることが分かる。</p>
+<pre><code class="language-typescript">const serverModule = context.asAbsolutePath(
+	path.join("server", "out", "server.js")
+);
+</code></pre><hr><p>vscode-ruby-clientが次のようになっているので</p>
+<pre><code class="language-typescript">client = new LanguageClient('ruby', 'Ruby', serverOptions, clientOptions);
+client.registerProposedFeatures();
+</code></pre>
+<p>registerProposedFeaturesの定義を見に行った。現在は空の配列が返ってくるだけだが、過去には</p>
+<pre><code class="language-typescript">[
+  new pd.DiagnosticFeature(client),
+  new nb.NotebookDocumentSyncFeature(client)
+]
+</code></pre>
+<p>のような配列が返ることもあったらしい。要はβ版の新機能を取り込むための処理だろうか。</p><hr><p>vscode-ruby-client/srcを見るとlinterやらcompletionやらが転がっているが、これは過去にクライアント側で正規表現を用いて機能が実装されていた頃の名残で、現在はどうやら参照されていないように見える。</p><hr><p>つまりクライアント側はほぼ何も実装しなくても良い感じっぽい。</p><hr><p>lsp-exampleのサーバー側の実装を少しずつ読んでいる。</p>
+<ul>
+<li>onInitializeで、clientのcapabilitiesを見ながらserverのcapabilitiesを返す</li>
+<li>onInitializedで、必要な初期化処理をやっていく。connection.listenとか</li>
+</ul>
+<p>この拡張の機能に関するデフォルトの設定があり、これが各テキストドキュメントごとのデフォルトの設定になる。テキストドキュメント単位で設定値を上書きすることが可能なので、こうなっている。テキストドキュメントのURIをIDとして、Mapオブジェクトを利用して設定値のキャッシュを持っている。</p>
+<p>設定値はクライアントが保持していて、サーバーがそれを知るには connection.workspace.getConfigurationで問い合わせる必要がある。この問い合わせ結果を上述のキャッシュに保存しておいているという仕組み。既に問い合わせ済みであればそのキャッシュから取得する。設定値変更イベントがクライアントで発生した場合、それがconnection経由で伝わってくるので、その場合サーバーはキャッシュを全部消す。これにより、次回の設定値取得時には新たにクライアントから取得しにいくようになるという寸法。</p>
+<p>テキストドキュメントが閉じられる際には、キャッシュからも設定値を消す。現在開かれているテキストドキュメントの設定値しか保持しないことで、サイズを小さく抑えるため?</p>
+<p>設定が変更された場合は、diagnosticsの検査をいちからやり直す。設定値の変化により検査結果が変わることがあるため。</p><hr><p>試しにhighlight機能を追加してみる。</p>
+<p>まずonInitializeで返すcapabilitiesにプロパティを追加して、documentHighlightProviderに対応していることを示す。</p>
+<pre><code class="language-diff">diff --git a/server/src/server.ts b/server/src/server.ts
+index 8e1ddf8..5b83ad7 100644
+--- a/server/src/server.ts
++++ b/server/src/server.ts
+@@ -54,6 +54,7 @@ connection.onInitialize((params: InitializeParams) => {
+       completionProvider: {
+         resolveProvider: true,
+       },
++      documentHighlightProvider: true,
+     },
+   };
+   if (hasWorkspaceFolderCapability) {
+</code></pre><hr><p>Provider.register(connection) を呼び出すタイミングとして、onInitializeとonInitializedの2パターンがあるけれど、どのProviderではどのタイミングを選べばいいのだろうか。</p>
+<p>vscode-rubyでは、DocumentHighlightProviderはonInitializeで登録しているようだ。</p><hr><p><a href="https://github.com/microsoft/vscode-extension-samples">https://github.com/microsoft/vscode-extension-samples</a> にはdocumentHighlightProvider: trueとしている例は見当たらなかったので、実装例が無い。とりあえずvscode-rubyのやっている方法に従ってみることにする?</p><hr><p><img src="https://user-images.githubusercontent.com/111689/182980343-1afaca7e-b566-46ea-94c5-f5bbe2d4bc35.png" alt="image"></p>
+<p>カーソルを合わせるとconnection.onDocumentHighlightで登録したコールバックが実行されることが無事確認できた。</p>
+<p>Language Serverで出しているconsole.logは、Extension Development HostのOutputでセレクトボックスから「Ruby」を選ぶことで表示できた。これは……Clientで指定したnameが使われているっぽい?</p><hr><p><img src="https://user-images.githubusercontent.com/111689/182989897-e98a17c1-3854-40cd-880f-69919b5f9ac7.gif" alt="1"></p>
+<p>自前実装で, endに対してDocumentHighlightが動くようになった。</p><hr><p>until, for, while についても対応しようとしたら親子関係というか木の構造が違うらしいことが分かった。それから、moduleもAもどちらもtypeはmoduleであるということも分かり、判定が大変そう。本当にキーワードかどうかはtoStringすれば判定できる。</p>]]></content:encoded></item><item><title><![CDATA[2022-08-04]]></title><description><![CDATA[r7kamura's working log on 2022-08-04]]></description><link>https://r7kamura.github.io/diary/articles/91</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/91</guid><pubDate>Wed, 03 Aug 2022 21:03:38 GMT</pubDate><content:encoded><![CDATA[<hr><p>ゼノブレイド3、かなりよく出来ている。1と2やる必要は全くない。</p>
 <p>ムービーが長いという意見を聞いていたが、そこまで長過ぎるようには感じなかった。ここ数年でどんどん人類の嗜好形態が変化していて、長いムービーに耐えられなくなってきているというのはあると思う。</p>
 <p>ちょっとHUDがうるさい感じはあるけど、ある程度は消すこともできるし、まあ許容範囲ではある。</p><hr><p><a href="https://dev.to/r7kamura/run-yard-as-rspec-3hnn">Run YARD as RSpec - DEV Community 👩‍💻👨‍💻</a>
 これを書いた</p><hr><p><a href="https://github.com/r7kamura/yardspec">https://github.com/r7kamura/yardspec</a>

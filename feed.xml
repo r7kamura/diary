@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 08 Aug 2022 19:06:15 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-08]]></title><description><![CDATA[r7kamura's working log on 2022-08-08]]></description><link>https://r7kamura.github.io/diary/articles/95</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/95</guid><pubDate>Sun, 07 Aug 2022 21:09:29 GMT</pubDate><content:encoded><![CDATA[<hr><p>OBSのブラウザソースでXMLHttpRequest使ってローカルファイル読み込めるよって話。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 08 Aug 2022 20:35:35 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-08]]></title><description><![CDATA[r7kamura's working log on 2022-08-08]]></description><link>https://r7kamura.github.io/diary/articles/95</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/95</guid><pubDate>Sun, 07 Aug 2022 21:09:29 GMT</pubDate><content:encoded><![CDATA[<hr><p>OBSのブラウザソースでXMLHttpRequest使ってローカルファイル読み込めるよって話。</p>
 <ul>
 <li><a href="https://obsproject.com/forum/threads/obs-cannot-access-local-files-from-local-html-javascript.128171/">https://obsproject.com/forum/threads/obs-cannot-access-local-files-from-local-html-javascript.128171/</a></li>
 </ul>
@@ -10,7 +10,7 @@
 <li>Pomodoro II</li>
 </ul>
 <p>の2つに分けた。前者にはここまで100回分が入っていて、明日からは新シーズンとして後者を始めるという感じ。</p>
-<p>タイトルも、"Work with r7kamura" からより実態と即していそうな "Pomodoro with me" に変えることに。タイトルの <code>#100</code> はタグ判定されてしまうことがわかったので、記号は外すことにした。また、毎度副題を付けていくことに。1話は New Season。</p>
+<p>タイトルも、"Work with r7kamura" からより実態と即していそうな "Pomodoro with me" に変えることに。タイトルの <code>#100</code> はタグ判定されてしまうことがわかったので、記号は外すことにした。</p>
 <ul>
 <li><a href="https://www.youtube.com/c/r7kamura">https://www.youtube.com/c/r7kamura</a></li>
 </ul><hr><p>Semantic Tokensに関するチュートリアル情報を見つけた</p>

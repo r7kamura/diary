@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 09 Aug 2022 19:06:24 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-09]]></title><description><![CDATA[r7kamura's working log on 2022-08-09]]></description><link>https://r7kamura.github.io/diary/articles/96</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/96</guid><pubDate>Mon, 08 Aug 2022 21:10:01 GMT</pubDate><content:encoded><![CDATA[<hr><p>RuboCopに出しているPull Requestのうち2件がどちらもこちらの作業待ちなので、早く取り掛からないといけない。どちらもドキュメントを追加するという仕事が残っているので大変。</p><hr><p>シンタックスハイライトの実装方法について悩んでいる。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 09 Aug 2022 22:31:02 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-09]]></title><description><![CDATA[r7kamura's working log on 2022-08-09]]></description><link>https://r7kamura.github.io/diary/articles/96</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/96</guid><pubDate>Mon, 08 Aug 2022 21:10:01 GMT</pubDate><content:encoded><![CDATA[<hr><p>RuboCopに出しているPull Requestのうち2件がどちらもこちらの作業待ちなので、早く取り掛からないといけない。どちらもドキュメントを追加するという仕事が残っているので大変。</p><hr><p>シンタックスハイライトの実装方法について悩んでいる。</p>
 <p>TextMateの文法ファイルを拡張側で管理して正規表現でやっていくか、あるいはLSPのSemantic Tokensを使ってtree-sitterで解析した結果に対してアプローチするか。</p><hr><p>Semantic Tokensで幾らか実装してみた。</p>
 <ul>
 <li>真面目にやろうとすると既存のTextMateの文法ファイルがやっているのとほぼ同等の機能を自分で実装することになる</li>
@@ -551,23 +551,4 @@ connection.onInitialize(async (params) => {
 <ul>
 <li><a href="https://togithub.com/rubocop/rubocop-rails/pull/747">https://togithub.com/rubocop/rubocop-rails/pull/747</a></li>
 </ul>]]></content:encoded></item><item><title><![CDATA[2022-07-19]]></title><description><![CDATA[r7kamura's working log on 2022-07-19]]></description><link>https://r7kamura.github.io/diary/articles/75</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/75</guid><pubDate>Mon, 18 Jul 2022 21:02:49 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=Y-DN_nGx3wk">作業 with r7kamura #80 - YouTube</a></p><hr><p><a href="https://www.youtube.com/watch?v=B5wdRcv-zQA">ASMR Coding: Chrome extension in 20 min (subtitle commentary available) - YouTube</a>
-これを公開した。</p>]]></content:encoded></item><item><title><![CDATA[2022-07-18]]></title><description><![CDATA[r7kamura's working log on 2022-07-18]]></description><link>https://r7kamura.github.io/diary/articles/74</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/74</guid><pubDate>Sun, 17 Jul 2022 21:04:22 GMT</pubDate><content:encoded><![CDATA[<hr><p><a href="https://www.youtube.com/watch?v=Jq3aA-WH4Wo">作業 with r7kamura #79 - YouTube</a></p><hr><p>github-label-sync-actionという仕組みをつくって実運用に載せたら\Goodという話を記事にまとめておきたい。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/179433107-b8dc65dc-7919-4dbf-9b94-77d5d454ac23.png" alt="image"></p>
-<p><img src="https://user-images.githubusercontent.com/111689/179433173-a7138779-c479-426b-9885-c1378cfda08a.png" alt="image"></p>
-<p>ほとんどの人が黒色買ってて、やっぱり黒色の方が見た目がいい気がする。キーボードが黒色だから対比としてグレーの方がいいかなと思ったけど、これ見ると黒色の方が良さそうに見える。この人は机の天板が黒色だから対比となるようグレーにしたと仰っていて、それは納得できる理由。</p>
-<p>引用元:</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=rs8RSewaLjQ">https://www.youtube.com/watch?v=rs8RSewaLjQ</a></li>
-<li><a href="https://www.youtube.com/watch?v=6VD9kFY4Abk">https://www.youtube.com/watch?v=6VD9kFY4Abk</a></li>
-</ul>
-<p>Amazon.co.jpで調べた限りだと、やはり高いけど有名なGrovemadeのblack mediumか、日本のメーカーがつくっている4800円のやつが良さそうに思った。Grovemadeは公式で90ドルだけど、12400円+送料 (+関税?) になる。Amazonだと19800円で取り扱っている。いずれもAmazonでは公式で売っているわけではなくて、マーケットプレイス経由。</p>
-<p>800円ぐらいのものも売られているが、品質が怪しい、サイズがなぜか適切なやつが無い、到着が数週間後になるなどのものが多い。恐らく中国製ということだろう。</p>
-<ul>
-<li><a href="https://www.amazon.co.jp/dp/B08X3ZMF41">https://www.amazon.co.jp/dp/B08X3ZMF41</a></li>
-<li><a href="https://www.amazon.co.jp/dp/B09VYR9CJM">https://www.amazon.co.jp/dp/B09VYR9CJM</a></li>
-</ul><hr><p><img src="https://user-images.githubusercontent.com/111689/179458518-5b555e96-411e-4a9b-bbd1-93881efb3190.png" alt="image">
-<img src="https://user-images.githubusercontent.com/111689/179461028-cf4a249d-1995-41ea-8fbe-ff80e3328635.png" alt="image">
-<img src="https://user-images.githubusercontent.com/111689/179459179-ce723926-d285-4496-997f-f2a5627e9015.png" alt="image">
-<img src="https://user-images.githubusercontent.com/111689/179459914-c37c1c9f-b82c-4808-b49e-f2f3cb7162ff.png" alt="image">
-<img src="https://user-images.githubusercontent.com/111689/179460576-389eff26-91ac-4ac2-bb2e-0b61c834293a.png" alt="image"></p>
-<p>some compositions</p><hr><p>最終稿</p>
-<p><img src="https://user-images.githubusercontent.com/111689/179465665-58e60a56-00a8-49e1-8a92-e97e52afbb27.png" alt="image"></p>]]></content:encoded></item></channel></rss>
+これを公開した。</p>]]></content:encoded></item></channel></rss>

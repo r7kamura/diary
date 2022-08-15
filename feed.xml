@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 15 Aug 2022 02:46:26 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-14]]></title><description><![CDATA[r7kamura's working log on 2022-08-14]]></description><link>https://r7kamura.github.io/diary/articles/101</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/101</guid><pubDate>Sat, 13 Aug 2022 21:01:51 GMT</pubDate><content:encoded><![CDATA[<hr><p>よく見たら昨日で作業ログも100回になっていた。昨日の配信が105回目だったから、配信6日目から作業ログを書き始めたらしい。</p><hr><p>RuboCopを使えるようにした。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 15 Aug 2022 19:06:46 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-15]]></title><description><![CDATA[r7kamura's working log on 2022-08-15]]></description><link>https://r7kamura.github.io/diary/articles/102</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/102</guid><pubDate>Mon, 15 Aug 2022 01:48:52 GMT</pubDate><content:encoded><![CDATA[<hr><p>vscode-ruby-lightのrubocopの機能を使うにはDocker越しではいけないので、devcontainerで開発てしみる実験を始めた。</p>
+<p>何故か普通にセットアップして起動しようとすると起動できないのだが、別途 docker-compose up -d rails と起動してやるとrialsサービスにattachしながらVSCodeが起動できるという状態。これは自前でやることなしに上手くできてほしい…… vscodeの実行するコマンドでrailsサービスが適切に指定されてほしい気がする。</p><hr><p>ともあれ上手くいった。</p>
+<p>自分で入れたghコマンドのauthを通すにはどうしたらいいか考えていたのだけど、ホスト側から ~/.config/gh/hosts.yml をマウントしてあげるのが良さそうだった。これはリポジトリには入れられないので、docker-compose.override.yml のvolumesの設定に書いてattachしてもらうしかないかも。</p>
+<ul>
+<li><a href="https://github.com/cli/cli/discussions/3226">https://github.com/cli/cli/discussions/3226</a></li>
+</ul><hr><p>services.rails.depends_onに指定されているやつをrunServicesに指定したら上手く動いた。これ指定しないといけないのかあ。</p>
+<pre><code class="language-json">{
+  "name": "Rails",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "rails",
+  "runServices": [
+    "elasticsearch",
+    "mysql",
+    "redis"
+  ],
+  "workspaceFolder": "/workspace"
+}
+</code></pre><hr><p>docker-compose.override.yml はわざわざ指定しなくてもちゃんと読み込んでくれるっぽい。単純にVSCodeもdocker-composeコマンドを実行しているだけなので当たり前ではあるか。</p><hr><pre><code class="language-json">{
+  "name": "Rails",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "rails",
+  "runServices": [
+    "rails"
+  ],
+  "workspaceFolder": "/workspace"
+}
+</code></pre>
+<p>こう書いてもいけそうだ。</p><hr><p>一度VSCodeのworkspaceを閉じて再度開いてReopen containerするだけではdotfilesは再インストールしてくれないみたいだ。</p><hr><p>Git 2.22の機能を使っていたが、Git 2.20が入っていて面倒だったので、それに対応する.bashrcに差し替えたという経緯。</p>
+<pre><code>cd /root/dotfiles
+git pull
+cd -
+source ~/.bashrc
+</code></pre>
+<p>で解決させた。</p><hr><p>ssh-agentが動いていないのでgit pushなどがhang outする問題のことを忘れていてまた遭遇した。が対処方法を覚えていたので、keychainを使って勝手にssh-agentが起動するようにした。</p>]]></content:encoded></item><item><title><![CDATA[2022-08-14]]></title><description><![CDATA[r7kamura's working log on 2022-08-14]]></description><link>https://r7kamura.github.io/diary/articles/101</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/101</guid><pubDate>Sat, 13 Aug 2022 21:01:51 GMT</pubDate><content:encoded><![CDATA[<hr><p>よく見たら昨日で作業ログも100回になっていた。昨日の配信が105回目だったから、配信6日目から作業ログを書き始めたらしい。</p><hr><p>RuboCopを使えるようにした。</p>
 <ul>
 <li><a href="https://github.com/r7kamura/vscode-ruby-light">https://github.com/r7kamura/vscode-ruby-light</a></li>
 </ul>

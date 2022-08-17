@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 17 Aug 2022 19:06:19 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-17]]></title><description><![CDATA[r7kamura's working log on 2022-08-17]]></description><link>https://r7kamura.github.io/diary/articles/104</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/104</guid><pubDate>Tue, 16 Aug 2022 21:06:14 GMT</pubDate><content:encoded><![CDATA[<hr><p>Style/FormatStringTokenは、特定のメソッドの引数やレシーバーのときのみ動作するようにしても良いんじゃないかと思った。それから、autocorrectできそうなコンテキストでしない場合があるので、これは直したいかも。</p><hr><p>vscode-ruby-lightにYARDサポートを入れてもいいかもしれない。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Wed, 17 Aug 2022 21:34:18 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-17]]></title><description><![CDATA[r7kamura's working log on 2022-08-17]]></description><link>https://r7kamura.github.io/diary/articles/104</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/104</guid><pubDate>Tue, 16 Aug 2022 21:06:14 GMT</pubDate><content:encoded><![CDATA[<hr><p>Style/FormatStringTokenは、特定のメソッドの引数やレシーバーのときのみ動作するようにしても良いんじゃないかと思った。それから、autocorrectできそうなコンテキストでしない場合があるので、これは直したいかも。</p><hr><p>vscode-ruby-lightにYARDサポートを入れてもいいかもしれない。
 yard gemsとyriを使ってみたら何かできそうな気がした</p>
 <ul>
 <li><a href="https://github.com/lsegal/yard">https://github.com/lsegal/yard</a></li>
@@ -275,82 +275,4 @@ Failed to run tests
 <p>この状態でも警告がかなり大量に出るのだが (主にdbus周り)、これは出るものらしい。一応dsubの設定をいれば消せるらしいのだが、まだ試していない。</p>
 <p>Windows 11だとwslg?という仕組みでUbuntuのGUIの機能が特に何もせずWindowsで動くようだから、このXサーバー云々の話とDISPLAY環境変数の話は不要らしい。Windows11にしたい利点が初めて出てきて意外だ。</p><hr><p>今日は lsp-example を動かして、VSCodeで試すのとnpm run testでテストを動かすのをやった。GUIだから仕方無いけど、何か動いているものの地に足がついていない感じがして不安はある。</p>]]></content:encoded></item><item><title><![CDATA[2022-08-02]]></title><description><![CDATA[r7kamura's working log on 2022-08-02]]></description><link>https://r7kamura.github.io/diary/articles/89</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/89</guid><pubDate>Mon, 01 Aug 2022 21:04:04 GMT</pubDate><content:encoded><![CDATA[<hr><p>The pull request I have submitted to rubocop  for template language support is not yet completed and in draft status, so I would like to complete it today.</p><hr><p>I feel that perhaps there should be a rubocop-markdown that inspects Ruby code in Markdown code blocks, or rubocop-comment that inspects Ruby code in code comments.</p><hr><p>But the existing YARD and Markdown parsers cannot return ASTs with location information, so it's going to be difficult to achieve that.</p>]]></content:encoded></item><item><title><![CDATA[2022-08-01]]></title><description><![CDATA[r7kamura's working log on 2022-08-01]]></description><link>https://r7kamura.github.io/diary/articles/88</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/88</guid><pubDate>Mon, 01 Aug 2022 02:04:43 GMT</pubDate><content:encoded><![CDATA[<hr><p>コミックNewtypeの日付表記が曖昧なので、<code>"10月24日配信"</code> という文字列を去年の10月24日のTimeのインスタンスとして処理する機能をweneedfeedに追加した。</p><hr><p>rubocopのテンプレート言語サポートの実装を改善して、影響範囲をかなり小さくできた。</p><hr><p>weneedfeedのOPMLのXML生成時にエスケープの不具合を見つけて修正できた。</p>]]></content:encoded></item><item><title><![CDATA[2022-07-30]]></title><description><![CDATA[r7kamura's working log on 2022-07-30]]></description><link>https://r7kamura.github.io/diary/articles/86</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/86</guid><pubDate>Sat, 30 Jul 2022 01:08:32 GMT</pubDate><content:encoded><![CDATA[<hr><p>ひさしぶりにRustを書いていて全く分かっていない</p><hr><p>ファイル全体コピーが動くようになった。
 <a href="https://github.com/r7kamura/gitcp">https://github.com/r7kamura/gitcp</a></p><hr><p><a href="https://dev.to/r7kamura/automate-refactoring-by-rubocop-todo-corrector-2mli">Automate refactoring by rubocop-todo-corrector - DEV Community 👩‍💻👨‍💻</a>
-これを書いた。</p>]]></content:encoded></item><item><title><![CDATA[2022-07-29]]></title><description><![CDATA[r7kamura's working log on 2022-07-29]]></description><link>https://r7kamura.github.io/diary/articles/85</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/85</guid><pubDate>Fri, 29 Jul 2022 01:03:50 GMT</pubDate><content:encoded><![CDATA[<hr><p>Rails Upgrade Guidesを眺めていて、新しくCopが1つ欲しくなったのでrubocop-railsにPull Requestを投げた。</p><hr><p>GitHubのテンプレートリポジトリからファイルをコピーしてくるようなツールがほしいと思い、degitには幾らか不満があったので、そういうものを自作することにした。最終的にgitcpというcpのラッパーみたいなものでいくことにした。</p><hr><p>weneedfeed-comic-newtypeをつくろうとして、雛形がほしいなと思い、こういう経緯になっている。</p><hr><p>zipはファイル単位での圧縮なのでtar.gzに比べると当然圧縮率が低いが、zipには全体を解凍しなくても単一ファイルのみ解凍できるという特色があるので、そういう用途では速そうだ。</p>]]></content:encoded></item><item><title><![CDATA[2022-07-28]]></title><description><![CDATA[r7kamura's working log on 2022-07-28]]></description><link>https://r7kamura.github.io/diary/articles/84</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/84</guid><pubDate>Wed, 27 Jul 2022 22:40:03 GMT</pubDate><content:encoded><![CDATA[<hr><p>rubocop gemを改造して、slimファイルを直接動作させる実験に成功した。</p>
-<pre><code>$ ./exe/rubocop dummy.slim
-Inspecting 1 file
-W
-
-Offenses:
-
-dummy.slim:1:3: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
-- "a"
-  ^
-dummy.slim:1:3: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
-- "a"
-  ^^^
-dummy.slim:1:6: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
-- "a"
-     
-dummy.slim:2:3: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
-= b
-  ^
-dummy.slim:2:4: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
-= b
-   
-dummy.slim:3:5: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
-| #{"c"}
-    ^
-dummy.slim:3:5: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
-| #{"c"}
-    ^^^
-dummy.slim:3:8: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
-| #{"c"}
-       
-dummy.slim:4:3: W: Lint/UselessAssignment: Useless assignment to variable - a.
-- a = 1
-  ^
-dummy.slim:4:3: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
-- a = 1
-  ^
-dummy.slim:4:8: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
-- a = 1
-       
-dummy.slim:5:3: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
-- a if array.size > 0
-  ^
-dummy.slim:5:8: C: [Correctable] Style/NumericPredicate: Use array.size.positive? instead of array.size > 0.
-- a if array.size > 0
-       ^^^^^^^^^^^^^^
-dummy.slim:5:8: C: [Correctable] Style/ZeroLengthPredicate: Use !empty? instead of size > 0.
-- a if array.size > 0
-       ^^^^^^^^^^^^^^
-dummy.slim:5:22: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
-- a if array.size > 0
-                     
-dummy.slim:6:3: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
-- a if !b
-  ^
-dummy.slim:6:3: C: [Correctable] Style/NegatedIf: Favor unless over if for negative conditions.
-- a if !b
-  ^^^^^^^
-dummy.slim:6:10: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
-- a if !b
-         
-dummy.slim:7:3: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
-- a if !b # rubocop:disable Style/NegatedIf
-  ^
-dummy.slim:7:44: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
-- a if !b # rubocop:disable Style/NegatedIf
-                                           
-dummy.slim:8:6: C: [Correctable] Style/FrozenStringLiteralComment: Missing frozen string literal comment.
-- if "a"
-     ^
-dummy.slim:8:6: C: [Correctable] Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.
-- if "a"
-     ^^^
-dummy.slim:8:9: C: [Correctable] Layout/TrailingEmptyLines: Final newline missing.
-- if "a"
-        
-
-1 file inspected, 23 offenses detected, 22 offenses autocorrectable
-</code></pre><hr><p>rubocopの改造とrubocop-slimでの実験が上手くいったので、rubocopにpull requestをdraftで出した。</p>]]></content:encoded></item></channel></rss>
+これを書いた。</p>]]></content:encoded></item><item><title><![CDATA[2022-07-29]]></title><description><![CDATA[r7kamura's working log on 2022-07-29]]></description><link>https://r7kamura.github.io/diary/articles/85</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/85</guid><pubDate>Fri, 29 Jul 2022 01:03:50 GMT</pubDate><content:encoded><![CDATA[<hr><p>Rails Upgrade Guidesを眺めていて、新しくCopが1つ欲しくなったのでrubocop-railsにPull Requestを投げた。</p><hr><p>GitHubのテンプレートリポジトリからファイルをコピーしてくるようなツールがほしいと思い、degitには幾らか不満があったので、そういうものを自作することにした。最終的にgitcpというcpのラッパーみたいなものでいくことにした。</p><hr><p>weneedfeed-comic-newtypeをつくろうとして、雛形がほしいなと思い、こういう経緯になっている。</p><hr><p>zipはファイル単位での圧縮なのでtar.gzに比べると当然圧縮率が低いが、zipには全体を解凍しなくても単一ファイルのみ解凍できるという特色があるので、そういう用途では速そうだ。</p>]]></content:encoded></item></channel></rss>

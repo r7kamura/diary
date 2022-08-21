@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 21 Aug 2022 07:54:29 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-20]]></title><description><![CDATA[r7kamura's working log on 2022-08-20]]></description><link>https://r7kamura.github.io/diary/articles/107</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/107</guid><pubDate>Fri, 19 Aug 2022 22:02:19 GMT</pubDate><content:encoded><![CDATA[<hr><p>Solargraphのソースコードを大体読みたいところを読み終わった。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 21 Aug 2022 19:06:10 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-21]]></title><description><![CDATA[r7kamura's working log on 2022-08-21]]></description><link>https://r7kamura.github.io/diary/articles/108</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/108</guid><pubDate>Sun, 21 Aug 2022 00:09:53 GMT</pubDate><content:encoded><![CDATA[<hr><p><img src="https://user-images.githubusercontent.com/111689/185770074-846d26d1-51b9-4e4c-aafd-fba5ba3f1d64.png" alt="image"></p>
+<p>「カーソルが指しているノードの型が分かる場合はそれを返す」という実装をつくってみようとしている。</p>
+<p>ソースコードとカーソル位置を与えると、カーソルの指しているノードと、そのコンテキストを作り出しているノード (ここでは <code>A#b</code>) を返す、という実装を試しにつくった。これはソースコードをパースして位置情報やノードの種類で走査すれば実現できた。</p>
+<p>メソッドの仮引数である <code>foo</code> の型注釈はYARDから引いてこれるので、これらを結び付ければ導出できるはず。</p><hr><p>メソッド内の</p>
+<ul>
+<li>ローカル変数</li>
+<li>レシーバーの無いメソッド呼び出し</li>
+</ul>
+<p>について、それぞれYARDで型注釈が与えられていないか調べにいって、あればそれを返すという実装ができた。</p>
+<p><img src="https://user-images.githubusercontent.com/111689/185775606-714f6a39-2505-478f-bc2f-a7d712d97f37.png" alt="image"></p><hr><p>メソッドチェーンに再帰的に対応できた。</p>
+<p>あとは対応するノードの種類を増やしていけば、YARDの注釈ベースで型を推測するという機能は完成しそう。</p><hr><p>次回対応したいもの</p>
+<ul>
+<li>local variable assignment</li>
+<li>constant</li>
+<li>singleton method</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[2022-08-20]]></title><description><![CDATA[r7kamura's working log on 2022-08-20]]></description><link>https://r7kamura.github.io/diary/articles/107</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/107</guid><pubDate>Fri, 19 Aug 2022 22:02:19 GMT</pubDate><content:encoded><![CDATA[<hr><p>Solargraphのソースコードを大体読みたいところを読み終わった。</p>
 <ul>
 <li>当初は、自前で似たものをつくってより深く学んでみようと考えていた</li>
 <li>Solargraphのやっていることの規模が大きすぎて、自分で実装するには大変そうだった</li>

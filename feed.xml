@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Mon, 22 Aug 2022 19:06:17 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-22]]></title><description><![CDATA[r7kamura's working log on 2022-08-22]]></description><link>https://r7kamura.github.io/diary/articles/109</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/109</guid><pubDate>Mon, 22 Aug 2022 00:33:20 GMT</pubDate><content:encoded><![CDATA[<hr><p>vscode-solargraph、たまにdocument highlightが壊れてエラーのポップアップを右下に出し続ける状態になるので、そこは体験が悪い</p><hr><p>型の特定ができるようになってきたので、今度はこれを利用する補完の提案機能をつくってみようと思う</p><hr><p>solargraphはYARDのパース機能を使わず、自前でソースコードをコメントと一緒にパースしながら、自前でYard::CodeObject::Baseのインスタンスを生成し、自前でHashに詰めて管理しているので、こんなに複雑になっているんだなということが分かった。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Tue, 23 Aug 2022 00:26:51 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-22]]></title><description><![CDATA[r7kamura's working log on 2022-08-22]]></description><link>https://r7kamura.github.io/diary/articles/109</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/109</guid><pubDate>Mon, 22 Aug 2022 00:33:20 GMT</pubDate><content:encoded><![CDATA[<hr><p>vscode-solargraph、たまにdocument highlightが壊れてエラーのポップアップを右下に出し続ける状態になるので、そこは体験が悪い</p><hr><p>型の特定ができるようになってきたので、今度はこれを利用する補完の提案機能をつくってみようと思う</p><hr><p>solargraphはYARDのパース機能を使わず、自前でソースコードをコメントと一緒にパースしながら、自前でYard::CodeObject::Baseのインスタンスを生成し、自前でHashに詰めて管理しているので、こんなに複雑になっているんだなということが分かった。</p>
 <p>YARDの機能では拾いきれないもの (ローカル変数などに対する <code>@type</code> タグとか?) があってそのために自前でやっているのかな?</p><hr><p>Symbolの補完</p>
 <ul>
 <li>シンボルを入力しようとしていそうであれば補完する</li>
@@ -309,69 +309,4 @@ index 8e1ddf8..5b83ad7 100644
 <p>ムービーが長いという意見を聞いていたが、そこまで長過ぎるようには感じなかった。ここ数年でどんどん人類の嗜好形態が変化していて、長いムービーに耐えられなくなってきているというのはあると思う。</p>
 <p>ちょっとHUDがうるさい感じはあるけど、ある程度は消すこともできるし、まあ許容範囲ではある。</p><hr><p><a href="https://dev.to/r7kamura/run-yard-as-rspec-3hnn">Run YARD as RSpec - DEV Community 👩‍💻👨‍💻</a>
 これを書いた</p><hr><p><a href="https://github.com/r7kamura/yardspec">https://github.com/r7kamura/yardspec</a>
-これを書いた</p>]]></content:encoded></item><item><title><![CDATA[2022-08-03]]></title><description><![CDATA[r7kamura's working log on 2022-08-03]]></description><link>https://r7kamura.github.io/diary/articles/90</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/90</guid><pubDate>Tue, 02 Aug 2022 22:21:10 GMT</pubDate><content:encoded><![CDATA[<hr><p>RuboCopのテンプレートサポート、autocorrectorの実装が難しくて、いい実装方法が見つかっていない。</p>
-<ul>
-<li><code>RuboCop::ProcessedSource</code> オブジェクトがテンプレート内のRubyのコード断片を表している</li>
-<li>各Copはこのオブジェクトに対して <code>RuboCop::Cop::Offense</code> を生成する</li>
-<li>offsetを指定してOffenseの位置情報をずらす</li>
-</ul>
-<p>というところまでは良いのだが、autocorrectを適用しようとすると、元々のソースコードに対してoffset付きで変換してほしいところが、Rubyのコード断片に対してoffset無しで変換が掛かってしまう。</p>
-<p>Copがなぜかソースコードへの参照を持っているという設計が根本的な原因。</p>
-<p>理想的には、こうなってほしい:</p>
-<ol>
-<li>テンプレートから、Rubyのコードを幾つか抽出する</li>
-<li>それぞれのRubyのコードに対して、CopでOffenseを検出する</li>
-<li>集めたOffense群の位置情報を、テンプレートのものに変換する</li>
-<li>変換されたOffense群を、autocorrectorに掛ける</li>
-<li>2に戻る (変換により新たに違反が検出されるようになるかもしれないため)</li>
-</ol><hr><p>RuboCopのテンプレートサポート、満足のいく形に変更できた。</p><hr><p>vscodemicrosoft/vscode-extension-samples/lsp-sample を試す。</p>
-<ul>
-<li><a href="https://code.visualstudio.com/api/language-extensions/language-server-extension-guide">https://code.visualstudio.com/api/language-extensions/language-server-extension-guide</a></li>
-</ul><hr><pre><code>npm install
-npm run test
-</code></pre>
-<p>これが失敗</p>
-<pre><code>error while loading shared libraries: libnss3.so: cannot open shared object file: No such file or directory
-</code></pre><hr><pre><code>sudo apt install libnss3
-</code></pre>
-<pre><code>error while loading shared libraries: libatk-1.0.so.0: cannot open shared object file: No such file or directory
-</code></pre>
-<pre><code>sudo apt-get install libatk1.0-0
-</code></pre>
-<pre><code>error while loading shared libraries: libatk-bridge-2.0.so.0: cannot open shared object file: No such file or directory
-</code></pre>
-<pre><code>sudo apt-get install libatk-bridge2.0-0
-</code></pre>
-<pre><code>error while loading shared libraries: libgtk-3.so.0: cannot open shared object file: No such file or directory
-</code></pre>
-<pre><code>sudo apt install libgtk-3-0
-</code></pre>
-<pre><code>error while loading shared libraries: libgbm.so.1: cannot open shared object file: No such file or directory
-</code></pre>
-<pre><code>sudo apt-get install libgbm-dev
-</code></pre>
-<pre><code>$ npm run test
-
-> lsp-sample@1.0.0 test
-> sh ./scripts/e2e.sh
-
-Found existing install in /home/r7kamura/ghq/github.com/r7kamura/vscode-ruby-toys/.vscode-test/vscode-linux-x64-1.69.2. Skipping download
-[20605:0803/143117.330327:ERROR:ozone_platform_x11.cc(248)] Missing X server or $DISPLAY
-[20605:0803/143117.330373:ERROR:env.cc(225)] The platform failed to initialize.  Exiting.
-The futex facility returned an unexpected error code.
-Exit code:   SIGABRT
-Failed to run tests
-</code></pre><hr><pre><code>export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
-</code></pre>
-<ul>
-<li><a href="https://blog.odaryo.com/2020/01/wsl2-xserver-export-display/">https://blog.odaryo.com/2020/01/wsl2-xserver-export-display/</a></li>
-</ul>
-<p>すぐには応答しなくなくったが変わらず。</p><hr><p>sourceforgeからVcXsrvをWindowsに入れた。XサーバーをWindowsに入れて、UbuntuのGUIをWindowsの上で描画してe2eテストを実行しようという試み。</p>
-<ul>
-<li><a href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a></li>
-</ul><hr><p>VcXsrvを起動しながらやるとこれが出るようになった。</p>
-<blockquote>
-<p>Authorization required, but no authorization protocol specified</p>
-</blockquote><hr><p>C:\Program Files\VcXsrv\xlaunch.exe から起動してaccess controlにチェックを入れながら進むと、バックグラウンドでVcXsrvが起動して、その状態だとようやく <code>npm run test</code> が成功するようになった。</p>
-<p>この状態でも警告がかなり大量に出るのだが (主にdbus周り)、これは出るものらしい。一応dsubの設定をいれば消せるらしいのだが、まだ試していない。</p>
-<p>Windows 11だとwslg?という仕組みでUbuntuのGUIの機能が特に何もせずWindowsで動くようだから、このXサーバー云々の話とDISPLAY環境変数の話は不要らしい。Windows11にしたい利点が初めて出てきて意外だ。</p><hr><p>今日は lsp-example を動かして、VSCodeで試すのとnpm run testでテストを動かすのをやった。GUIだから仕方無いけど、何か動いているものの地に足がついていない感じがして不安はある。</p>]]></content:encoded></item></channel></rss>
+これを書いた</p>]]></content:encoded></item></channel></rss>

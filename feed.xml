@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sat, 27 Aug 2022 19:06:22 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-27]]></title><description><![CDATA[r7kamura's working log on 2022-08-27]]></description><link>https://r7kamura.github.io/diary/articles/114</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/114</guid><pubDate>Fri, 26 Aug 2022 22:36:05 GMT</pubDate><content:encoded><![CDATA[<hr><p>RubyのコアはRDocでドキュメントが記載されているが、型情報についてはここには記載されないようだった。つまり公式のRDocからデータを読み取って利用する作戦は失敗。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sat, 27 Aug 2022 22:35:00 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-08-27]]></title><description><![CDATA[r7kamura's working log on 2022-08-27]]></description><link>https://r7kamura.github.io/diary/articles/114</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/114</guid><pubDate>Fri, 26 Aug 2022 22:36:05 GMT</pubDate><content:encoded><![CDATA[<hr><p>RubyのコアはRDocでドキュメントが記載されているが、型情報についてはここには記載されないようだった。つまり公式のRDocからデータを読み取って利用する作戦は失敗。</p>
 <p>RBSだと型情報が取れる上に公式のRDocから抽出したコメントも併記されているので、代わりにRBSの情報を使うのが良さそうに見える。</p><hr><p>ruby/rubyのRDocではなくruby/rbsのRBSの情報を元にするように変更できた。</p>
 <p>YARDと型の表現方法が違ったりする部分の吸収については頑張らないといけない。</p>
 <pre><code># RBS
@@ -190,25 +190,4 @@ source ~/.bashrc
 </ul><hr><p>forkしたTextMate文法を改善していくのが良さそうということになった。しかし大変そうではある……</p><hr><p>Semantic Tokensだと設定で無効化できるけど、Grammerだと無効化するには拡張ごと無効化するしかない。</p><hr><p>よく見たら bunder のBUNDLE_ONLYオプションリリースされてた。</p>
 <ul>
 <li><a href="https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md">https://github.com/rubygems/rubygems/blob/master/bundler/CHANGELOG.md</a></li>
-</ul>]]></content:encoded></item><item><title><![CDATA[2022-08-08]]></title><description><![CDATA[r7kamura's working log on 2022-08-08]]></description><link>https://r7kamura.github.io/diary/articles/95</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/95</guid><pubDate>Sun, 07 Aug 2022 21:09:29 GMT</pubDate><content:encoded><![CDATA[<hr><p>OBSのブラウザソースでXMLHttpRequest使ってローカルファイル読み込めるよって話。</p>
-<ul>
-<li><a href="https://obsproject.com/forum/threads/obs-cannot-access-local-files-from-local-html-javascript.128171/">https://obsproject.com/forum/threads/obs-cannot-access-local-files-from-local-html-javascript.128171/</a></li>
-</ul>
-<p>fetchだとセキュリティの問題があって難しいっぽい? OBS起動時のオプション引数で云々みたいな話もあるので、これ次第では行ける可能性もある。それと、XMLHttpRequestの例もこの引数が前提となっている可能性もある。</p><hr><p>例えばSpotifyで再生中の楽曲名を表示したい場合に、Snipというアプリを使うとテキストファイルに楽曲名を書き出してくれる。普通はテキストソースを利用してこれを表示することになるが、上の方法を使えばJavaScriptからでも読み出せるので、もっとリッチな表現をしたい場合に使えそう。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/183312908-833e1fd6-5029-4bca-ac32-29071c0174b0.png" alt="image"></p>
-<p>DocumentSymbolに対応すべく、とりあえず全部の名前付きノードをSymbolとして登録してみる実験を行った。</p><hr><p><img src="https://user-images.githubusercontent.com/111689/183316030-51ebf9ea-47c2-4d6c-9179-641ac9f4a549.png" alt="image"></p><hr><p><img src="https://user-images.githubusercontent.com/111689/183356245-393cc4d8-c61d-4980-89b0-681db3b3cd97.png" alt="image"></p>
-<p>OBS Studio 0.28 beta + Spotify + SnipでNow playingを表示することに成功。</p><hr><p>SemanticTokensに対応しようとしているが、これまでと若干インターフェースが違っていて難しい。</p><hr><p><a href="https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_semanticTokens">https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#textDocument_semanticTokens</a></p><hr><p>YouTubeのr7kamura channelの再生リストを整理して、</p>
-<ul>
-<li>Pomodoro I</li>
-<li>Pomodoro II</li>
-</ul>
-<p>の2つに分けた。前者にはここまで100回分が入っていて、明日からは新シーズンとして後者を始めるという感じ。</p>
-<p>タイトルも、"Work with r7kamura" からより実態と即していそうな "Pomodoro with me" に変えることに。タイトルの <code>#100</code> はタグ判定されてしまうことがわかったので、記号は外すことにした。</p>
-<ul>
-<li><a href="https://www.youtube.com/c/r7kamura">https://www.youtube.com/c/r7kamura</a></li>
-</ul><hr><p>Semantic Tokensに関するチュートリアル情報を見つけた</p>
-<ul>
-<li><a href="https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide">https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide</a></li>
-</ul><hr><p>公式のサンプル集にもあった。まずここを探すべきだった:</p>
-<ul>
-<li><a href="https://github.com/microsoft/vscode-extension-samples/tree/main/semantic-tokens-sample">https://github.com/microsoft/vscode-extension-samples/tree/main/semantic-tokens-sample</a></li>
 </ul>]]></content:encoded></item></channel></rss>

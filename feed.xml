@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 09 Sep 2022 19:06:43 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-09-06]]></title><description><![CDATA[r7kamura's working log on 2022-09-06]]></description><link>https://r7kamura.github.io/diary/articles/124</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/124</guid><pubDate>Tue, 06 Sep 2022 11:38:08 GMT</pubDate><content:encoded/></item><item><title><![CDATA[2022-09-05]]></title><description><![CDATA[r7kamura's working log on 2022-09-05]]></description><link>https://r7kamura.github.io/diary/articles/123</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/123</guid><pubDate>Sun, 04 Sep 2022 23:46:41 GMT</pubDate><content:encoded><![CDATA[<hr><p>Added Range Formatting support and some bug fixes to rucoa, the language server implementation I'm recently working on.</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Fri, 09 Sep 2022 20:42:57 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-09-06]]></title><description><![CDATA[r7kamura's working log on 2022-09-06]]></description><link>https://r7kamura.github.io/diary/articles/124</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/124</guid><pubDate>Tue, 06 Sep 2022 11:38:08 GMT</pubDate><content:encoded/></item><item><title><![CDATA[2022-09-05]]></title><description><![CDATA[r7kamura's working log on 2022-09-05]]></description><link>https://r7kamura.github.io/diary/articles/123</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/123</guid><pubDate>Sun, 04 Sep 2022 23:46:41 GMT</pubDate><content:encoded><![CDATA[<hr><p>Added Range Formatting support and some bug fixes to rucoa, the language server implementation I'm recently working on.</p>
 <ul>
 <li><a href="https://github.com/r7kamura/rucoa">https://github.com/r7kamura/rucoa</a></li>
 </ul>
@@ -111,33 +111,4 @@ YardMapでrequire_from_bundleというのがあったので、Gemのソースは
 <p>inferが結構大変そう。
 例えば、メソッドの本体部分からreturn valueになり得るものを探してそのnodeの取り得る型をinferするとか。
 infer無しでYARDの型定義だけ探して無ければ諦めるならまだマシそう。</p><hr><p>どこかで library.catalog が呼ばれて、そのタイミングで libarary.api_map の内容が更新される (ソースコードが読み込まれる?) と思うんだけど、いつどこで呼ばれるのか分かっていない。</p>
-<p>CLIから呼ばれるときはそこで呼ばれてるんだけど、Language Serverから呼ばれるときは… Host#catalog で呼ばれていた。あとスレッドを立てて、0.01秒sleepしながら一生catalogを呼び出し続けていた。DidChangeWatchedFiles命令でも呼び出している。起動時にも呼び出していると思うのだが…これはその別スレッドが呼び出すのだろう。</p>]]></content:encoded></item><item><title><![CDATA[2022-08-18]]></title><description><![CDATA[r7kamura's working log on 2022-08-18]]></description><link>https://r7kamura.github.io/diary/articles/105</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/105</guid><pubDate>Wed, 17 Aug 2022 21:33:05 GMT</pubDate><content:encoded><![CDATA[<hr><p>solargraph gemのソースコードを読んでいく。</p><hr><p>vscodeの方はほぼ何もしておらず、コマンドをサーバーに送信しているだけだった。</p>
-<ul>
-<li><a href="https://github.com/castwide/solargraph">https://github.com/castwide/solargraph</a></li>
-<li><a href="https://github.com/castwide/vscode-solargraph">https://github.com/castwide/vscode-solargraph</a></li>
-</ul><hr><p>solargraphの方では、Host#prepare(directory)でHost#librariesにSolargraph::Librariesを溜めておき、Host#diagnoseでこれに問い合わせている。</p><hr><p>Host#diagnoseの実装はLibrary#diagnoseに委譲されていた。更に、Diagnostics::Reporter.reporter(name)に委譲されている。</p><hr><p>Diagnostics::Rubocopに辿り着いた。これはReporterの1つで、他にはTypeCheckなどがあるらしい。</p><hr><p>lib/solargraph/diagnostics/rubocop.rb を見た。vscode-ruby-lightとやっていることはほぼ同じだった。</p><hr><p>Diagnosticsを読むのは終えて、Documentというのを読んでみることに。これはHost#document -> Library#document -> ApiMap#document と委譲されている。</p><hr><p>vscode-ruby-lightのおかげで手軽にRubyのソースコードのシンボル情報を得られるようになって、メソッド名で検索するというのがやりやすくなって捗るようになった。</p><hr><p><code>api_map.clip(cursor).complete</code> でその地点の補完候補を返しているようなので、これを読んでみる。</p><hr><p>インライン化すると <code>SourceMap::Clip.new(self, cursor).complete</code> になる。</p><hr><pre><code class="language-ruby"># @return [Completion]
-def complete
-  return package_completions([]) if !source_map.source.parsed? || cursor.string?
-  return package_completions(api_map.get_symbols) if cursor.chain.literal? &#x26;&#x26; cursor.chain.links.last.word == '&#x3C;Symbol>'
-  return Completion.new([], cursor.range) if cursor.chain.literal?
-  if cursor.comment?
-    tag_complete
-  else
-    code_complete
-  end
-end
-</code></pre><hr><p>cursor.chainで使われているChainは、メソッドチェーンなどの一連のトークン列を表すやつ? トークン、と読み替えても差し支えない気がする。chain.linksはtoken.previous_tokens。</p>
-<p>そうなると、</p>
-<pre><code class="language-ruby">  return package_completions(api_map.get_symbols) if cursor.chain.literal? &#x26;&#x26; cursor.chain.links.last.word == '&#x3C;Symbol>'
-</code></pre>
-<p>これは、現在カーソルがSymbolリテラルを指しているときは、Symbol一覧の補完候補を出しましょうということになる。libraryに問い合わせていて、libraryは1つのファイルについての情報のみを持っているはずだから、これは「現在ファイル内のSymbolから補完候補を出す」ということになりそう。</p>
-<p>ところで、単純なワードだけを補完するのであれば、VSCodeの標準機能がそれを補完候補に含めてくれるはずなので、実際これは意味があるんだろうか...? 補完候補の優先順位が上がるとかだろうか。</p><hr><pre><code>solargraph socket --host 0.0.0.0
-</code></pre>
-<p>とやることでWSL環境でもsolargraphが動いた。これをしないと動かない……デフォルトだと127.0.0.1になってこれがWSLだと動かない (別のもの...Windows側のホスト?に解決される?) のだと推測している。</p>
-<p><img src="https://user-images.githubusercontent.com/111689/185257843-4fc4893a-5096-4183-98b8-fd7353042181.png" alt="image"></p>
-<p>引数にhoverするとツールチップが表示されて、リンクっぽい文字列をクリックするとwebviewというやつが開くことが確認できた。webviewを使ってドキュメント表示を実現しているらしい。ドキュメントの計算には時間が掛かるから、1ステップ踏ませている、という努力が見られる気がする。</p><hr><p>stdioモードにしたら上手く動いた。</p><hr><p>vscode-solargraphを見ると、stdioモードの場合は起動時にクライアント側でsolargraph stdioをspawnしている様子が見て取れた。extentionKindがworkspaceなので、当然クライアント側で起動してもOK。</p><hr><p>typecheckerは面白いけど、YARD viewerみたいなものがあればそれで十分かなあ。</p>
-<pre><code class="language-ruby"># @params [Foo::Bar] bar
-</code></pre>
-<p>に対して、Rubyで <code>Foo::Bar</code> の定義元を調べたりメソッドの情報を調べたりできるともっと便利だけど、これは実行してみないといけないので、適切にrequireしたりする必要があって色々大変かも。</p><hr><p>vscode-ruby-lightにYARD Viewer機能をつくってみてもいいかも。できるところまでシグネチャを解析して、ビルドされたYARDのデータベースに一致すればその情報を返すというもの。</p>
-<p>あとデフォルトで標準ライブラリについての情報は持っておいてもいいかも。そうなるとYARDに限らない気もするけど。</p><hr><p>もうしばらくsolargraphのコードを読んでいく。</p>
-<p>Pin, SourceMap, ApiMap辺りの概念を把握する必要がありそう。</p><hr><p>コード上のオブジェクトのことをPinと呼ぶようだ。例えば、一つの派生形として、Pin::Methodがある。</p>]]></content:encoded></item></channel></rss>
+<p>CLIから呼ばれるときはそこで呼ばれてるんだけど、Language Serverから呼ばれるときは… Host#catalog で呼ばれていた。あとスレッドを立てて、0.01秒sleepしながら一生catalogを呼び出し続けていた。DidChangeWatchedFiles命令でも呼び出している。起動時にも呼び出していると思うのだが…これはその別スレッドが呼び出すのだろう。</p>]]></content:encoded></item></channel></rss>

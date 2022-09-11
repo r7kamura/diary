@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 11 Sep 2022 05:18:49 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-09-10]]></title><description><![CDATA[r7kamura's working log on 2022-09-10]]></description><link>https://r7kamura.github.io/diary/articles/125</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/125</guid><pubDate>Fri, 09 Sep 2022 20:41:40 GMT</pubDate><content:encoded><![CDATA[<hr><p>ここ3日間ほど、気負いすぎて作業ログを書けていなかった。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 11 Sep 2022 19:06:25 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-09-11]]></title><description><![CDATA[r7kamura's working log on 2022-09-11]]></description><link>https://r7kamura.github.io/diary/articles/126</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/126</guid><pubDate>Sun, 11 Sep 2022 04:32:34 GMT</pubDate><content:encoded><![CDATA[<hr><p>Rucoaの補完機能がほぼほぼ実装できた。</p>
+<ul>
+<li><a href="https://github.com/r7kamura/rucoa/pull/27">r7kamura/rucoa#27</a></li>
+</ul>
+<p>メソッドの補完ができる。定数の補完もしたいので、それが完成したらMergeする予定。メソッドや定数の定義を探索する部分で継承関係にまだ対応できていなかったりするので、それが今後の課題。まずは動くようにしてから、徐々にやりたいことを見つけられるようにして改善していこうという優先順位で進めている。</p><hr><p>r7kamura/diaryのWebページへの配信タイミングを、コメントごとではなく日次に変えた。</p>
+<ul>
+<li>Commitの数が無駄に増える</li>
+<li>RSSは日次で前日分を一気に吐き出してるので揃えた方が違和感が無い</li>
+<li>writeとreadはリアルタイムで繋がっているより少し分かれているぐらいの方が心地良い</li>
+</ul>
+<blockquote>
+<p>writeとreadはリアルタイムで繋がっているより少し分かれているぐらいの方が心地良い</p>
+</blockquote>
+<p>これはもしかしたら重要な感覚かもしれない。Twitterとかにも何か適用できる要素のある考え方かもしれないが上手くまとまらないのでこれ以上掘り下げるのはやめることに。</p>]]></content:encoded></item><item><title><![CDATA[2022-09-10]]></title><description><![CDATA[r7kamura's working log on 2022-09-10]]></description><link>https://r7kamura.github.io/diary/articles/125</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/125</guid><pubDate>Fri, 09 Sep 2022 20:41:40 GMT</pubDate><content:encoded><![CDATA[<hr><p>ここ3日間ほど、気負いすぎて作業ログを書けていなかった。</p>
 <p>作業ログを書くこと自体に疑問を持ち始めると途端に書けなくなるらしい。書き続けたいのであれば、特に何も考えずにやる方が良さそうではある。癖として書いているぐらいでちょうどいいかもしれない。</p><hr><p>今日はLanguage Serverの実装中にハマった。</p>
 <p>いつかそうなるだろうと思ってたんだけどね。いまのLanguage Serverの実装ではIPCではなく標準入出力経由で通信することにしているんだけど、外部ライブラリのYARDが不正なタグを見つけたときに標準出力に警告を出力するものだから、パース中に意図せず警告がクライアントが読み込む標準出力に書き込まれてしまうことがあり、そこでクライアントが停止……というかそれ以上何も読み込めなくなるという問題が起きた。実際、エラーを吐くでもなく何か特定の操作をしたあとは機能が上手く働かなくなるという状況だったので、原因究明が遅れた。</p>
 <p>デバッグもより難しいものになるし、標準入出力を使うのはやめてIPC経由で通信するように変更したいが、Rubyだとどうやるのが良いのかよく分かっていない。</p><hr><p>My name is Ryo. (私の名前はRyoです) って日常会話では全く言わないんだなあ。</p>

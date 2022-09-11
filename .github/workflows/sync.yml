@@ -42,13 +42,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: data
           publish_dir: data
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16.x
-          cache: npm
-      - run: npm install
-      - run: npm run export
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: out

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sat, 10 Sep 2022 19:06:21 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-09-10]]></title><description><![CDATA[r7kamura's working log on 2022-09-10]]></description><link>https://r7kamura.github.io/diary/articles/125</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/125</guid><pubDate>Fri, 09 Sep 2022 20:41:40 GMT</pubDate><content:encoded><![CDATA[<hr><p>ここ3日間ほど、気負いすぎて作業ログを書けていなかった。</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[r7kamura/diary]]></title><description><![CDATA[r7kamura's daily working log.]]></description><link>https://r7kamura.github.io/diary/</link><generator>r7kamura/diary</generator><lastBuildDate>Sun, 11 Sep 2022 04:33:29 GMT</lastBuildDate><atom:link href="https://r7kamura.github.io/diary/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[2022-09-10]]></title><description><![CDATA[r7kamura's working log on 2022-09-10]]></description><link>https://r7kamura.github.io/diary/articles/125</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/125</guid><pubDate>Fri, 09 Sep 2022 20:41:40 GMT</pubDate><content:encoded><![CDATA[<hr><p>ここ3日間ほど、気負いすぎて作業ログを書けていなかった。</p>
 <p>作業ログを書くこと自体に疑問を持ち始めると途端に書けなくなるらしい。書き続けたいのであれば、特に何も考えずにやる方が良さそうではある。癖として書いているぐらいでちょうどいいかもしれない。</p><hr><p>今日はLanguage Serverの実装中にハマった。</p>
 <p>いつかそうなるだろうと思ってたんだけどね。いまのLanguage Serverの実装ではIPCではなく標準入出力経由で通信することにしているんだけど、外部ライブラリのYARDが不正なタグを見つけたときに標準出力に警告を出力するものだから、パース中に意図せず警告がクライアントが読み込む標準出力に書き込まれてしまうことがあり、そこでクライアントが停止……というかそれ以上何も読み込めなくなるという問題が起きた。実際、エラーを吐くでもなく何か特定の操作をしたあとは機能が上手く働かなくなるという状況だったので、原因究明が遅れた。</p>
 <p>デバッグもより難しいものになるし、標準入出力を使うのはやめてIPC経由で通信するように変更したいが、Rubyだとどうやるのが良いのかよく分かっていない。</p><hr><p>My name is Ryo. (私の名前はRyoです) って日常会話では全く言わないんだなあ。</p>
@@ -80,41 +80,4 @@ end
 <li>yard gemsがビルドしたファイルからデータを読み込んで集約し、それをMarshal.dumpでキャッシュしていた</li>
 <li>Libraray, ApiMap, Pin, SourceMap, YardMap, Host</li>
 <li>Inferの仕組みもやるべきことを淡々とやっている感じであった</li>
-</ul>]]></content:encoded></item><item><title><![CDATA[2022-08-19]]></title><description><![CDATA[r7kamura's working log on 2022-08-19]]></description><link>https://r7kamura.github.io/diary/articles/106</link><guid isPermaLink="true">https://r7kamura.github.io/diary/articles/106</guid><pubDate>Thu, 18 Aug 2022 21:31:56 GMT</pubDate><content:encoded><![CDATA[<hr><p>引き続きSolargraph</p><hr><h3>workspace</h3>
-<p>プロジェクトのディレクトリに対して1つのWorkspaceが割り当てられる。</p>
-<h3>library</h3>
-<ul>
-<li>1つのlibraryが1つのApiMapを持つ</li>
-<li>1つのソースコードと対応している?
-<ul>
-<li>現在見ているソースコードという状態を持っているだけで、そうではないかも</li>
-</ul>
-</li>
-<li>1つのworkspaceが複数のlibraryを持つ?
-<ul>
-<li>library belongs_to workspace という関係</li>
-</ul>
-</li>
-<li>要請に応じて違反や定義元を返したりする役割も持っている</li>
-</ul><hr><ol>
-<li>エディタ起動時、エディタのworkspaceが <code>Host#prepare_folders</code> で読み込まれる</li>
-<li>Solargraph::Library.loadでそのディレクトリの情報が用意される</li>
-<li>Host#librariesに読み込んだ情報が登録される</li>
-<li>エディタからのリクエストに応じて、Host#librariesが検索される</li>
-</ol><hr><p>Library#find_external_requires という実装があった。そのソースコード内の <code>require</code> を集めているらしい。</p>
-<p>bundlerの管理するgemのYARDはどう読み込まれているのか気になって調べてみた。
-YardMapでrequire_from_bundleというのがあったので、Gemのソースは多分ここで読み込まれている。YardMapがどこから使われているかは不明。ApiMapがYardMapの参照を持っているので多分ApiMapが管理している。yard_mapは、definitionを調べるリクエストとtype checkから使われていた。</p><hr><p>Workspace#generate_require_paths を見ていると、gemspecが存在する場合は、それを読んでrequire_pathsの内容からどのファイルを読むべきか推測するというコードが書かれていた。デフォルトではlibになる。</p><hr><p>Workspace#initializeではそのディレクトリの配下のRubyのソースコードがほぼ全て読み込まれ、Solargraph::Sourceに変換される。</p><hr><p>Solargraphで定数をgo to definitionしたときには候補が沢山表示されるなと思っていたが、これはRubyがオープンクラスできるためで、その定数をnamespaceとして利用している実装が候補に上がるためである。solargraphは第一候補として一番それらしいやつを挙げてくれるようなので、大体のケースではF12を二回押すだけで事足りる。</p><hr><p>カーソル位置についての処理を担当するのがClipクラスらしい。</p><hr><p>ApiMapというのは、いろんなところでソースコードの集合を扱うための実装で、1つのLibraryが1つのApiMapを持っていたり…するらしいが概念がよく分からない...がlibraryが複数のソースコードを扱う存在であると考えるなら妥当かも。</p><hr><p>ApiMapが大きいやつで、SourceMapが小さいやつ…</p><hr><p>最初のステップとして、<code>@param</code> で仮引数の型が明示されている場合に、その仮引数の定義位置を返す、という機能を実装できるようにしてみるのはどうか。</p><hr><ol start="0">
-<li>Solargraph::LanguageServer::Message::TextDocument::Definition 型を表すPinの配列からLSP用の位置情報を返す</li>
-<li>Host#definitions_at</li>
-<li>Library#definitions_at</li>
-<li>Clip#define カーソル位置のチェーン (一連のまとまり) から推測される型を表すPinの配列を返す</li>
-<li>Chain#define ほぼ同上</li>
-<li>Chain#infer_first_defined 型の計算が行われる中核部分</li>
-<li>Link#resolve 型を表すPinの配列を返す</li>
-</ol>
-<p>chain.linksのlinksはchainの要素で、a.b.cの場合linksはa, b, cみたいな感じ。</p>
-<p>ApiMapをchainあたりまで引き回しているが、これはdatabase connectionみたいなもので、実際のソースコードの情報を色々引いてくるにはこうするのが妥当。</p>
-<p>inferが結構大変そう。
-例えば、メソッドの本体部分からreturn valueになり得るものを探してそのnodeの取り得る型をinferするとか。
-infer無しでYARDの型定義だけ探して無ければ諦めるならまだマシそう。</p><hr><p>どこかで library.catalog が呼ばれて、そのタイミングで libarary.api_map の内容が更新される (ソースコードが読み込まれる?) と思うんだけど、いつどこで呼ばれるのか分かっていない。</p>
-<p>CLIから呼ばれるときはそこで呼ばれてるんだけど、Language Serverから呼ばれるときは… Host#catalog で呼ばれていた。あとスレッドを立てて、0.01秒sleepしながら一生catalogを呼び出し続けていた。DidChangeWatchedFiles命令でも呼び出している。起動時にも呼び出していると思うのだが…これはその別スレッドが呼び出すのだろう。</p>]]></content:encoded></item></channel></rss>
+</ul>]]></content:encoded></item></channel></rss>
